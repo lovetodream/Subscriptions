@@ -1,0 +1,13 @@
+xcuserdata/
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.hmap
+timeline.xctimeline
+playground.xcworkspace
+.build/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+*.xcconfig
