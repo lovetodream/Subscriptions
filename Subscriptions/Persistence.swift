@@ -61,7 +61,7 @@ struct PersistenceController {
 //                    self.container.viewContext.delete(objectData)
 //                }
 //                insertSampleData(viewContext: self.container.viewContext)
-//                UserDefaults.standard.set(true, forKey: Bundle.main.object(forInfoDictionaryKey: "PREMIUM_IAP") as! String)
+//                UserDefaults.standard.set(true, forKey: Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String)
 //            } catch let error {
 //                print("Detele all data in Item error :", error)
 //            }
