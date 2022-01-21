@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>developerTeamID</key>
+	<string>$(DEV_PORTAL_TEAM_ID)</string>
+	<key>connectTeamID</key>
+	<string>$(CONNECT_TEAM_ID)</string>
+	<key>appleID</key>
+	<string>$(APPLE_ID)</string>
+	<key>tipIAPs</key>
+	<array>
+		<string>$(INSANE)</string>
+		<string>$(GIANT)</string>
+		<string>$(HUGE)</string>
+		<string>$(LARGE)</string>
+		<string>$(GREAT)</string>
+		<string>$(GENEROUS)</string>
+		<string>$(SUBSTANTIAL)</string>
+	</array>
+	<key>premiumIAP</key>
+	<string>$(PREMIUM_IAP)</string>
+</dict>
+</plist>

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FaviconFinder",
+        "repositoryURL": "https://github.com/OpenSesameManager/FaviconFinder",
+        "state": {
+          "branch": null,
+          "revision": "b327d60fd49d0f30bcc4b89473c6087ae07e03cb",
+          "version": "4.0.4"
+        }
+      },
+      {
+        "package": "SwiftSoup",
+        "repositoryURL": "https://github.com/scinfu/SwiftSoup.git",
+        "state": {
+          "branch": null,
+          "revision": "45a7566f7ec2de0b977f28e825f8df874f210327",
+          "version": "2.3.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

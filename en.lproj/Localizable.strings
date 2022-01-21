@@ -1,0 +1,381 @@
+/* No comment provided by engineer. */
+" " = " ";
+
+/* No comment provided by engineer. */
+" (%@)" = " (%@)";
+
+/* No comment provided by engineer. */
+"%@ (%@)" = "%@ (%@)";
+
+/* No comment provided by engineer. */
+"👍" = "👍";
+
+/* No comment provided by engineer. */
+"0.00" = "0.00";
+
+/* No comment provided by engineer. */
+"Acknowledgements" = "Acknowledgements";
+
+/* No comment provided by engineer. */
+"Actions" = "Actions";
+
+/* No comment provided by engineer. */
+"Add as many subscriptions as you want, there is no limit 😁." = "Add as many subscriptions as you want, there is no limit 😁.";
+
+/* No comment provided by engineer. */
+"Add end date" = "Add end date";
+
+/* No comment provided by engineer. */
+"Add Subscription" = "Add Subscription";
+
+/* No comment provided by engineer. */
+"Add your first Subscription with the %@ button." = "Add your first Subscription with the %@ button.";
+
+/* No comment provided by engineer. */
+"Advanced" = "Advanced";
+
+/* No comment provided by engineer. */
+"And many more to come with future updates" = "And many more to come with future updates";
+
+/* No comment provided by engineer. */
+"annually" = "annually";
+
+/* No comment provided by engineer. */
+"Are you sure?" = "Are you sure?";
+
+/* No comment provided by engineer. */
+"Bill for %@" = "Bill for %@";
+
+/* No comment provided by engineer. */
+"Billed" = "Billed";
+
+/* No comment provided by engineer. */
+"Budget" = "Budget";
+
+/* No comment provided by engineer. */
+"Cancel" = "Cancel";
+
+/* No comment provided by engineer. */
+"Cancel this Subscription" = "Cancel this Subscription";
+
+/* No comment provided by engineer. */
+"Cancellation URL" = "Cancellation URL";
+
+/* No comment provided by engineer. */
+"Choose from gallery" = "Choose from gallery";
+
+/* No comment provided by engineer. */
+"Choose icon" = "Choose icon";
+
+/* No comment provided by engineer. */
+"Clear ignored months" = "Clear ignored months";
+
+/* No comment provided by engineer. */
+"Close" = "Close";
+
+/* No comment provided by engineer. */
+"Color" = "Color";
+
+/* No comment provided by engineer. */
+"Contact" = "Contact";
+
+/* No comment provided by engineer. */
+"Continue" = "Continue";
+
+/* No comment provided by engineer. */
+"Cosmetics" = "Cosmetics";
+
+/* No comment provided by engineer. */
+"Cost" = "Cost";
+
+/* No comment provided by engineer. */
+"Currency" = "Currency";
+
+/* No comment provided by engineer. */
+"custom circle" = "custom circle";
+
+/* No comment provided by engineer. */
+"daily" = "daily";
+
+/* No comment provided by engineer. */
+"Danger Zone" = "Danger Zone";
+
+/* No comment provided by engineer. */
+"Date of last bill" = "Date of last bill";
+
+/* No comment provided by engineer. */
+"days" = "days";
+
+/* No comment provided by engineer. */
+"Days" = "Days";
+
+/* No comment provided by engineer. */
+"Delete this Subscription" = "Delete this Subscription";
+
+/* No comment provided by engineer. */
+"Deleting a Subscription will completely remove it forever." = "Deleting a Subscription will completely remove it forever.";
+
+/* No comment provided by engineer. */
+"Disclaimer" = "Disclaimer";
+
+/* No comment provided by engineer. */
+"Download logo" = "Download logo";
+
+/* No comment provided by engineer. */
+"Due Subscriptions" = "Due Subscriptions";
+
+/* No comment provided by engineer. */
+"Due this month: %@" = "Due this month: %@";
+
+/* No comment provided by engineer. */
+"Edit" = "Edit";
+
+/* No comment provided by engineer. */
+"Edit Budget" = "Edit Budget";
+
+/* No comment provided by engineer. */
+"Email" = "Email";
+
+/* No comment provided by engineer. */
+"Enabling iCloud Sync will allow your subscriptions to stay in sync across all your devices." = "Enabling iCloud Sync will allow your subscriptions to stay in sync across all your devices.";
+
+/* No comment provided by engineer. */
+"Erase all data" = "Erase all data";
+
+/* No comment provided by engineer. */
+"every six months" = "every six months";
+
+/* No comment provided by engineer. */
+"Get notified if your monthly subscription cost exceeds your budget." = "Get notified if your monthly subscription cost exceeds your budget.";
+
+/* No comment provided by engineer. */
+"Hide advanced options" = "Hide advanced options";
+
+/* No comment provided by engineer. */
+"https://" = "https://";
+
+/* No comment provided by engineer. */
+"iCloud Sync" = "iCloud Sync";
+
+/* No comment provided by engineer. */
+"iCloud Sync will allow your subscriptions to stay in sync across all your devices." = "iCloud Sync will allow your subscriptions to stay in sync across all your devices.";
+
+/* No comment provided by engineer. */
+"iCloud Synchronisation" = "iCloud Synchronisation";
+
+/* No comment provided by engineer. */
+"Icon" = "Icon";
+
+/* No comment provided by engineer. */
+"If your monthly bills exceed the defined budget you'll get notified." = "If your monthly bills exceed the defined budget you'll get notified.";
+
+/* No comment provided by engineer. */
+"Ignore Budget for this month" = "Ignore Budget for this month";
+
+/* No comment provided by engineer. */
+"Inactive Subscriptions" = "Inactive Subscriptions";
+
+/* No comment provided by engineer. */
+"Information" = "Information";
+
+/* No comment provided by engineer. */
+"Load logo (favicon) from URL" = "Load logo (favicon) from URL";
+
+/* No comment provided by engineer. */
+"monthly" = "monthly";
+
+/* No comment provided by engineer. */
+"Monthly Budget" = "Monthly Budget";
+
+/* No comment provided by engineer. */
+"Next Bill" = "Next Bill";
+
+/* No comment provided by engineer. */
+"No potential matches found..." = "No potential matches found...";
+
+/* No comment provided by engineer. */
+"No third-party tracking or analytics services are used, and no personal data is collected or shared with anyone." = "No third-party tracking or analytics services are used, and no personal data is collected or shared with anyone.";
+
+/* No comment provided by engineer. */
+"Note" = "Note";
+
+/* No comment provided by engineer. */
+"Once paused, you can resume a subscription at any time in the future." = "Once paused, you can resume a subscription at any time in the future.";
+
+/* No comment provided by engineer. */
+"or add a new one" = "or add a new one";
+
+/* No comment provided by engineer. */
+"Or choose one of these" = "Or choose one of these";
+
+/* No comment provided by engineer. */
+"Pause" = "Pause";
+
+/* No comment provided by engineer. */
+"Pause this Subscription" = "Pause this Subscription";
+
+/* No comment provided by engineer. */
+"Paused since " = "Paused since ";
+
+/* No comment provided by engineer. */
+"Pin" = "Pin";
+
+/* No comment provided by engineer. */
+"Pin this Subscription" = "Pin this Subscription";
+
+/* No comment provided by engineer. */
+"Pinned" = "Pinned";
+
+/* No comment provided by engineer. */
+"Powerful Suggestions - soon" = "Powerful Suggestions - soon";
+
+/* No comment provided by engineer. */
+"Premium Version" = "Premium Version";
+
+/* No comment provided by engineer. */
+"Previous Bill" = "Previous Bill";
+
+/* No comment provided by engineer. */
+"Privacy Policy" = "Privacy Policy";
+
+/* No comment provided by engineer. */
+"Purchase for %@" = "Purchase for %@";
+
+/* No comment provided by engineer. */
+"Purchase not available, try again..." = "Purchase not available, try again...";
+
+/* No comment provided by engineer. */
+"Purchases" = "Purchases";
+
+/* No comment provided by engineer. */
+"Purchasing Premium helps the developer of this app." = "Purchasing Premium helps the developer of this app.";
+
+/* No comment provided by engineer. */
+"quarterly" = "quarterly";
+
+/* No comment provided by engineer. */
+"Reactivate" = "Reactivate";
+
+/* No comment provided by engineer. */
+"Remove" = "Remove";
+
+/* No comment provided by engineer. */
+"Remove end date" = "Remove end date";
+
+/* No comment provided by engineer. */
+"Restore Purchase" = "Restore Purchase";
+
+/* No comment provided by engineer. */
+"Resume" = "Resume";
+
+/* No comment provided by engineer. */
+"Resume this Subscription" = "Resume this Subscription";
+
+/* No comment provided by engineer. */
+"Rounded Borders on Icons" = "Rounded Borders on Icons";
+
+/* No comment provided by engineer. */
+"Save" = "Save";
+
+/* No comment provided by engineer. */
+"Select a subscription" = "Select a subscription";
+
+/* No comment provided by engineer. */
+"Settings" = "Settings";
+
+/* No comment provided by engineer. */
+"Show %lld inactive Subscription" = "Show %lld inactive Subscription";
+
+/* No comment provided by engineer. */
+"Show %lld inactive Subscriptions" = "Show %lld inactive Subscriptions";
+
+/* No comment provided by engineer. */
+"Show advanced options" = "Show advanced options";
+
+/* No comment provided by engineer. */
+"Show License" = "Show License";
+
+/* No comment provided by engineer. */
+"Subscription added at %@" = "Subscription added at %@";
+
+/* No comment provided by engineer. */
+"Subscription ends on" = "Subscription ends on";
+
+/* No comment provided by engineer. */
+"Subscriptions" = "Subscriptions";
+
+/* No comment provided by engineer. */
+"Suggestions" = "Suggestions";
+
+/* No comment provided by engineer. */
+"Suggestions with options to choose between predefined price plans and more." = "Suggestions with options to choose between predefined price plans and more.";
+
+/* No comment provided by engineer. */
+"Support" = "Support";
+
+/* No comment provided by engineer. */
+"Thank you so much! %@" = "Thank you so much! %@";
+
+/* No comment provided by engineer. */
+"The tip jar helps keep Abonementi running, and helps with getting regular (and substantial) updates pushed out to you.\n\nIf you enjoy using this app and want to support an independent app developer (that's me, Timo), please consider leaving a tip, an App Store rating/review, or telling a friend about how much you like Abonementi.\n\nThank you for being awesome!" = "The tip jar helps keep Abonementi running, and helps with getting regular (and substantial) updates pushed out to you.\n\nIf you enjoy using this app and want to support an independent app developer (that's me, Timo), please consider leaving a tip, an App Store rating/review, or telling a friend about how much you like Abonementi.\n\nThank you for being awesome!";
+
+/* No comment provided by engineer. */
+"This app was made with %@ by an independent iOS developer called Timo." = "This app was made with %@ by an independent iOS developer called Timo.";
+
+/* No comment provided by engineer. */
+"This is a display only option and does not affect the cost of your subscriptions." = "This is a display only option and does not affect the cost of your subscriptions.";
+
+/* No comment provided by engineer. */
+"This months bill exceeds your budget by %@." = "This months bill exceeds your budget by %@.";
+
+/* No comment provided by engineer. */
+"This will remove all your subscriptions and corresponding data from the app permanently." = "This will remove all your subscriptions and corresponding data from the app permanently.";
+
+/* No comment provided by engineer. */
+"This will remove the subscription permanently, it's recommended to pause it instead." = "This will remove the subscription permanently, it's recommended to pause it instead.";
+
+/* No comment provided by engineer. */
+"This will remove the subscription permanently." = "This will remove the subscription permanently.";
+
+/* No comment provided by engineer. */
+"Tip Jar" = "Tip Jar";
+
+/* No comment provided by engineer. */
+"Title" = "Title";
+
+/* No comment provided by engineer. */
+"Title or URL" = "Title or URL";
+
+/* No comment provided by engineer. */
+"Unlimited Subscriptions" = "Unlimited Subscriptions";
+
+/* No comment provided by engineer. */
+"Unlock all features" = "Unlock all features";
+
+/* No comment provided by engineer. */
+"Unlock more" = "Unlock more";
+
+/* No comment provided by engineer. */
+"Unpin" = "Unpin";
+
+/* No comment provided by engineer. */
+"Unpin this Subscription" = "Unpin this Subscription";
+
+/* No comment provided by engineer. */
+"Website" = "Website";
+
+/* No comment provided by engineer. */
+"weekly" = "weekly";
+
+/* No comment provided by engineer. */
+"Why a Tip Jar?" = "Why a Tip Jar?";
+
+/* No comment provided by engineer. */
+"Will be paused " = "Will be paused ";
+
+/* No comment provided by engineer. */
+"You have reached the limit of free active Subscriptions" = "You have reached the limit of free active Subscriptions";
+
+/* No comment provided by engineer. */
+"Your purchase directly supports the indepentent developer of this app." = "Your purchase directly supports the indepentent developer of this app.";
+

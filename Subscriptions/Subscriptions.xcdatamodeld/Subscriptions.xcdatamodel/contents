@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="IgnoredBudgetMonth" representedClassName="IgnoredBudgetMonth" syncable="YES" codeGenerationType="class">
+        <attribute name="firstOfMonth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="billing" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cancellationUrl" optional="YES" attributeType="URI"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="cost" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="currencyCode" optional="YES" attributeType="String"/>
+        <attribute name="deactivationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="icon" optional="YES" attributeType="Binary"/>
+        <attribute name="lastBillDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="pinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="serviceUrl" optional="YES" attributeType="URI"/>
+        <attribute name="suggestedPlanID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="suggestedServiceID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="systemImage" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" inverseName="reminder" inverseEntity="Reminder"/>
+    </entity>
+    <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="uid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="reminder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="reminders" inverseEntity="Item"/>
+    </entity>
+    <fetchRequest name="ActiveSubscriptions" entity="Item" predicateString="active == 1 AND deactivationDate &lt; CAST(Date.now.timeIntervalSince1970, &quot;NSDate&quot;)"/>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="299"/>
+        <element name="Reminder" positionX="350.96484375" positionY="54" width="154.99609375" height="73"/>
+        <element name="IgnoredBudgetMonth" positionX="144" positionY="108" width="128" height="44"/>
     </elements>
 </model>

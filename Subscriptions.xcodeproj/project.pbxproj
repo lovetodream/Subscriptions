@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062020852788D27400CC6836 /* SubscriptionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062020842788D27400CC6836 /* SubscriptionForm.swift */; };
 		06409F39276932BF00ED3B7A /* SubscriptionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F38276932BF00ED3B7A /* SubscriptionsApp.swift */; };
 		06409F3B276932BF00ED3B7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F3A276932BF00ED3B7A /* ContentView.swift */; };
 		06409F3D276932C000ED3B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06409F3C276932C000ED3B7A /* Assets.xcassets */; };
@@ -16,6 +17,19 @@
 		06409F4F276932C000ED3B7A /* SubscriptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F4E276932C000ED3B7A /* SubscriptionsTests.swift */; };
 		06409F59276932C000ED3B7A /* SubscriptionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F58276932C000ED3B7A /* SubscriptionsUITests.swift */; };
 		06409F5B276932C000ED3B7A /* SubscriptionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F5A276932C000ED3B7A /* SubscriptionsUITestsLaunchTests.swift */; };
+		0680FD8C278A145700A35783 /* FaviconFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 0680FD8B278A145700A35783 /* FaviconFinder */; };
+		0680FD8E278AED5800A35783 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD8D278AED5800A35783 /* Icons.swift */; };
+		0680FD90278AEF3F00A35783 /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD8F278AEF3F00A35783 /* IconPicker.swift */; };
+		0680FD92278B111500A35783 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD91278B111500A35783 /* ImagePicker.swift */; };
+		0680FD94278B1BBD00A35783 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD93278B1BBD00A35783 /* SettingsView.swift */; };
+		0680FD98278B5ED800A35783 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0680FD97278B5ED800A35783 /* CloudKit.framework */; };
+		0680FD9A278B6D7F00A35783 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0680FD99278B6D7F00A35783 /* StoreKit.framework */; };
+		0680FD9C278B6D9D00A35783 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9B278B6D9D00A35783 /* StoreManager.swift */; };
+		0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */; };
+		0680FDA0279451A900A35783 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9F279451A800A35783 /* TipJarView.swift */; };
+		06DEA566279486D400FC6412 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA564279486D400FC6412 /* Localizable.strings */; };
+		06DEA569279486D500FC6412 /* Subscriptions-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA567279486D400FC6412 /* Subscriptions-InfoPlist.strings */; };
+		06DEA62C2794BBD400FC6412 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEA5D12794BBBE00FC6412 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06409F35276932BF00ED3B7A /* Subscriptions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subscriptions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06047BD3279B10B3000ADA4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		062020842788D27400CC6836 /* SubscriptionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionForm.swift; sourceTree = "<group>"; };
+		06409F35276932BF00ED3B7A /* Abonementi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abonementi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06409F38276932BF00ED3B7A /* SubscriptionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsApp.swift; sourceTree = "<group>"; };
 		06409F3A276932BF00ED3B7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		06409F3C276932C000ED3B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +64,28 @@
 		06409F54276932C000ED3B7A /* SubscriptionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubscriptionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06409F58276932C000ED3B7A /* SubscriptionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsUITests.swift; sourceTree = "<group>"; };
 		06409F5A276932C000ED3B7A /* SubscriptionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		064834EE2795F614002C210C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		067956CF279B0BC400ED60E8 /* Environment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Environment.xcconfig; sourceTree = "<group>"; };
+		067956D0279B0C8700ED60E8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0680FD8D278AED5800A35783 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		0680FD8F278AEF3F00A35783 /* IconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPicker.swift; sourceTree = "<group>"; };
+		0680FD91278B111500A35783 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0680FD93278B1BBD00A35783 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0680FD95278B5ED200A35783 /* Subscriptions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subscriptions.entitlements; sourceTree = "<group>"; };
+		0680FD97278B5ED800A35783 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		0680FD99278B6D7F00A35783 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0680FD9B278B6D9D00A35783 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumIAPView.swift; sourceTree = "<group>"; };
+		0680FD9F279451A800A35783 /* TipJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarView.swift; sourceTree = "<group>"; };
+		06DEA565279486D400FC6412 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06DEA568279486D500FC6412 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "de.lproj/Subscriptions-InfoPlist.strings"; sourceTree = "<group>"; };
+		06DEA56A2794B67400FC6412 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		06DEA56D2794BABE00FC6412 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		06DEA5CF2794BBBE00FC6412 /* Fastfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fastfile.swift; sourceTree = "<group>"; };
+		06DEA5D02794BBBE00FC6412 /* Snapfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapfile.swift; sourceTree = "<group>"; };
+		06DEA5D12794BBBE00FC6412 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		06DEA5FD2794BBBE00FC6412 /* Appfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appfile.swift; sourceTree = "<group>"; };
+		06DEA5FE2794BBBE00FC6412 /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0680FD9A278B6D7F00A35783 /* StoreKit.framework in Frameworks */,
+				0680FD8C278A145700A35783 /* FaviconFinder in Frameworks */,
+				0680FD98278B5ED800A35783 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,17 +119,24 @@
 		06409F2C276932BF00ED3B7A = {
 			isa = PBXGroup;
 			children = (
+				067956D0279B0C8700ED60E8 /* .gitignore */,
+				06DEA5CE2794BBBE00FC6412 /* fastlane */,
+				06DEA56D2794BABE00FC6412 /* Gemfile.lock */,
+				06DEA56A2794B67400FC6412 /* Gemfile */,
+				06DEA567279486D400FC6412 /* Subscriptions-InfoPlist.strings */,
+				06DEA564279486D400FC6412 /* Localizable.strings */,
 				06409F37276932BF00ED3B7A /* Subscriptions */,
 				06409F4D276932C000ED3B7A /* SubscriptionsTests */,
 				06409F57276932C000ED3B7A /* SubscriptionsUITests */,
 				06409F36276932BF00ED3B7A /* Products */,
+				0680FD96278B5ED800A35783 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		06409F36276932BF00ED3B7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06409F35276932BF00ED3B7A /* Subscriptions.app */,
+				06409F35276932BF00ED3B7A /* Abonementi.app */,
 				06409F4A276932C000ED3B7A /* SubscriptionsTests.xctest */,
 				06409F54276932C000ED3B7A /* SubscriptionsUITests.xctest */,
 			);
@@ -98,8 +146,19 @@
 		06409F37276932BF00ED3B7A /* Subscriptions */ = {
 			isa = PBXGroup;
 			children = (
+				06047BD3279B10B3000ADA4D /* Info.plist */,
+				0680FD95278B5ED200A35783 /* Subscriptions.entitlements */,
 				06409F38276932BF00ED3B7A /* SubscriptionsApp.swift */,
 				06409F3A276932BF00ED3B7A /* ContentView.swift */,
+				0680FD9F279451A800A35783 /* TipJarView.swift */,
+				0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */,
+				0680FD93278B1BBD00A35783 /* SettingsView.swift */,
+				062020842788D27400CC6836 /* SubscriptionForm.swift */,
+				0680FD8F278AEF3F00A35783 /* IconPicker.swift */,
+				0680FD91278B111500A35783 /* ImagePicker.swift */,
+				0680FD9B278B6D9D00A35783 /* StoreManager.swift */,
+				0680FD8D278AED5800A35783 /* Icons.swift */,
+				067956CF279B0BC400ED60E8 /* Environment.xcconfig */,
 				06409F3C276932C000ED3B7A /* Assets.xcassets */,
 				06409F41276932C000ED3B7A /* Persistence.swift */,
 				06409F43276932C000ED3B7A /* Subscriptions.xcdatamodeld */,
@@ -133,6 +192,27 @@
 			path = SubscriptionsUITests;
 			sourceTree = "<group>";
 		};
+		0680FD96278B5ED800A35783 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0680FD99278B6D7F00A35783 /* StoreKit.framework */,
+				0680FD97278B5ED800A35783 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06DEA5CE2794BBBE00FC6412 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				06DEA5CF2794BBBE00FC6412 /* Fastfile.swift */,
+				06DEA5D02794BBBE00FC6412 /* Snapfile.swift */,
+				06DEA5D12794BBBE00FC6412 /* SnapshotHelper.swift */,
+				06DEA5FD2794BBBE00FC6412 /* Appfile.swift */,
+				06DEA5FE2794BBBE00FC6412 /* Snapfile */,
+			);
+			path = fastlane;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,8 +229,11 @@
 			dependencies = (
 			);
 			name = Subscriptions;
+			packageProductDependencies = (
+				0680FD8B278A145700A35783 /* FaviconFinder */,
+			);
 			productName = Subscriptions;
-			productReference = 06409F35276932BF00ED3B7A /* Subscriptions.app */;
+			productReference = 06409F35276932BF00ED3B7A /* Abonementi.app */;
 			productType = "com.apple.product-type.application";
 		};
 		06409F49276932C000ED3B7A /* SubscriptionsTests */ = {
@@ -219,8 +302,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 06409F2C276932BF00ED3B7A;
+			packageReferences = (
+				0680FD8A278A145700A35783 /* XCRemoteSwiftPackageReference "FaviconFinder" */,
+			);
 			productRefGroup = 06409F36276932BF00ED3B7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,7 +324,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DEA569279486D500FC6412 /* Subscriptions-InfoPlist.strings in Resources */,
 				06409F40276932C000ED3B7A /* Preview Assets.xcassets in Resources */,
+				06DEA566279486D400FC6412 /* Localizable.strings in Resources */,
 				06409F3D276932C000ED3B7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +352,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0680FDA0279451A900A35783 /* TipJarView.swift in Sources */,
+				0680FD90278AEF3F00A35783 /* IconPicker.swift in Sources */,
 				06409F42276932C000ED3B7A /* Persistence.swift in Sources */,
+				062020852788D27400CC6836 /* SubscriptionForm.swift in Sources */,
+				0680FD94278B1BBD00A35783 /* SettingsView.swift in Sources */,
+				0680FD8E278AED5800A35783 /* Icons.swift in Sources */,
+				0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */,
 				06409F3B276932BF00ED3B7A /* ContentView.swift in Sources */,
+				0680FD92278B111500A35783 /* ImagePicker.swift in Sources */,
+				0680FD9C278B6D9D00A35783 /* StoreManager.swift in Sources */,
 				06409F45276932C000ED3B7A /* Subscriptions.xcdatamodeld in Sources */,
 				06409F39276932BF00ED3B7A /* SubscriptionsApp.swift in Sources */,
 			);
@@ -275,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06409F4F276932C000ED3B7A /* SubscriptionsTests.swift in Sources */,
+				06DEA62C2794BBD400FC6412 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,9 +400,30 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		06DEA564279486D400FC6412 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06DEA565279486D400FC6412 /* de */,
+				064834EE2795F614002C210C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		06DEA567279486D400FC6412 /* Subscriptions-InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06DEA568279486D500FC6412 /* de */,
+			);
+			name = "Subscriptions-InfoPlist.strings";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		06409F5C276932C000ED3B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 067956CF279B0BC400ED60E8 /* Environment.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -366,6 +485,7 @@
 		};
 		06409F5D276932C000ED3B7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 067956CF279B0BC400ED60E8 /* Environment.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -424,12 +544,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Subscriptions/Subscriptions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Preview Content\"";
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Subscriptions/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,9 +561,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timozacherl.Subscriptions;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Abonementi;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,12 +575,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Subscriptions/Subscriptions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Preview Content\"";
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Subscriptions/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,9 +592,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timozacherl.Subscriptions;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Abonementi;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -593,6 +717,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0680FD8A278A145700A35783 /* XCRemoteSwiftPackageReference "FaviconFinder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OpenSesameManager/FaviconFinder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0680FD8B278A145700A35783 /* FaviconFinder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0680FD8A278A145700A35783 /* XCRemoteSwiftPackageReference "FaviconFinder" */;
+			productName = FaviconFinder;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		06409F43276932C000ED3B7A /* Subscriptions.xcdatamodeld */ = {

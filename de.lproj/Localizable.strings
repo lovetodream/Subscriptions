@@ -1,0 +1,381 @@
+/* No comment provided by engineer. */
+" " = " ";
+
+/* No comment provided by engineer. */
+" (%@)" = " (%@)";
+
+/* No comment provided by engineer. */
+"%@ (%@)" = "%@ (%@)";
+
+/* No comment provided by engineer. */
+"👍" = "👍";
+
+/* No comment provided by engineer. */
+"0.00" = "0,00";
+
+/* No comment provided by engineer. */
+"Acknowledgements" = "Anerkennungen";
+
+/* No comment provided by engineer. */
+"Actions" = "Aktionen";
+
+/* No comment provided by engineer. */
+"Add as many subscriptions as you want, there is no limit 😁." = "Füge so viele Abonnements hinzu, wie du möchtest, es gibt keine Begrenzung 😁.";
+
+/* No comment provided by engineer. */
+"Add end date" = "Enddatum hinzufügen";
+
+/* No comment provided by engineer. */
+"Add Subscription" = "Abonnement hinzufügen";
+
+/* No comment provided by engineer. */
+"Add your first Subscription with the %@ button." = "Füge dein erstes Abonnement mit der Schaltfläche %@ hinzu.";
+
+/* No comment provided by engineer. */
+"Advanced" = "Erweitert";
+
+/* No comment provided by engineer. */
+"And many more to come with future updates" = "Und viele weitere werden mit zukünftigen Updates folgen";
+
+/* No comment provided by engineer. */
+"annually" = "jährlich";
+
+/* No comment provided by engineer. */
+"Are you sure?" = "Bist du sicher?";
+
+/* No comment provided by engineer. */
+"Bill for %@" = "Rechnung für %@";
+
+/* No comment provided by engineer. */
+"Billed" = "Abgerechnet";
+
+/* No comment provided by engineer. */
+"Budget" = "Budget";
+
+/* No comment provided by engineer. */
+"Cancel" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"Cancel this Subscription" = "Dieses Abonnement kündigen";
+
+/* No comment provided by engineer. */
+"Cancellation URL" = "Kündigungslink";
+
+/* No comment provided by engineer. */
+"Choose from gallery" = "Wähle aus der Galerie";
+
+/* No comment provided by engineer. */
+"Choose icon" = "Symbol auswählen";
+
+/* No comment provided by engineer. */
+"Clear ignored months" = "Ignorierte Monate zurücksetzen";
+
+/* No comment provided by engineer. */
+"Close" = "Schließen";
+
+/* No comment provided by engineer. */
+"Color" = "Farbe";
+
+/* No comment provided by engineer. */
+"Contact" = "Kontakt";
+
+/* No comment provided by engineer. */
+"Continue" = "Fortfahren";
+
+/* No comment provided by engineer. */
+"Cosmetics" = "Visuelles";
+
+/* No comment provided by engineer. */
+"Cost" = "Kosten";
+
+/* No comment provided by engineer. */
+"Currency" = "Währung";
+
+/* No comment provided by engineer. */
+"custom circle" = "benutzerdefiniert";
+
+/* No comment provided by engineer. */
+"daily" = "täglich";
+
+/* No comment provided by engineer. */
+"Danger Zone" = "Gefahrenzone";
+
+/* No comment provided by engineer. */
+"Date of last bill" = "Datum der letzten Rechnung";
+
+/* No comment provided by engineer. */
+"days" = "Tage";
+
+/* No comment provided by engineer. */
+"Days" = "Tage";
+
+/* No comment provided by engineer. */
+"Delete this Subscription" = "Dieses Abonnement löschen";
+
+/* No comment provided by engineer. */
+"Deleting a Subscription will completely remove it forever." = "Wenn du ein Abonnement löschst, wird es für immer entfernt.";
+
+/* No comment provided by engineer. */
+"Disclaimer" = "Hinweis";
+
+/* No comment provided by engineer. */
+"Download logo" = "Logo herunterladen";
+
+/* No comment provided by engineer. */
+"Due Subscriptions" = "Fällige Abonnements";
+
+/* No comment provided by engineer. */
+"Due this month: %@" = "Diesen Monat noch fällig: %@";
+
+/* No comment provided by engineer. */
+"Edit" = "Editieren";
+
+/* No comment provided by engineer. */
+"Edit Budget" = "Budget editieren";
+
+/* No comment provided by engineer. */
+"Email" = "E-Mail";
+
+/* No comment provided by engineer. */
+"Enabling iCloud Sync will allow your subscriptions to stay in sync across all your devices." = "Wenn du die iCloud-Synchronisierung aktivierst, werden deine Abonnements auf alle deinen Geräten synchronisiert.";
+
+/* No comment provided by engineer. */
+"Erase all data" = "Alle Daten löschen";
+
+/* No comment provided by engineer. */
+"every six months" = "alle sechs Monate";
+
+/* No comment provided by engineer. */
+"Get notified if your monthly subscription cost exceeds your budget." = "Lasse dich benachrichtigen, wenn deine monatlichen Abonnementkosten dein Budget überschreiten.";
+
+/* No comment provided by engineer. */
+"Hide advanced options" = "Erweiterte Optionen ausblenden";
+
+/* No comment provided by engineer. */
+"https://" = "https://";
+
+/* No comment provided by engineer. */
+"iCloud Sync" = "iCloud-Synchronisierung";
+
+/* No comment provided by engineer. */
+"iCloud Sync will allow your subscriptions to stay in sync across all your devices." = "Mit iCloud-Synchronisierung bleiben Ihre Abonnements auf all Ihren Geräten synchronisiert.";
+
+/* No comment provided by engineer. */
+"iCloud Synchronisation" = "iCloud-Synchronisierung";
+
+/* No comment provided by engineer. */
+"Icon" = "Symbol";
+
+/* No comment provided by engineer. */
+"If your monthly bills exceed the defined budget you'll get notified." = "Wenn deine monatlichen Rechnungen das festgelegte Budget überschreiten, wirst du darauf hingewiesen.";
+
+/* No comment provided by engineer. */
+"Ignore Budget for this month" = "Budget für diesen Monat ignorieren";
+
+/* No comment provided by engineer. */
+"Inactive Subscriptions" = "Inaktive Abonnements";
+
+/* No comment provided by engineer. */
+"Information" = "Information";
+
+/* No comment provided by engineer. */
+"Load logo (favicon) from URL" = "Logo (Favicon) von URL laden";
+
+/* No comment provided by engineer. */
+"monthly" = "monatlich";
+
+/* No comment provided by engineer. */
+"Monthly Budget" = "Monatliches Budget";
+
+/* No comment provided by engineer. */
+"Next Bill" = "Nächste Rechnung";
+
+/* No comment provided by engineer. */
+"No potential matches found..." = "Keine potentiellen Übereinstimmungen gefunden…";
+
+/* No comment provided by engineer. */
+"No third-party tracking or analytics services are used, and no personal data is collected or shared with anyone." = "Es werden keine Tracking- oder Analysedienste von Drittanbietern verwendet, und es werden keine personenbezogenen Daten erhoben oder an Dritte weitergegeben.";
+
+/* No comment provided by engineer. */
+"Note" = "Notiz";
+
+/* No comment provided by engineer. */
+"Once paused, you can resume a subscription at any time in the future." = "Einmal unterbrochen, kannst du ein Abonnement jederzeit wieder fortsetzen.";
+
+/* No comment provided by engineer. */
+"or add a new one" = "oder ein neues hinzufügen";
+
+/* No comment provided by engineer. */
+"Or choose one of these" = "Oder wähle eine der folgenden Möglichkeiten";
+
+/* No comment provided by engineer. */
+"Pause" = "Pausieren";
+
+/* No comment provided by engineer. */
+"Pause this Subscription" = "Dieses Abonnement pausieren";
+
+/* No comment provided by engineer. */
+"Paused since " = "Pausiert seit ";
+
+/* No comment provided by engineer. */
+"Pin" = "Anheften";
+
+/* No comment provided by engineer. */
+"Pin this Subscription" = "Dieses Abonnement anheften";
+
+/* No comment provided by engineer. */
+"Pinned" = "Angeheftet";
+
+/* No comment provided by engineer. */
+"Powerful Suggestions - soon" = "Verbesserte Vorschläge - bald";
+
+/* No comment provided by engineer. */
+"Premium Version" = "Premium Version";
+
+/* No comment provided by engineer. */
+"Previous Bill" = "Vorherige Rechnung";
+
+/* No comment provided by engineer. */
+"Privacy Policy" = "Datenschutzbestimmungen";
+
+/* No comment provided by engineer. */
+"Purchase for %@" = "Für %@ kaufen";
+
+/* No comment provided by engineer. */
+"Purchase not available, try again..." = "Kauf nicht möglich, versuche es erneut...";
+
+/* No comment provided by engineer. */
+"Purchases" = "Kaufoptionen";
+
+/* No comment provided by engineer. */
+"Purchasing Premium helps the developer of this app." = "Der Kauf von Premium hilft dem Entwickler dieser App.";
+
+/* No comment provided by engineer. */
+"quarterly" = "vierteljährlich";
+
+/* No comment provided by engineer. */
+"Reactivate" = "Reaktivieren";
+
+/* No comment provided by engineer. */
+"Remove" = "Entfernen";
+
+/* No comment provided by engineer. */
+"Remove end date" = "Enddatum entfernen";
+
+/* No comment provided by engineer. */
+"Restore Purchase" = "Kauf wiederherstellen";
+
+/* No comment provided by engineer. */
+"Resume" = "Fortsetzen";
+
+/* No comment provided by engineer. */
+"Resume this Subscription" = "Dieses Abonnement fortsetzen";
+
+/* No comment provided by engineer. */
+"Rounded Borders on Icons" = "Abgerundete Ränder bei Symbolen";
+
+/* No comment provided by engineer. */
+"Save" = "Speichern";
+
+/* No comment provided by engineer. */
+"Select a subscription" = "Wähle ein Abonnement";
+
+/* No comment provided by engineer. */
+"Settings" = "Einstellungen";
+
+/* No comment provided by engineer. */
+"Show %lld inactive Subscription" = "Zeige %lld inaktives Abonnement";
+
+/* No comment provided by engineer. */
+"Show %lld inactive Subscriptions" = "Zeige %lld inaktive Abonnements";
+
+/* No comment provided by engineer. */
+"Show advanced options" = "Erweiterte Optionen anzeigen";
+
+/* No comment provided by engineer. */
+"Show License" = "Lizenz anzeigen";
+
+/* No comment provided by engineer. */
+"Subscription added at %@" = "Abonnement am %@ hinzugefügt";
+
+/* No comment provided by engineer. */
+"Subscription ends on" = "Das Abonnement endet am";
+
+/* No comment provided by engineer. */
+"Subscriptions" = "Abonnements";
+
+/* No comment provided by engineer. */
+"Suggestions" = "Vorschläge";
+
+/* No comment provided by engineer. */
+"Suggestions with options to choose between predefined price plans and more." = "Vorschläge mit Optionen zur Auswahl zwischen vordefinierten Preisplänen und mehr.";
+
+/* No comment provided by engineer. */
+"Support" = "Support";
+
+/* No comment provided by engineer. */
+"Thank you so much! %@" = "Herzlichen Dank! %@";
+
+/* No comment provided by engineer. */
+"The tip jar helps keep Abonementi running, and helps with getting regular (and substantial) updates pushed out to you.\n\nIf you enjoy using this app and want to support an independent app developer (that's me, Timo), please consider leaving a tip, an App Store rating/review, or telling a friend about how much you like Abonementi.\n\nThank you for being awesome!" = "Das Trinkgeld hilft, Abonementi am Laufen zu halten und regelmäßige (und umfangreiche) Updates zu erhalten.\n\nWenn dir diese App gefällt und du einen unabhängigen App-Entwickler (das bin ich, Timo) unterstützen möchtest, kannst du mir etwas Trinkgeld oder eine App Store-Bewertung/-Rezension geben. Es hilft auch wenn du einem Freund erzählst, wie sehr dir Abonementi gefällt.\n\nVielen Dank, dass du so fantastisch bist!\n";
+
+/* No comment provided by engineer. */
+"This app was made with %@ by an independent iOS developer called Timo." = "Diese App wurde mit %@ von einem unabhängigen iOS-Entwickler namens Timo erstellt.";
+
+/* No comment provided by engineer. */
+"This is a display only option and does not affect the cost of your subscriptions." = "Dies ist eine reine Anzeigeoption und hat keinen Einfluss auf die Berechnung der Kosten deiner Abonnements.";
+
+/* No comment provided by engineer. */
+"This months bill exceeds your budget by %@." = "Die Rechnung dieses Monats übersteigt dein Budget um %@.";
+
+/* No comment provided by engineer. */
+"This will remove all your subscriptions and corresponding data from the app permanently." = "Durch diese Aktion werden alle deine Abonnements und die entsprechenden Daten dauerhaft aus der App entfernt.";
+
+/* No comment provided by engineer. */
+"This will remove the subscription permanently, it's recommended to pause it instead." = "Dadurch wird das Abonnement dauerhaft entfernt, es wird empfohlen, es stattdessen zu pausieren.";
+
+/* No comment provided by engineer. */
+"This will remove the subscription permanently." = "Dadurch wird das Abonnement dauerhaft entfernt.";
+
+/* No comment provided by engineer. */
+"Tip Jar" = "Trinkgelddose";
+
+/* No comment provided by engineer. */
+"Title" = "Titel";
+
+/* No comment provided by engineer. */
+"Title or URL" = "Titel oder URL";
+
+/* No comment provided by engineer. */
+"Unlimited Subscriptions" = "Unbegrenzte Abonnements";
+
+/* No comment provided by engineer. */
+"Unlock all features" = "Alle Funktionen freischalten";
+
+/* No comment provided by engineer. */
+"Unlock more" = "Mehr freischalten";
+
+/* No comment provided by engineer. */
+"Unpin" = "Loslösen";
+
+/* No comment provided by engineer. */
+"Unpin this Subscription" = "Dieses Abonnement loslösen";
+
+/* No comment provided by engineer. */
+"Website" = "Webseite";
+
+/* No comment provided by engineer. */
+"weekly" = "wöchentlich";
+
+/* No comment provided by engineer. */
+"Why a Tip Jar?" = "Warum eine Trinkgelddose?";
+
+/* No comment provided by engineer. */
+"Will be paused " = "Wird pausiert ";
+
+/* No comment provided by engineer. */
+"You have reached the limit of free active Subscriptions" = "Du hast das Limit der kostenlosen aktiven Abonnements erreicht";
+
+/* No comment provided by engineer. */
+"Your purchase directly supports the indepentent developer of this app." = "Dein Kauf unterstützt direkt den unabhängigen Entwickler dieser App.";
+
