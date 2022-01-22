@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ORGANIZATIONNAME</key>
+	<string>Timo Zacherl</string>
+	<key>FILEHEADER</key>
+	<string> 
+//  ___FILENAME___
+//  ___PRODUCTNAME___
+// 
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+// 
+//  ___COPYRIGHT___
+// 
+//  This program is licensed under the GPL-3.0 License.
+//  A copy of that license should be attached to the bundle.
+//  If not, see &lt;https://www.gnu.org/licenses/&gt;
+// </string>
+</dict>
+</plist>
