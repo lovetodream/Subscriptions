@@ -26,6 +26,7 @@ struct SettingsView: View {
     @AppStorage("monthlyBudget") private var budget = 0.0
     @AppStorage("monthlyBudgetActive") private var budgetActive = false
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
+    @AppStorage("onlyRelevantSubscriptions") private var showOnlyRelevantSubscriptions = false
     
     @State private var showPremiumIAP = false
     @State private var confirmErasing = false
@@ -124,6 +125,14 @@ struct SettingsView: View {
                     }
                 } footer: {
                     Text("Enabling iCloud Sync will allow your subscriptions to stay in sync across all your devices.")
+                }
+                
+                Section {
+                    Toggle(isOn: $showOnlyRelevantSubscriptions) {
+                        Label("Only relevant subscriptions", systemImage: "eye.slash")
+                    }
+                } footer: {
+                    Text("Shows only relevant subscriptions for this month by default. This hides all subscriptions which aren't due for the rest of the month.")
                 }
                 
                 Section {

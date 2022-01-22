@@ -23,6 +23,7 @@ struct ContentView: View {
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
     @AppStorage("monthlyBudget") private var budget = 0.0
     @AppStorage("monthlyBudgetActive") private var budgetActive = false
+    @AppStorage("onlyRelevantSubscriptions") private var showOnlyRelevantSubscriptions = false
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -44,6 +45,7 @@ struct ContentView: View {
     @State private var showSettings = false
     @State private var showPremiumIAP = false
     @State private var highlightAddButton: CGFloat = 0
+    @State private var ignoreOnlyRelevantFlag = false
     
     @State private var searchText = ""
     
@@ -52,7 +54,22 @@ struct ContentView: View {
     
     var searchResult: [Item] {
         if searchText.isEmpty {
-            return items.reversed()
+            return items.filter { item in
+                if showOnlyRelevantSubscriptions && !ignoreOnlyRelevantFlag {
+                    if let nextBill = getNextBill(item, circle: BillingOption(item.billing)) {
+                        let endOfMonth = Date.now.endOfMonth()
+                        return nextBill <= endOfMonth && nextBill >= Calendar.current.startOfDay(for: .now)
+                    }
+                    return false
+                }
+                return true
+            }.sorted { previous, next in
+                if let previousNextBill = getNextBill(previous, circle: BillingOption(previous.billing)),
+                    let nextNextBill = getNextBill(next, circle: BillingOption(next.billing)) {
+                    return previousNextBill < nextNextBill
+                }
+                return previous.timestamp! < next.timestamp!
+             }
         }
         
         return items.filter { $0.title?.lowercased().contains(searchText.lowercased()) ?? false }
@@ -178,6 +195,20 @@ struct ContentView: View {
                     }
                 } header: {
                     Text("Due this month: \(currentMonthCost as NSDecimalNumber, formatter: currencyFormatter)")
+                }
+                
+                if showOnlyRelevantSubscriptions {
+                    Button {
+                        withAnimation {
+                            ignoreOnlyRelevantFlag.toggle()
+                        }
+                    } label: {
+                        if ignoreOnlyRelevantFlag {
+                            Label("Show only relevant subscriptions", systemImage: "eye.slash")
+                        } else {
+                            Label("Show all active subscriptions", systemImage: "eye")
+                        }
+                    }
                 }
                 
                 if archivedItems.count > 0 {
