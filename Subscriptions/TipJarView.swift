@@ -29,27 +29,13 @@ struct TipJarView: View {
     
     var body: some View {
         IAPViewScaffold(success: $success, selectedProduct: $selectedProduct, title: Text("Tip Jar")) {
-            if let selectedProduct = selectedProduct {
-                Button {
-                    if success {
-                        dismiss()
-                    } else {
-                        storeManager.purchaseProduct(product: selectedProduct)
-                    }
-                } label: {
-                    HStack {
-                        Spacer()
-                        if success {
-                            Text("Thank you so much! \(Image(systemName: "heart.fill"))")
-                        } else if let transactionState = storeManager.transactionState, transactionState == .purchasing {
-                            ProgressView()
-                        } else {
-                            Text(selectedProduct.localizedTitle) + Text(" (\(selectedProduct.price.decimalValue, format: .currency(code: selectedProduct.priceLocale.currencyCode ?? Locale.current.currencyCode!)))")
-                        }
-                        Spacer()
-                    }
-                }
+            PurchaseButton(success: $success, product: $selectedProduct) {
+                Text(selectedProduct!.localizedTitle) + Text(" ") +
+                Text(selectedProduct!.price.decimalValue,
+                     format: .currency(code: selectedProduct!.priceLocale.currencyCode
+                                       ?? Locale.current.currencyCode!))
             }
+            .environmentObject(storeManager)
         } content: {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 500))]) {
                 ForEach(availableProducts, id: \.productIdentifier) { product in
