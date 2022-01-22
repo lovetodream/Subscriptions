@@ -12,7 +12,7 @@
 //
 
 import SwiftUI
-import StoreKit
+import StoreKit.SKProduct
 
 struct TipJarView: View {
     @EnvironmentObject var storeManager: StoreManager
@@ -20,20 +20,25 @@ struct TipJarView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var selectedProduct: SKProduct?
-    
-    private var availableProducts: [SKProduct] {
-        storeManager.availableProducts.filter { $0.productIdentifier != Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String }.sorted { $0.price.decimalValue < $1.price.decimalValue }
-    }
-    
     @State private var success = false
     
+    private var availableProducts: [SKProduct] {
+        storeManager.availableProducts.filter {
+            $0.productIdentifier != Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String
+        }.sorted {
+            $0.price.decimalValue < $1.price.decimalValue
+        }
+    }
+    
     var body: some View {
-        IAPViewScaffold(success: $success, selectedProduct: $selectedProduct, title: Text("Tip Jar")) {
-            PurchaseButton(success: $success, product: $selectedProduct) {
+        IAPViewScaffold(success: $success,
+                        selectedProduct: $selectedProduct,
+                        title: Text("Tip Jar")) {
+            PurchaseButton(success: $success,
+                           product: $selectedProduct) {
                 Text(selectedProduct!.localizedTitle) + Text(" ") +
                 Text(selectedProduct!.price.decimalValue,
-                     format: .currency(code: selectedProduct!.priceLocale.currencyCode
-                                       ?? Locale.current.currencyCode!))
+                     format: .currency(code: getCurrencyCode(for: selectedProduct!)))
             }
             .environmentObject(storeManager)
         } content: {
@@ -46,7 +51,8 @@ struct TipJarView: View {
                     } label: {
                         HStack {
                             Spacer()
-                            Text(product.price.decimalValue, format: .currency(code: product.priceLocale.currencyCode ?? Locale.current.currencyCode!))
+                            Text(product.price.decimalValue,
+                                 format: .currency(code: getCurrencyCode(for: product)))
                             Spacer()
                         }
                     }

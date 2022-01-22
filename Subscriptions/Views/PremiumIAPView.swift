@@ -12,7 +12,7 @@
 //
 
 import SwiftUI
-import StoreKit
+import StoreKit.SKProduct
 
 struct PremiumIAPView: View {
     @EnvironmentObject var storeManager: StoreManager

@@ -168,32 +168,15 @@ struct IconPicker: View {
 struct IconPicker_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IconPicker(image: .constant(UIImage()), systemImage: .constant(""), isSystemImage: .constant(false), color: .constant(.accentColor))
-            IconPicker(image: .constant(UIImage()), systemImage: .constant(""), isSystemImage: .constant(false), color: .constant(.accentColor))
+            IconPicker(image: .constant(UIImage()),
+                       systemImage: .constant(""),
+                       isSystemImage: .constant(false),
+                       color: .constant(.accentColor))
+            IconPicker(image: .constant(UIImage()),
+                       systemImage: .constant(""),
+                       isSystemImage: .constant(false),
+                       color: .constant(.accentColor))
                 .preferredColorScheme(.dark)
         }
-    }
-}
-
-struct Shake: GeometryEffect {
-    var amount: CGFloat = 10
-    var shakesPerUnit = 3
-    var animatableData: CGFloat
-
-    func effectValue(size: CGSize) -> ProjectionTransform {
-        ProjectionTransform(CGAffineTransform(translationX:
-            amount * sin(animatableData * .pi * CGFloat(shakesPerUnit)),
-            y: 0))
-    }
-}
-
-struct Bounce: GeometryEffect {
-    var amount: CGFloat = 5
-    var shakesPerUnit = 3
-    var animatableData: CGFloat
-
-    func effectValue(size: CGSize) -> ProjectionTransform {
-        ProjectionTransform(CGAffineTransform(translationX: 0,
-            y: amount * sin(animatableData * .pi * CGFloat(shakesPerUnit))))
     }
 }

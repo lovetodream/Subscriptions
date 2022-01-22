@@ -21,19 +21,12 @@ struct SettingsView: View {
     @Environment(\.managedObjectContext) var viewContext
     
     @AppStorage("currency") private var currency: String = Locale.current.currencyCode ?? "USD"
-    @AppStorage("useCloudKitSync") private var icloudSync = false
+    @AppStorage("useCloudKitSync") private var iCloudSync = false
     @AppStorage(Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String) private var lifetimePremium = false
     @AppStorage("monthlyBudget") private var budget = 0.0
     @AppStorage("monthlyBudgetActive") private var budgetActive = false
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
     
-    private var licenses: [License] = [License(product: "FaviconFinder", content: "", url: URL(string: "https://raw.githubusercontent.com/OpenSesameManager/FaviconFinder/4.0.4/LICENSE.txt")!),
-                                       License(product: "SwiftSoup", content: "", url: URL(string: "https://raw.githubusercontent.com/scinfu/SwiftSoup/2.3.6/LICENSE")!)]
-    
-    @State private var selectedLicense: License?
-    @State private var loadingLicense: License?
-    
-    @State private var failedAttempts: CGFloat = 0.0
     @State private var showPremiumIAP = false
     @State private var confirmErasing = false
     @State private var showTipJar = false
@@ -118,13 +111,13 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    Toggle(isOn: $icloudSync) {
+                    Toggle(isOn: $iCloudSync) {
                         Label("iCloud Sync", systemImage: "icloud")
                     }
-                    .onChange(of: icloudSync) { newValue in
+                    .onChange(of: iCloudSync) { newValue in
                         if newValue && !lifetimePremium {
                             withAnimation {
-                                icloudSync = false
+                                iCloudSync = false
                                 showPremiumIAP.toggle()
                             }
                         }
@@ -163,42 +156,7 @@ struct SettingsView: View {
                 }
                 
                 NavigationLink {
-                    List {
-                        Section {
-                            ForEach(licenses) { license in
-                                HStack {
-                                    Text(license.product)
-                                    Spacer()
-                                    Button {
-                                        withAnimation {
-                                            loadingLicense = license
-                                        }
-                                        getLicense(for: license.url) { lic in
-                                            if let lic = lic {
-                                                withAnimation {
-                                                    loadingLicense = nil
-                                                    self.selectedLicense = License(product: license.product, content: lic, url: license.url)
-                                                }
-                                            } else {
-                                                withAnimation {
-                                                    failedAttempts += 1
-                                                }
-                                            }
-                                        }
-                                    } label: {
-                                        if loadingLicense == license {
-                                            ProgressView()
-                                        } else {
-                                            Text("Show License")
-                                        }
-                                    }
-                                    .disabled(loadingLicense != nil)
-                                }
-                            }
-                        }
-                        .modifier(Shake(animatableData: failedAttempts))
-                    }
-                    .navigationTitle("Acknowledgements")
+                    AcknowledgementView()
                 } label: {
                     Label {
                         Text("Acknowledgements")
@@ -269,27 +227,6 @@ struct SettingsView: View {
                     }
                 }
             }
-            .sheet(item: $selectedLicense) { license in
-                NavigationView {
-                    ScrollView {
-                        Text(license.content)
-                            .lineLimit(.none)
-                            .monospacedDigit()
-                            .font(.system(size: 12, weight: .regular, design: .monospaced))
-                            .padding()
-                    }
-                    .navigationTitle(license.product)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            CloseButton(fill: .secondarySystemBackground) {
-                                withAnimation {
-                                    self.selectedLicense = nil
-                                }
-                            }
-                        }
-                    }
-                }
-            }
             .sheet(isPresented: $showPremiumIAP) {
                 PremiumIAPView()
                     .environmentObject(storeManager)
@@ -308,26 +245,6 @@ struct SettingsView: View {
                 })])
             }
         }
-    }
-    
-    private func getLicense(for url: URL?, completion: @escaping (String?) -> ()) {
-        guard let url = url else {
-            completion(nil)
-            return
-        }
-
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else {
-                completion(nil)
-                return
-            }
-            
-            let license = String(data: data, encoding: .utf8)
-            
-            completion(license)
-        }
-
-        task.resume()
     }
     
     private func deleteAllData(_ entity: String) {
@@ -356,69 +273,30 @@ struct SettingsView_Previews: PreviewProvider {
     }
 }
 
-struct CloseButton: View {
-    var fill: Color = .secondarySystemGroupedBackground
-    var action: () -> ()
+struct LicenseView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    var license: License
     
     var body: some View {
-        Button(action: action, label: {
-            ZStack {
-                Circle()
-                    .fill(fill)
-                    .frame(width: 30, height: 30)
-                
-                Image(systemName: "xmark")
-                    .font(.system(size: 12, weight: .bold, design: .rounded))
-                    .foregroundColor(.secondary)
+        NavigationView {
+            ScrollView {
+                Text(license.content)
+                    .lineLimit(.none)
+                    .monospacedDigit()
+                    .font(.system(size: 12, weight: .regular, design: .monospaced))
+                    .padding()
             }
-            .padding(8)
-            .contentShape(Circle())
-        })
-        .buttonStyle(PlainButtonStyle())
-        .accessibilityLabel(Text("Close"))
-    }
-}
-
-struct License: Identifiable, Equatable {
-    var id = UUID()
-    var product: String
-    var content: String
-    var url: URL
-}
-
-struct SearchBar: UIViewRepresentable {
-
-    @Binding var text: String
-    var placeholder: String
-
-    func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
-        let searchBar = UISearchBar(frame: .zero)
-        searchBar.delegate = context.coordinator
-
-        searchBar.placeholder = placeholder
-        searchBar.autocapitalizationType = .none
-        searchBar.searchBarStyle = .minimal
-        return searchBar
-    }
-
-    func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchBar>) {
-        uiView.text = text
-    }
-
-    func makeCoordinator() -> SearchBar.Coordinator {
-        return Coordinator(text: $text)
-    }
-
-    class Coordinator: NSObject, UISearchBarDelegate {
-
-        @Binding var text: String
-
-        init(text: Binding<String>) {
-            _text = text
-        }
-
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            text = searchText
+            .navigationTitle(license.product)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    CloseButton(fill: .secondarySystemBackground) {
+                        withAnimation {
+                            dismiss()
+                        }
+                    }
+                }
+            }
         }
     }
 }

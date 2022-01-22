@@ -13,6 +13,7 @@
 
 import Foundation
 
+// TODO: This needs some work
 struct Icons {
     static var available = ["pencil.circle.fill",
                             "scribble.variable",

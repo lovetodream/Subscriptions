@@ -11,6 +11,18 @@
 		06047BE4279C3FA3000ADA4D /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BE3279C3FA3000ADA4D /* PurchaseButton.swift */; };
 		06047BE6279C43CC000ADA4D /* RestoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BE5279C43CC000ADA4D /* RestoreButton.swift */; };
 		06047BE8279C4965000ADA4D /* IAPBenefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BE7279C4965000ADA4D /* IAPBenefit.swift */; };
+		06047BED279C71B9000ADA4D /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BEC279C71B9000ADA4D /* Shake.swift */; };
+		06047BEF279C71CB000ADA4D /* Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BEE279C71CB000ADA4D /* Bounce.swift */; };
+		06047BF4279C747F000ADA4D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BF3279C747F000ADA4D /* Currency.swift */; };
+		06047BF6279C8697000ADA4D /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BF5279C8697000ADA4D /* Extension+Color.swift */; };
+		06047BF8279C86F2000ADA4D /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BF7279C86F2000ADA4D /* Extension+UIImage.swift */; };
+		06047BFA279C8BE1000ADA4D /* BillingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BF9279C8BE1000ADA4D /* BillingOption.swift */; };
+		06047BFC279C8C3E000ADA4D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BFB279C8C3E000ADA4D /* SearchBar.swift */; };
+		06047BFE279C8C5D000ADA4D /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BFD279C8C5D000ADA4D /* License.swift */; };
+		06047C00279C8CA2000ADA4D /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047BFF279C8CA2000ADA4D /* CloseButton.swift */; };
+		06047C02279C916A000ADA4D /* SubscriptionDetailsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047C01279C916A000ADA4D /* SubscriptionDetailsForm.swift */; };
+		06047C04279C92E0000ADA4D /* AcknowledgementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047C03279C92E0000ADA4D /* AcknowledgementView.swift */; };
+		06047C06279C93C3000ADA4D /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06047C05279C93C3000ADA4D /* SampleData.swift */; };
 		062020852788D27400CC6836 /* SubscriptionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062020842788D27400CC6836 /* SubscriptionForm.swift */; };
 		06409F39276932BF00ED3B7A /* SubscriptionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F38276932BF00ED3B7A /* SubscriptionsApp.swift */; };
 		06409F3B276932BF00ED3B7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F3A276932BF00ED3B7A /* ContentView.swift */; };
@@ -54,12 +66,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06047BD3279B10B3000ADA4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		06047BD3279B10B3000ADA4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06047BD5279B540B000ADA4D /* .fossa.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .fossa.yml; sourceTree = "<group>"; };
 		06047BD6279B6389000ADA4D /* IAPViewScaffold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPViewScaffold.swift; sourceTree = "<group>"; };
 		06047BE3279C3FA3000ADA4D /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
 		06047BE5279C43CC000ADA4D /* RestoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreButton.swift; sourceTree = "<group>"; };
 		06047BE7279C4965000ADA4D /* IAPBenefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPBenefit.swift; sourceTree = "<group>"; };
+		06047BEC279C71B9000ADA4D /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		06047BEE279C71CB000ADA4D /* Bounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bounce.swift; sourceTree = "<group>"; };
+		06047BF3279C747F000ADA4D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		06047BF5279C8697000ADA4D /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		06047BF7279C86F2000ADA4D /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		06047BF9279C8BE1000ADA4D /* BillingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingOption.swift; sourceTree = "<group>"; };
+		06047BFB279C8C3E000ADA4D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		06047BFD279C8C5D000ADA4D /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		06047BFF279C8CA2000ADA4D /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		06047C01279C916A000ADA4D /* SubscriptionDetailsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailsForm.swift; sourceTree = "<group>"; };
+		06047C03279C92E0000ADA4D /* AcknowledgementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementView.swift; sourceTree = "<group>"; };
+		06047C05279C93C3000ADA4D /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		062020842788D27400CC6836 /* SubscriptionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionForm.swift; sourceTree = "<group>"; };
 		06409F35276932BF00ED3B7A /* Abonementi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abonementi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06409F38276932BF00ED3B7A /* SubscriptionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsApp.swift; sourceTree = "<group>"; };
@@ -128,11 +152,90 @@
 		06047BE2279C378B000ADA4D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0680FD91278B111500A35783 /* ImagePicker.swift */,
 				06047BE3279C3FA3000ADA4D /* PurchaseButton.swift */,
 				06047BE5279C43CC000ADA4D /* RestoreButton.swift */,
 				06047BE7279C4965000ADA4D /* IAPBenefit.swift */,
+				06047BFB279C8C3E000ADA4D /* SearchBar.swift */,
+				06047BFF279C8CA2000ADA4D /* CloseButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		06047BE9279C70AC000ADA4D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06047BD3279B10B3000ADA4D /* Info.plist */,
+				067956CF279B0BC400ED60E8 /* Environment.xcconfig */,
+				0680FD95278B5ED200A35783 /* Subscriptions.entitlements */,
+				06DEA567279486D400FC6412 /* Subscriptions-InfoPlist.strings */,
+				06DEA564279486D400FC6412 /* Localizable.strings */,
+				06409F3C276932C000ED3B7A /* Assets.xcassets */,
+				06409F3E276932C000ED3B7A /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		06047BEA279C70EF000ADA4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06047BF9279C8BE1000ADA4D /* BillingOption.swift */,
+				0680FD8D278AED5800A35783 /* Icons.swift */,
+				06409F43276932C000ED3B7A /* Subscriptions.xcdatamodeld */,
+				06047BFD279C8C5D000ADA4D /* License.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06047BEB279C7198000ADA4D /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				06047BEE279C71CB000ADA4D /* Bounce.swift */,
+				06047BEC279C71B9000ADA4D /* Shake.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		06047BF0279C73DC000ADA4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06047C03279C92E0000ADA4D /* AcknowledgementView.swift */,
+				0680FD8F278AEF3F00A35783 /* IconPicker.swift */,
+				0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */,
+				0680FD93278B1BBD00A35783 /* SettingsView.swift */,
+				062020842788D27400CC6836 /* SubscriptionForm.swift */,
+				06047C01279C916A000ADA4D /* SubscriptionDetailsForm.swift */,
+				0680FD9F279451A800A35783 /* TipJarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06047BF1279C73EA000ADA4D /* Scaffolds */ = {
+			isa = PBXGroup;
+			children = (
+				06047BD6279B6389000ADA4D /* IAPViewScaffold.swift */,
+			);
+			path = Scaffolds;
+			sourceTree = "<group>";
+		};
+		06047BF2279C7442000ADA4D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				06047BF3279C747F000ADA4D /* Currency.swift */,
+				06047BF5279C8697000ADA4D /* Extension+Color.swift */,
+				06047BF7279C86F2000ADA4D /* Extension+UIImage.swift */,
+				06047C05279C93C3000ADA4D /* SampleData.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		06047C07279C9573000ADA4D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				06409F41276932C000ED3B7A /* Persistence.swift */,
+				0680FD9B278B6D9D00A35783 /* StoreManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		06409F2C276932BF00ED3B7A = {
@@ -143,8 +246,6 @@
 				06DEA5CE2794BBBE00FC6412 /* fastlane */,
 				06DEA56D2794BABE00FC6412 /* Gemfile.lock */,
 				06DEA56A2794B67400FC6412 /* Gemfile */,
-				06DEA567279486D400FC6412 /* Subscriptions-InfoPlist.strings */,
-				06DEA564279486D400FC6412 /* Localizable.strings */,
 				06409F37276932BF00ED3B7A /* Subscriptions */,
 				06409F4D276932C000ED3B7A /* SubscriptionsTests */,
 				06409F57276932C000ED3B7A /* SubscriptionsUITests */,
@@ -166,25 +267,16 @@
 		06409F37276932BF00ED3B7A /* Subscriptions */ = {
 			isa = PBXGroup;
 			children = (
-				06047BE2279C378B000ADA4D /* Components */,
-				06047BD3279B10B3000ADA4D /* Info.plist */,
-				0680FD95278B5ED200A35783 /* Subscriptions.entitlements */,
 				06409F38276932BF00ED3B7A /* SubscriptionsApp.swift */,
+				06047BEB279C7198000ADA4D /* Animations */,
+				06047BE2279C378B000ADA4D /* Components */,
+				06047BEA279C70EF000ADA4D /* Model */,
+				06047BF0279C73DC000ADA4D /* Views */,
+				06047BF1279C73EA000ADA4D /* Scaffolds */,
+				06047C07279C9573000ADA4D /* Services */,
+				06047BF2279C7442000ADA4D /* Utility */,
 				06409F3A276932BF00ED3B7A /* ContentView.swift */,
-				0680FD9F279451A800A35783 /* TipJarView.swift */,
-				0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */,
-				06047BD6279B6389000ADA4D /* IAPViewScaffold.swift */,
-				0680FD93278B1BBD00A35783 /* SettingsView.swift */,
-				062020842788D27400CC6836 /* SubscriptionForm.swift */,
-				0680FD8F278AEF3F00A35783 /* IconPicker.swift */,
-				0680FD91278B111500A35783 /* ImagePicker.swift */,
-				0680FD9B278B6D9D00A35783 /* StoreManager.swift */,
-				0680FD8D278AED5800A35783 /* Icons.swift */,
-				067956CF279B0BC400ED60E8 /* Environment.xcconfig */,
-				06409F3C276932C000ED3B7A /* Assets.xcassets */,
-				06409F41276932C000ED3B7A /* Persistence.swift */,
-				06409F43276932C000ED3B7A /* Subscriptions.xcdatamodeld */,
-				06409F3E276932C000ED3B7A /* Preview Content */,
+				06047BE9279C70AC000ADA4D /* Resources */,
 			);
 			path = Subscriptions;
 			sourceTree = "<group>";
@@ -375,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06047BF8279C86F2000ADA4D /* Extension+UIImage.swift in Sources */,
 				06047BE4279C3FA3000ADA4D /* PurchaseButton.swift in Sources */,
 				0680FDA0279451A900A35783 /* TipJarView.swift in Sources */,
 				06047BE8279C4965000ADA4D /* IAPBenefit.swift in Sources */,
@@ -382,13 +475,24 @@
 				06409F42276932C000ED3B7A /* Persistence.swift in Sources */,
 				062020852788D27400CC6836 /* SubscriptionForm.swift in Sources */,
 				06047BD7279B6389000ADA4D /* IAPViewScaffold.swift in Sources */,
+				06047BF6279C8697000ADA4D /* Extension+Color.swift in Sources */,
 				0680FD94278B1BBD00A35783 /* SettingsView.swift in Sources */,
 				0680FD8E278AED5800A35783 /* Icons.swift in Sources */,
+				06047BFE279C8C5D000ADA4D /* License.swift in Sources */,
 				0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */,
+				06047BF4279C747F000ADA4D /* Currency.swift in Sources */,
+				06047BED279C71B9000ADA4D /* Shake.swift in Sources */,
+				06047C06279C93C3000ADA4D /* SampleData.swift in Sources */,
+				06047C04279C92E0000ADA4D /* AcknowledgementView.swift in Sources */,
+				06047C02279C916A000ADA4D /* SubscriptionDetailsForm.swift in Sources */,
+				06047C00279C8CA2000ADA4D /* CloseButton.swift in Sources */,
+				06047BFA279C8BE1000ADA4D /* BillingOption.swift in Sources */,
 				06409F3B276932BF00ED3B7A /* ContentView.swift in Sources */,
+				06047BFC279C8C3E000ADA4D /* SearchBar.swift in Sources */,
 				0680FD92278B111500A35783 /* ImagePicker.swift in Sources */,
 				0680FD9C278B6D9D00A35783 /* StoreManager.swift in Sources */,
 				06047BE6279C43CC000ADA4D /* RestoreButton.swift in Sources */,
+				06047BEF279C71CB000ADA4D /* Bounce.swift in Sources */,
 				06409F45276932C000ED3B7A /* Subscriptions.xcdatamodeld in Sources */,
 				06409F39276932BF00ED3B7A /* SubscriptionsApp.swift in Sources */,
 			);
@@ -571,14 +675,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Subscriptions/Subscriptions.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Subscriptions/Resources/Subscriptions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Subscriptions/Info.plist;
+				INFOPLIST_FILE = Subscriptions/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -602,14 +706,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Subscriptions/Subscriptions.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Subscriptions/Resources/Subscriptions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Subscriptions/Info.plist;
+				INFOPLIST_FILE = Subscriptions/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

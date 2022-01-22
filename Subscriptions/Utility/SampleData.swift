@@ -1,82 +1,23 @@
-//
-//  Persistence.swift
+// 
+//  SampleData.swift
 //  Subscriptions
-//
-//  Created by Timo Zacherl on 14.12.21.
-//
-//  Copyright © 2021 Timo Zacherl. All rights reserved.
-//
+// 
+//  Created by Timo Zacherl on 22.01.22.
+// 
+//  Copyright © 2022 Timo Zacherl. All rights reserved.
+// 
 //  This program is licensed under the GPL-3.0 License.
 //  A copy of that license should be attached to the bundle.
 //  If not, see <https://www.gnu.org/licenses/>
 //
 
+// MARK: The contents of this file are not supposed to use anywhere, except for development or debugging
+
+import Foundation
 import CoreData
 
-struct PersistenceController {
-    static let shared = PersistenceController()
-
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        insertSampleData(viewContext: viewContext)
-        return result
-    }()
-
-    let container: NSPersistentContainer
-
-    init(inMemory: Bool = false) {
-        let useCloudKit = UserDefaults.standard.bool(forKey: "useCloudKitSync")
-        
-        if useCloudKit {
-            container = NSPersistentCloudKitContainer(name: "Subscriptions")
-        } else {
-            container = NSPersistentContainer(name: "Subscriptions")
-            let description = container.persistentStoreDescriptions.first
-            // This allows a 'non-iCloud' sycning container to keep track of changes if a user changes their mind and turns it on.
-            description?.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
-        }
-        if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
-        }
-        container.viewContext.automaticallyMergesChangesFromParent = true
-        container.loadPersistentStores(completionHandler: { [self] (storeDescription, error) in
-            
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-
-                /*
-                Typical reasons for an error here include:
-                * The parent directory does not exist, cannot be created, or disallows writing.
-                * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                * The device is out of space.
-                * The store could not be migrated to the current model version.
-                Check the error message to determine what the actual problem was.
-                */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-            
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-            fetchRequest.returnsObjectsAsFaults = false
-//            The following is only for testing and shouldn't really be here maybe?
-//            do {
-//                let results = try self.container.viewContext.fetch(fetchRequest)
-//                for object in results {
-//                    guard let objectData = object as? NSManagedObject else {continue}
-//                    self.container.viewContext.delete(objectData)
-//                }
-//                insertSampleData(viewContext: self.container.viewContext)
-//                UserDefaults.standard.set(true, forKey: Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String)
-//            } catch let error {
-//                print("Detele all data in Item error :", error)
-//            }
-        })
-    }
-}
-
-// Find a better place for this stuff?
-fileprivate func insertSampleData(viewContext: NSManagedObjectContext) {
+/// - Warning: This  should not be used anywhere, except for development or debugging
+func insertSampleData(viewContext: NSManagedObjectContext) {
     let titles = ["Netflix", "Sky Ticket", "Apple Developer", "Disney+", "Apple ONE", "Playstation Plus", "Github Sponsors", "Amazon Prime", "Tesla Premium Connectivity", "Hetzner Server"]
     let prices: [NSDecimalNumber] = [16.99, 9.99, 99.99, 89.90, 28.95, 59.99, 9.98, 69.00, 9.99, 34.51]
     let billingCircles: [BillingOption] = [.monthly, .monthly, .annually, .annually, .monthly, .annually, .monthly, .annually, .monthly, .monthly]
