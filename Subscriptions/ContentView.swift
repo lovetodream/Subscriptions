@@ -49,9 +49,6 @@ struct ContentView: View {
     
     @State private var searchText = ""
     
-    // Little hack here
-    @State private var significantTimeChanges = 0
-    
     var searchResult: [Item] {
         if searchText.isEmpty {
             return items.filter { item in
@@ -314,8 +311,7 @@ struct ContentView: View {
             SKPaymentQueue.default().add(storeManager)
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification)) { output in
-            print(output)
-            significantTimeChanges += 1
+            viewContext.refreshAllObjects()
         }
     }
     
