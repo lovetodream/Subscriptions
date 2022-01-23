@@ -113,7 +113,7 @@ func getPreviousBill(_ item: Item, circle: BillingOption) -> Date? {
         case .weekly:
             let weekdayOfFirstBill = Calendar.current.dateComponents([.weekday], from: firstBilling).weekday!
             var previousBilling = Calendar.current.date(bySetting: .weekday, value: weekdayOfFirstBill, of: today)!
-            if previousBilling.compare(today) == .orderedDescending {
+            if previousBilling.compare(today) != .orderedDescending {
                 previousBilling = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: previousBilling)!
             }
             return previousBilling
@@ -121,7 +121,7 @@ func getPreviousBill(_ item: Item, circle: BillingOption) -> Date? {
             var components = DateComponents()
             components.day = Calendar.current.dateComponents([.day], from: firstBilling).day!
             var previousBilling = Calendar.current.date(bySetting: .day, value: components.day!, of: today)!
-            if previousBilling.compare(today) == .orderedDescending {
+            if previousBilling.compare(today) != .orderedDescending {
                 previousBilling = Calendar.current.date(byAdding: .month, value: -1, to: previousBilling)!
             }
             return previousBilling
