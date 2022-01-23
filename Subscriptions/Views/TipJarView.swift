@@ -22,12 +22,24 @@ struct TipJarView: View {
     @State private var selectedProduct: SKProduct?
     @State private var success = false
     
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Tip.timestamp, ascending: true)], animation: .default)
+    private var previousPurchases: FetchedResults<Tip>
+    
     private var availableProducts: [SKProduct] {
         storeManager.availableProducts.filter {
             $0.productIdentifier != Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String
         }.sorted {
             $0.price.decimalValue < $1.price.decimalValue
         }
+    }
+    
+    private var fullPurchaseAmount: (Decimal, String) {
+        // Purchases in different currencies are ignored, the locale of the last purchase will be used
+        var price: Decimal = 0
+        previousPurchases.forEach { tip in
+            price += tip.price?.decimalValue ?? 0
+        }
+        return (price, previousPurchases.last?.currency ?? Locale.current.currencyCode ?? "USD")
     }
     
     var body: some View {
@@ -67,6 +79,10 @@ struct TipJarView: View {
                 .onAppear {
                     selectedProduct = availableProducts.first
                 }
+            }
+            
+            VStack {
+                Text("You have tipped a total of \(fullPurchaseAmount.0, format: .currency(code: fullPurchaseAmount.1))")
             }
             
             VStack {

@@ -13,6 +13,7 @@
 
 import Foundation
 import StoreKit
+import CoreData
 
 class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     var productIDs: [String] = {
@@ -66,6 +67,8 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPay
                 print(transaction.payment.productIdentifier)
                 if transaction.payment.productIdentifier == Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String {
                     UserDefaults.standard.setValue(true, forKey: transaction.payment.productIdentifier)
+                } else if (Bundle.main.object(forInfoDictionaryKey: "tipIAPs") as! [String]).contains(where: { $0 == transaction.payment.productIdentifier }) {
+                    storeTipPurchase(transaction)
                 }
                 queue.finishTransaction(transaction)
                 transactionState = .purchased
@@ -98,5 +101,17 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPay
     func restoreProducts() {
         print("Restoring products ...")
         SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
+    func storeTipPurchase(_ transaction: SKPaymentTransaction) {
+        let context = PersistenceController.shared.container.viewContext
+        let affectedProduct = availableProducts.first(where: { $0.productIdentifier == transaction.payment.productIdentifier })
+        let newTip = Tip(context: context)
+        newTip.timestamp = transaction.transactionDate
+        newTip.transactionID = transaction.transactionIdentifier
+        newTip.productID = transaction.payment.productIdentifier
+        newTip.currency = affectedProduct?.priceLocale.currencyCode
+        newTip.price = affectedProduct?.price
+        try? context.save()
     }
 }

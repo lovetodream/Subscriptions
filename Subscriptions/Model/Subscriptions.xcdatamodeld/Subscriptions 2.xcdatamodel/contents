@@ -29,15 +29,16 @@
     </entity>
     <entity name="Tip" representedClassName="Tip" syncable="YES" codeGenerationType="class">
         <attribute name="currency" optional="YES" attributeType="String"/>
-        <attribute name="iapID" optional="YES" attributeType="String"/>
         <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="productID" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="transactionID" optional="YES" attributeType="String"/>
     </entity>
     <fetchRequest name="ActiveSubscriptions" entity="Item" predicateString="active == 1 AND deactivationDate &lt; CAST(Date.now.timeIntervalSince1970, &quot;NSDate&quot;)"/>
     <elements>
         <element name="IgnoredBudgetMonth" positionX="144" positionY="108" width="128" height="44"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="299"/>
         <element name="Reminder" positionX="350.96484375" positionY="54" width="154.99609375" height="73"/>
-        <element name="Tip" positionX="144" positionY="126" width="128" height="89"/>
+        <element name="Tip" positionX="144" positionY="126" width="128" height="104"/>
     </elements>
 </model>
