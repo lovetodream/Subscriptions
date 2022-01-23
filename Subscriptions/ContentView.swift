@@ -444,12 +444,12 @@ struct SubscriptionDetailView: View {
                         }
                     }
                     if let cancellationDate = item.deactivationDate {
-                        if cancellationDate.compare(calendar.startOfDay(for: .now)) == .orderedDescending {
-                            Text("Will be paused ")
-                            Spacer()
-                            Text(cancellationDate, formatter: relativeDateFormatter)
-                        } else {
-                            Text("Paused since ")
+                        HStack {
+                            if cancellationDate.compare(calendar.startOfDay(for: .now)) == .orderedDescending {
+                                Text("Will be paused ")
+                            } else {
+                                Text("Paused since ")
+                            }
                             Spacer()
                             Text(cancellationDate, formatter: relativeDateFormatter)
                         }
