@@ -92,6 +92,7 @@
 		06047C0A279C98BC000ADA4D /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		06047C0C279C99D4000ADA4D /* DateCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculations.swift; sourceTree = "<group>"; };
 		06047C0E279C9C19000ADA4D /* SubscriptionItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionItems.swift; sourceTree = "<group>"; };
+		06047C10279D85CE000ADA4D /* Subscriptions 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Subscriptions 2.xcdatamodel"; sourceTree = "<group>"; };
 		062020842788D27400CC6836 /* SubscriptionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionForm.swift; sourceTree = "<group>"; };
 		06409F35276932BF00ED3B7A /* Abonementi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abonementi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06409F38276932BF00ED3B7A /* SubscriptionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsApp.swift; sourceTree = "<group>"; };
@@ -890,9 +891,10 @@
 		06409F43276932C000ED3B7A /* Subscriptions.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				06047C10279D85CE000ADA4D /* Subscriptions 2.xcdatamodel */,
 				06409F44276932C000ED3B7A /* Subscriptions.xcdatamodel */,
 			);
-			currentVersion = 06409F44276932C000ED3B7A /* Subscriptions.xcdatamodel */;
+			currentVersion = 06047C10279D85CE000ADA4D /* Subscriptions 2.xcdatamodel */;
 			path = Subscriptions.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
