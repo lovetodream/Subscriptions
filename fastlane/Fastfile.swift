@@ -9,9 +9,30 @@
 import Foundation
 
 class Fastfile: LaneFile {
+    let xcodeproj = OptionalConfigValue(stringLiteral: "Subscriptions.xcodeproj")
+    let appleID = OptionalConfigValue(stringLiteral: environmentVariable(get: "APPLE_ID"))
+    
 	func screenshotsLane() {
-	desc("Generate new localized screenshots")
+        desc("Generate new localized screenshots")
 		captureScreenshots(scheme: "SubscriptionsUITests")
-        uploadToAppStore(username: Bundle.main.object(forInfoDictionaryKey: "appleID") as! String, appIdentifier: "com.timozacherl.Subscriptions", skipBinaryUpload: true, skipMetadata: true)
+        uploadToAppStore(username: "appleID", appIdentifier: "com.timozacherl.Subscriptions", skipBinaryUpload: true, skipMetadata: true)
 	}
+    
+    func releaseLane() {
+        desc("Upload a new build to TestFlight")
+        
+        incrementBuildNumber(xcodeproj: xcodeproj)
+        
+        let buildNumber = getBuildNumber()
+        
+        commitVersionBump(message: "build: version bump to \(buildNumber)", xcodeproj: xcodeproj)
+        
+        addGitTag()
+        
+        pushToGitRemote()
+        
+        buildIosApp(scheme: "Subscriptions")
+        
+        uploadToTestflight(appleId: "appleID")
+    }
 }

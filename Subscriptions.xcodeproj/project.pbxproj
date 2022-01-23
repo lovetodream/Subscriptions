@@ -50,7 +50,6 @@
 		0680FDA0279451A900A35783 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9F279451A800A35783 /* TipJarView.swift */; };
 		06DEA566279486D400FC6412 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA564279486D400FC6412 /* Localizable.strings */; };
 		06DEA569279486D500FC6412 /* Subscriptions-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA567279486D400FC6412 /* Subscriptions-InfoPlist.strings */; };
-		06DEA62C2794BBD400FC6412 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEA5D12794BBBE00FC6412 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,11 +124,6 @@
 		06DEA568279486D500FC6412 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "de.lproj/Subscriptions-InfoPlist.strings"; sourceTree = "<group>"; };
 		06DEA56A2794B67400FC6412 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		06DEA56D2794BABE00FC6412 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
-		06DEA5CF2794BBBE00FC6412 /* Fastfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fastfile.swift; sourceTree = "<group>"; };
-		06DEA5D02794BBBE00FC6412 /* Snapfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapfile.swift; sourceTree = "<group>"; };
-		06DEA5D12794BBBE00FC6412 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
-		06DEA5FD2794BBBE00FC6412 /* Appfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appfile.swift; sourceTree = "<group>"; };
-		06DEA5FE2794BBBE00FC6412 /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,7 +253,6 @@
 			children = (
 				06047BD5279B540B000ADA4D /* .fossa.yml */,
 				067956D0279B0C8700ED60E8 /* .gitignore */,
-				06DEA5CE2794BBBE00FC6412 /* fastlane */,
 				06DEA56D2794BABE00FC6412 /* Gemfile.lock */,
 				06DEA56A2794B67400FC6412 /* Gemfile */,
 				06409F37276932BF00ED3B7A /* Subscriptions */,
@@ -329,18 +322,6 @@
 				0680FD97278B5ED800A35783 /* CloudKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		06DEA5CE2794BBBE00FC6412 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				06DEA5CF2794BBBE00FC6412 /* Fastfile.swift */,
-				06DEA5D02794BBBE00FC6412 /* Snapfile.swift */,
-				06DEA5D12794BBBE00FC6412 /* SnapshotHelper.swift */,
-				06DEA5FD2794BBBE00FC6412 /* Appfile.swift */,
-				06DEA5FE2794BBBE00FC6412 /* Snapfile */,
-			);
-			path = fastlane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,7 +505,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06409F4F276932C000ED3B7A /* SubscriptionsTests.swift in Sources */,
-				06DEA62C2794BBD400FC6412 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +687,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CODE_SIGN_ENTITLEMENTS = Subscriptions/Resources/Subscriptions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				ENABLE_PREVIEWS = YES;
@@ -722,7 +702,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timozacherl.Subscriptions;
 				PRODUCT_NAME = Abonementi;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -739,7 +719,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CODE_SIGN_ENTITLEMENTS = Subscriptions/Resources/Subscriptions.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Subscriptions/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				ENABLE_PREVIEWS = YES;
@@ -754,7 +734,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timozacherl.Subscriptions;
 				PRODUCT_NAME = Abonementi;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -769,7 +749,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -789,7 +769,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -808,7 +788,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -826,7 +806,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = V7ET8TF7ZR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;

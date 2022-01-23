@@ -2,14 +2,14 @@ import Foundation
 
 var appIdentifier: String { return "com.timozacherl.Subscriptions" } // The bundle identifier of your app
 var appleID: String {
-    return Bundle.main.object(forInfoDictionaryKey: "appleID") as! String
+    return environmentVariable(get: "APPLE_ID")
 } // Your Apple email address
 
 var itcTeam: String? {
-    return Bundle.main.object(forInfoDictionaryKey: "connectTeamID") as! String
+    return environmentVariable(get: "CONNECT_TEAM_ID")
 } // App Store Connect Team ID
 var teamID: String {
-    return Bundle.main.object(forInfoDictionaryKey: "developerTeamID") as! String
+    return environmentVariable(get: "DEV_PORTAL_TEAM_ID")
 } // Apple Developer Portal Team ID
 
 

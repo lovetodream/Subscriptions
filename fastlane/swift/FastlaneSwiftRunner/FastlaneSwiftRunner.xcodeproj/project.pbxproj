@@ -43,6 +43,8 @@
 /* Begin PBXFileReference section */
 		0311E386230AC1B20060BB5C /* Plugins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plugins.swift; path = ../Plugins.swift; sourceTree = "<group>"; };
 		0311E38A230AC9490060BB5C /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Actions.swift; path = ../Actions.swift; sourceTree = "<group>"; };
+		06047C18279DF3D9000ADA4D /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; name = .env; path = ../../.env; sourceTree = "<group>"; };
+		06047C19279DF3D9000ADA4D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../../.gitignore; sourceTree = "<group>"; };
 		1257253824B7992B00E04FA3 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../main.swift; sourceTree = "<group>"; };
 		12D2EB8C2620D83B00844013 /* OptionalConfigValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OptionalConfigValue.swift; path = ../OptionalConfigValue.swift; sourceTree = "<group>"; };
 		B30206741F5E3E9000DE6EBD /* SnapshotfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotfileProtocol.swift; path = ../SnapshotfileProtocol.swift; sourceTree = "<group>"; };
@@ -114,6 +116,8 @@
 				D55B28C01F6C588300DC42C5 /* Scanfile.swift */,
 				D55B28C11F6C588300DC42C5 /* Screengrabfile.swift */,
 				D55B28C21F6C588300DC42C5 /* Snapshotfile.swift */,
+				06047C18279DF3D9000ADA4D /* .env */,
+				06047C19279DF3D9000ADA4D /* .gitignore */,
 			);
 			name = "Fastlane Runner";
 			sourceTree = "<group>";
