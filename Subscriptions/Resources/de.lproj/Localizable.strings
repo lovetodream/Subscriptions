@@ -53,6 +53,9 @@
 "Budget" = "Budget";
 
 /* No comment provided by engineer. */
+"Buy this fancy stuff!" = "Kauf den nicen Stuff!";
+
+/* No comment provided by engineer. */
 "Cancel" = "Abbrechen";
 
 /* No comment provided by engineer. */
@@ -182,6 +185,9 @@
 "Load logo (favicon) from URL" = "Logo (Favicon) von URL laden";
 
 /* No comment provided by engineer. */
+"May the force be with me" = "Möge die Macht mit dir sein";
+
+/* No comment provided by engineer. */
 "monthly" = "monatlich";
 
 /* No comment provided by engineer. */
@@ -201,6 +207,9 @@
 
 /* No comment provided by engineer. */
 "Once paused, you can resume a subscription at any time in the future." = "Einmal unterbrochen, kannst du ein Abonnement jederzeit wieder fortsetzen.";
+
+/* No comment provided by engineer. */
+"Only relevant subscriptions" = "Nur relevante Abonnements";
 
 /* No comment provided by engineer. */
 "or add a new one" = "oder ein neues hinzufügen";
@@ -293,7 +302,16 @@
 "Show advanced options" = "Erweiterte Optionen anzeigen";
 
 /* No comment provided by engineer. */
+"Show all active subscriptions" = "Alle aktiven Abonnements anzeigen";
+
+/* No comment provided by engineer. */
 "Show License" = "Lizenz anzeigen";
+
+/* No comment provided by engineer. */
+"Show only relevant subscriptions" = "Nur relevante Abonnements anzeigen";
+
+/* No comment provided by engineer. */
+"Shows only relevant subscriptions for this month by default. This hides all subscriptions which aren't due for the rest of the month." = "Zeigt standardmäßig nur relevante Abonnements für diesen Monat an. Dadurch werden alle Abonnements ausgeblendet, die für den Rest des Monats noch nicht fällig sind.";
 
 /* No comment provided by engineer. */
 "Subscription added at %@" = "Abonnement am %@ hinzugefügt";
@@ -320,7 +338,13 @@
 "The tip jar helps keep Abonementi running, and helps with getting regular (and substantial) updates pushed out to you.\n\nIf you enjoy using this app and want to support an independent app developer (that's me, Timo), please consider leaving a tip, an App Store rating/review, or telling a friend about how much you like Abonementi.\n\nThank you for being awesome!" = "Das Trinkgeld hilft, Abonementi am Laufen zu halten und regelmäßige (und umfangreiche) Updates zu erhalten.\n\nWenn dir diese App gefällt und du einen unabhängigen App-Entwickler (das bin ich, Timo) unterstützen möchtest, kannst du mir etwas Trinkgeld oder eine App Store-Bewertung/-Rezension geben. Es hilft auch wenn du einem Freund erzählst, wie sehr dir Abonementi gefällt.\n\nVielen Dank, dass du so fantastisch bist!\n";
 
 /* No comment provided by engineer. */
+"This adds Chewbacca to your crew" = "Dies fügt Chewbacca zu deiner Crew hinzu";
+
+/* No comment provided by engineer. */
 "This app was made with %@ by an independent iOS developer called Timo." = "Diese App wurde mit %@ von einem unabhängigen iOS-Entwickler namens Timo erstellt.";
+
+/* No comment provided by engineer. */
+"This beats Darth Sidious with one purchase" = "Dies besiegt Darth Sidious mit einem Kauf";
 
 /* No comment provided by engineer. */
 "This is a display only option and does not affect the cost of your subscriptions." = "Dies ist eine reine Anzeigeoption und hat keinen Einfluss auf die Berechnung der Kosten deiner Abonnements.";
@@ -375,6 +399,12 @@
 
 /* No comment provided by engineer. */
 "You have reached the limit of free active Subscriptions" = "Du hast das Limit der kostenlosen aktiven Abonnements erreicht";
+
+/* No comment provided by engineer. */
+"You have tipped a total of %@" = "Du hast insgesamt %@ Trinkgeld gegeben.";
+
+/* No comment provided by engineer. */
+"Your purchase directly supports the independent developer of this app." = "Dein Kauf unterstützt direkt den unabhängigen Entwickler dieser App.";
 
 /* No comment provided by engineer. */
 "Your purchase directly supports the indepentent developer of this app." = "Dein Kauf unterstützt direkt den unabhängigen Entwickler dieser App.";
