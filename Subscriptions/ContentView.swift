@@ -372,6 +372,11 @@ struct ContentView: View {
                 break
             }
         }
+        .onShake {
+            withAnimation {
+                privacyMode.toggle()
+            }
+        }
     }
     
     private func deleteItems(offsets: IndexSet) {
@@ -485,9 +490,6 @@ struct SubscriptionDetailView: View {
                         }
                         .font(.body.weight(.semibold))
                         .privacySensitive()
-                        .onLongPressGesture {
-                            privacyMode.toggle()
-                        }
                     }
                 }
                 if let billing = item.billing {
