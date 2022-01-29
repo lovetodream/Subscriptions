@@ -35,8 +35,10 @@ class StoreManager: NSObject, ObservableObject, SKProductsRequestDelegate, SKPay
             
         if !response.products.isEmpty {
             for fetchedProduct in response.products {
-                DispatchQueue.main.async {
-                    self.availableProducts.append(fetchedProduct)
+                if !self.availableProducts.contains(where: { $0.productIdentifier == fetchedProduct.productIdentifier }) {
+                    DispatchQueue.main.async {
+                        self.availableProducts.append(fetchedProduct)
+                    }
                 }
             }
         }
