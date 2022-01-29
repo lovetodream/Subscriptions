@@ -23,23 +23,28 @@ struct PersistenceController {
         return result
     }()
 
-    let container: NSPersistentContainer
+    let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
         let useCloudKit = UserDefaults.standard.bool(forKey: "useCloudKitSync")
         
-        if useCloudKit {
-            container = NSPersistentCloudKitContainer(name: "Subscriptions")
-        } else {
-            container = NSPersistentContainer(name: "Subscriptions")
-            let description = container.persistentStoreDescriptions.first
-            // This allows a 'non-iCloud' syncing container to keep track of changes if a user changes their mind and turns it on.
-            description?.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
-        }
+        container = NSPersistentCloudKitContainer(name: "Subscriptions")
+                    
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        container.viewContext.automaticallyMergesChangesFromParent = true
+        
+        guard let storeDescription = container.persistentStoreDescriptions.first else {
+            fatalError("###\(#function): Failed to retrieve a persistent store description.")
+        }
+        
+        storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+        storeDescription.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+        
+        if !useCloudKit {
+            storeDescription.cloudKitContainerOptions = nil
+        }
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             
             if let error = error as NSError? {
@@ -56,10 +61,21 @@ struct PersistenceController {
                 */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-            
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-            fetchRequest.returnsObjectsAsFaults = false
 
         })
+        
+        #if DEBUG
+        if useCloudKit {
+            do {
+                try container.initializeCloudKitSchema(options: [])
+            } catch {
+                fatalError("Unresolved error \(error)")
+            }
+        }
+        #endif
+        
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        
+        // TODO: handle toggle of iCloud options
     }
 }
