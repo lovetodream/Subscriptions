@@ -75,11 +75,5 @@ struct PersistenceController {
         #endif
         
         container.viewContext.automaticallyMergesChangesFromParent = true
-        
-        // TODO: handle toggle of iCloud options
-    }
-    
-    func initializeContainer(inMemory: Bool = false) {
-        
     }
 }

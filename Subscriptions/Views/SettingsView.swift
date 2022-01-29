@@ -13,6 +13,7 @@
 
 import SwiftUI
 import CoreData
+import LocalAuthentication
 
 struct SettingsView: View {
     @EnvironmentObject var storeManager: StoreManager
@@ -27,6 +28,7 @@ struct SettingsView: View {
     @AppStorage("monthlyBudgetActive") private var budgetActive = false
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
     @AppStorage("onlyRelevantSubscriptions") private var showOnlyRelevantSubscriptions = false
+    @AppStorage("unlockWithBiometrics") private var unlockWithBiometrics = false
     
     @State private var showPremiumIAP = false
     @State private var confirmErasing = false
@@ -49,6 +51,8 @@ struct SettingsView: View {
     private var ignoredBudgetMonths: FetchedResults<IgnoredBudgetMonth>
     
     @State private var searchText = ""
+    @State private var biometryType: LABiometryType?
+    @State private var context: LAContext?
     
     var searchResults: [String] {
         if searchText.isEmpty {
@@ -141,6 +145,41 @@ struct SettingsView: View {
                 Section {
                     Toggle(isOn: $roundedIconBorders) {
                         Label("Rounded Borders on Icons", systemImage: "app")
+                    }
+                }
+                
+                if let biometryType = biometryType {
+                    Section {
+                        Toggle(isOn: $unlockWithBiometrics) {
+                            switch biometryType {
+                            case .touchID:
+                                Label("Use Touch-ID to unlock the app", systemImage: "touchid")
+                            case .faceID:
+                                Label("Use Face-ID to unlock the app", systemImage: "faceid")
+                            case .none:
+                                Label("Use a PIN to unlock the app", systemImage: "lock")
+                            @unknown default:
+                                Label("Use a PIN to unlock the app", systemImage: "lock")
+                            }
+                        }
+                    } footer: {
+                        Text("Tip: You can long tap any price tag within the app to switch to private mode and vice versa. (This hides all prices)")
+                    }
+                    .onChange(of: unlockWithBiometrics) { newValue in
+                        if let context = context {
+                            if newValue {
+                                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Activate device unlock") { success, error in
+                                    if !success || error != nil {
+                                        debugPrint(error as Any)
+                                        unlockWithBiometrics = false
+                                    }
+                                }
+                            } else {
+                                context.invalidate()
+                                
+                                self.context = LAContext()
+                            }
+                        }
                     }
                 }
                 
@@ -265,7 +304,17 @@ struct SettingsView: View {
             } message: {
                 Text("It may take some time for iCloud to start syncing your data across your devices.")
             }
-
+            .onAppear {
+                context = LAContext()
+                var error: NSError?
+                if context!.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+                    if error == nil {
+                        withAnimation {
+                            self.biometryType = context!.biometryType
+                        }
+                    }
+                }
+            }
         }
     }
     

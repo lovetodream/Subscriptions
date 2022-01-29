@@ -16,6 +16,7 @@ import SwiftUI
 struct ItemRow: View {
     @AppStorage("currency") private var currency: String = Locale.current.currencyCode ?? "USD"
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
+    @AppStorage("privacyMode") private var privacyMode = false
     
     @ObservedObject var item: Item
     
@@ -49,6 +50,10 @@ struct ItemRow: View {
             if let cost = item.cost?.decimalValue {
                 Text(cost as NSDecimalNumber, formatter: currencyFormatter)
                     .foregroundColor(inCurrentMonth(item, circle: BillingOption(item.billing)) || context == .budget ? .label : .secondaryLabel)
+                    .onLongPressGesture {
+                        privacyMode.toggle()
+                    }
+                    .privacySensitive()
             }
         } icon: {
             if let systemImage = item.systemImage, !systemImage.isEmpty {

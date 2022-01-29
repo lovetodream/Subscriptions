@@ -14,9 +14,11 @@
 import SwiftUI
 import StoreKit
 import CoreData
+import LocalAuthentication
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.scenePhase) var scenePhase
     
     @AppStorage("currency") private var currency: String = Locale.current.currencyCode ?? "USD"
     @AppStorage(Bundle.main.object(forInfoDictionaryKey: "premiumIAP") as! String) private var lifetimePremium = false
@@ -24,6 +26,11 @@ struct ContentView: View {
     @AppStorage("monthlyBudget") private var budget = 0.0
     @AppStorage("monthlyBudgetActive") private var budgetActive = false
     @AppStorage("onlyRelevantSubscriptions") private var showOnlyRelevantSubscriptions = false
+    @AppStorage("privacyMode") private var privacyMode = false
+    
+    @AppStorage("unlockWithBiometrics") private var unlockWithBiometrics = false
+    // locked is only taking affect if unlockWithBiometrics is true
+    @State private var locked = true
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -94,7 +101,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                if let cost = calculateCostForRestOfCurrentMonth(for: items, fullMonth: true), let budget = Decimal(budget), budgetActive, cost > budget, !ignoredBudgetMonths.contains(where: { $0.firstOfMonth == .now.startOfMonth() }) {
+                if !privacyMode, let cost = calculateCostForRestOfCurrentMonth(for: items, fullMonth: true), let budget = Decimal(budget), budgetActive, cost > budget, !ignoredBudgetMonths.contains(where: { $0.firstOfMonth == .now.startOfMonth() }) {
                     Section {
                         NavigationLink {
                             BillView(showSettings: $showSettings, cost: cost, budget: budget)
@@ -192,6 +199,7 @@ struct ContentView: View {
                     }
                 } header: {
                     Text("Due this month: \(currentMonthCost as NSDecimalNumber, formatter: currencyFormatter)")
+                        .privacySensitive()
                 }
                 
                 if showOnlyRelevantSubscriptions {
@@ -313,6 +321,57 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification)) { output in
             viewContext.refreshAllObjects()
         }
+        .if(privacyMode) {
+            $0.redacted(reason: .privacy)
+        }
+        .if(locked && unlockWithBiometrics) {
+            $0.overlay {
+                ZStack {
+                    Rectangle()
+                        .fill(.thinMaterial)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .ignoresSafeArea()
+                    
+                    VStack {
+                        Spacer()
+                        Button {
+                            let context = LAContext()
+                            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Unlock the app") { success, error in
+                                debugPrint(error as Any)
+                                if success {
+                                    withAnimation {
+                                        locked = false
+                                    }
+                                }
+                            }
+                        } label: {
+                            Text("Unlock Abonementi")
+                        }
+                        .buttonStyle(.bordered)
+                    }
+                }
+            }
+        }
+        .onChange(of: scenePhase) { newValue in
+            switch newValue {
+            case .inactive, .background:
+                locked = true
+            case .active:
+                if locked && unlockWithBiometrics {
+                    let context = LAContext()
+                    context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Unlock the app") { success, error in
+                        debugPrint(error as Any)
+                        if success {
+                            withAnimation {
+                                locked = false
+                            }
+                        }
+                    }
+                }
+            @unknown default:
+                break
+            }
+        }
     }
     
     private func deleteItems(offsets: IndexSet) {
@@ -349,6 +408,7 @@ struct SubscriptionDetailView: View {
     
     @AppStorage("currency") private var currency: String = Locale.current.currencyCode ?? "USD"
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
+    @AppStorage("privacyMode") private var privacyMode = false
     
     @ObservedObject var item: Item
     
@@ -424,6 +484,10 @@ struct SubscriptionDetailView: View {
                             Text(BillingLabel(BillingOption(billing)).localizedString())
                         }
                         .font(.body.weight(.semibold))
+                        .privacySensitive()
+                        .onLongPressGesture {
+                            privacyMode.toggle()
+                        }
                     }
                 }
                 if let billing = item.billing {
