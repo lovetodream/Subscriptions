@@ -31,6 +31,7 @@ struct SettingsView: View {
     @State private var showPremiumIAP = false
     @State private var confirmErasing = false
     @State private var showTipJar = false
+    @State private var showiCloudDisclaimer = false
     
     private enum Field: Int, Hashable {
         case budget
@@ -116,10 +117,12 @@ struct SettingsView: View {
                         Label("iCloud Sync", systemImage: "icloud")
                     }
                     .onChange(of: iCloudSync) { newValue in
-                        if newValue && !lifetimePremium {
-                            withAnimation {
+                        withAnimation {
+                            if newValue && !lifetimePremium {
                                 iCloudSync = false
                                 showPremiumIAP.toggle()
+                            } else if newValue {
+                                showiCloudDisclaimer = true
                             }
                         }
                     }
@@ -253,6 +256,16 @@ struct SettingsView: View {
                     dismiss()
                 })])
             }
+            .alert("Information", isPresented: $showiCloudDisclaimer) {
+                Button(role: .cancel) {
+                    showiCloudDisclaimer = false
+                } label: {
+                    Text("Ok")
+                }
+            } message: {
+                Text("It may take some time for iCloud to start syncing your data across your devices.")
+            }
+
         }
     }
     

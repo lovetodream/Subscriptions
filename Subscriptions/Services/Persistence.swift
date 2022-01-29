@@ -78,4 +78,8 @@ struct PersistenceController {
         
         // TODO: handle toggle of iCloud options
     }
+    
+    func initializeContainer(inMemory: Bool = false) {
+        
+    }
 }
