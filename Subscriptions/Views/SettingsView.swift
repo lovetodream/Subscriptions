@@ -29,6 +29,8 @@ struct SettingsView: View {
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
     @AppStorage("onlyRelevantSubscriptions") private var showOnlyRelevantSubscriptions = false
     @AppStorage("unlockWithBiometrics") private var unlockWithBiometrics = false
+    @AppStorage("timeToReceiveNotifications") private var timeToReceiveNotifications = Date.now
+    @AppStorage("sendNotificationsWithPriceTag") private var sendNotificationsWithPriceTag = true
     
     @State private var showPremiumIAP = false
     @State private var confirmErasing = false
@@ -116,35 +118,48 @@ struct SettingsView: View {
                     Text("This is a display only option and does not affect the cost of your subscriptions.")
                 }
                 
-                Section {
-                    Toggle(isOn: $iCloudSync) {
-                        Label("iCloud Sync", systemImage: "icloud")
-                    }
-                    .onChange(of: iCloudSync) { newValue in
-                        withAnimation {
-                            if newValue && !lifetimePremium {
-                                iCloudSync = false
-                                showPremiumIAP.toggle()
-                            } else if newValue {
-                                showiCloudDisclaimer = true
+                Group {
+                    Section {
+                        Toggle(isOn: $iCloudSync) {
+                            Label("iCloud Sync", systemImage: "icloud")
+                        }
+                        .onChange(of: iCloudSync) { newValue in
+                            withAnimation {
+                                if newValue && !lifetimePremium {
+                                    iCloudSync = false
+                                    showPremiumIAP.toggle()
+                                } else if newValue {
+                                    showiCloudDisclaimer = true
+                                }
                             }
                         }
+                    } footer: {
+                        Text("Enabling iCloud Sync will allow your subscriptions to stay in sync across all your devices.")
                     }
-                } footer: {
-                    Text("Enabling iCloud Sync will allow your subscriptions to stay in sync across all your devices.")
-                }
-                
-                Section {
-                    Toggle(isOn: $showOnlyRelevantSubscriptions) {
-                        Label("Only relevant subscriptions", systemImage: "eye.slash")
+                    
+                    Section {
+                        Toggle(isOn: $sendNotificationsWithPriceTag) {
+                            Text("Include cost in notifications")
+                        }
+                        DatePicker("Time at which you receive notifications",
+                                   selection: $timeToReceiveNotifications,
+                                   displayedComponents: .hourAndMinute)
+                    } footer: {
+                        Text("You will receive all your notifications at \(timeToReceiveNotifications, style: .time). Except reminders to cancel a subscriptions, you can specify date and time for those individually.")
                     }
-                } footer: {
-                    Text("Shows only relevant subscriptions for this month by default. This hides all subscriptions which aren't due for the rest of the month.")
-                }
-                
-                Section {
-                    Toggle(isOn: $roundedIconBorders) {
-                        Label("Rounded Borders on Icons", systemImage: "app")
+                    
+                    Section {
+                        Toggle(isOn: $showOnlyRelevantSubscriptions) {
+                            Label("Only relevant subscriptions", systemImage: "eye.slash")
+                        }
+                    } footer: {
+                        Text("Shows only relevant subscriptions for this month by default. This hides all subscriptions which aren't due for the rest of the month.")
+                    }
+                    
+                    Section {
+                        Toggle(isOn: $roundedIconBorders) {
+                            Label("Rounded Borders on Icons", systemImage: "app")
+                        }
                     }
                 }
                 
