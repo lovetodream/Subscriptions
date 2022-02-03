@@ -39,6 +39,7 @@ struct SubscriptionDetailsForm: View {
     @Binding var withDeactivationDate: Bool
     @Binding var iconIsSfSymbol: Bool
     @Binding var iconSfSymbol: String
+    @Binding var reminders: [ReleasedReminder]
     @Binding var cancellationReminders: [ReleasedCancellationReminder]
     
     @State var reminderWarning = false
@@ -107,6 +108,74 @@ struct SubscriptionDetailsForm: View {
                     }
                 }
                 DatePicker("Date of last bill", selection: $lastBillDate, displayedComponents: .date)
+                
+                if showAdvancedOptions {
+                    Button {
+                        let id = reminders.count + 1
+                        let newReminder = ReleasedReminder(id: id,
+                                                           daysBefore: id)
+                        withAnimation {
+                            reminders.append(newReminder)
+                        }
+                    } label: {
+                        if reminders.count > 0 {
+                            Text("Add another reminder")
+                        } else {
+                            if title.isEmpty {
+                                Text("Add a due date reminder for \"Unnamed\"")
+                            } else {
+                                Text("Add a due date reminder for \"\(title)\"")
+                            }
+                        }
+                    }
+                    .onChange(of: reminders.count) { [reminders] newCount in
+                        if newCount > 3 && newCount > reminders.count {
+                            withAnimation {
+                                reminderWarning = true
+                            }
+                        }
+                    }
+                    .alert("Warning", isPresented: $reminderWarning) {
+                        Button("Ok", role: .cancel) {
+                            withAnimation {
+                                reminderWarning = false
+                            }
+                        }
+                    } message: {
+                        Text("You should avoid adding more than 3 notifications to a single subscription")
+                    }
+                    
+                    ForEach($reminders) { reminder in
+                        HStack {
+                            TextField("0", value: reminder.daysBefore, format: .number)
+                                .multilineTextAlignment(.center)
+                                .frame(maxWidth: 25)
+                                .padding(.horizontal, 4)
+                                .padding(.vertical, 2)
+                                .background(Color.tertiarySystemGroupedBackground)
+                                .cornerRadius(5)
+                            if reminder.daysBefore.wrappedValue == 1 {
+                                Text("day before next bill")
+                            } else {
+                                Text("days before next bill")
+                            }
+                            Spacer()
+                            Button {
+                                withAnimation {
+                                    reminders.removeAll { $0.id == reminder.wrappedValue.id }
+                                }
+                            } label: {
+                                Label("Remove", systemImage: "minus.circle.fill")
+                                    .labelStyle(.iconOnly)
+                                    .foregroundColor(.red)
+                            }
+                            .buttonStyle(.borderless)
+                        }
+                    }
+                    .onDelete { indexSet in
+                        reminders.remove(atOffsets: indexSet)
+                    }
+                }
             } header: {
                 Text("Cost")
             }
@@ -212,6 +281,9 @@ struct SubscriptionDetailsForm: View {
                             .buttonStyle(.borderless)
                         }
                     }
+                    .onDelete { indexSet in
+                        cancellationReminders.remove(atOffsets: indexSet)
+                    }
                 } header: {
                     Text("Advanced")
                 }
@@ -279,7 +351,14 @@ struct SubscriptionDetailsForm: View {
                     item.serviceUrl = serviceUrl
                 }
                 
+                item.reminders?.forEach { viewContext.delete($0 as! NSManagedObject) }
                 item.cancellationReminders?.forEach { viewContext.delete($0 as! NSManagedObject) }
+                
+                reminders.forEach { reminder in
+                    let newReminder = Reminder(context: viewContext)
+                    newReminder.daysBefore = Int16(reminder.daysBefore)
+                    newReminder.item = item
+                }
                 
                 cancellationReminders.forEach { reminder in
                     let newReminder = CancellationReminder(context: viewContext)
@@ -330,6 +409,12 @@ struct SubscriptionDetailsForm: View {
                 newItem.serviceUrl = serviceUrl
             }
             
+            reminders.forEach { reminder in
+                let newReminder = Reminder(context: viewContext)
+                newReminder.daysBefore = Int16(reminder.daysBefore)
+                newReminder.item = newItem
+            }
+            
             cancellationReminders.forEach { reminder in
                 let newReminder = CancellationReminder(context: viewContext)
                 newReminder.onDate = reminder.date
@@ -369,6 +454,7 @@ struct SubscriptionDetailsForm_Previews: PreviewProvider {
                                 withDeactivationDate: .constant(false),
                                 iconIsSfSymbol: .constant(true),
                                 iconSfSymbol: .constant("applelogo"),
+                                reminders: .constant([]),
                                 cancellationReminders: .constant([]))
     }
 }
@@ -390,6 +476,11 @@ public extension Int {
           formatter.numberStyle = .spellOut
           return formatter.string(from: numberValue)
       }
+}
+
+struct ReleasedReminder: Identifiable {
+    var id: Int
+    var daysBefore: Int
 }
 
 struct ReleasedCancellationReminder: Identifiable {

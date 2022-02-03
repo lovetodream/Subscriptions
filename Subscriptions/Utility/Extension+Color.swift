@@ -22,6 +22,7 @@ extension Color {
     static var secondaryLabel = Color(uiColor: .secondaryLabel)
     static var secondarySystemBackground = Color(uiColor: .secondarySystemBackground)
     static var secondarySystemGroupedBackground = Color(uiColor: .secondarySystemGroupedBackground)
+    static let tertiarySystemGroupedBackground = Color(uiColor: .tertiarySystemGroupedBackground)
 }
 
 // MARK: - Color to hex code and back

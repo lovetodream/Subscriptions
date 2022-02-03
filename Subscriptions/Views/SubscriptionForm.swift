@@ -39,6 +39,14 @@ struct SubscriptionForm: View {
         self._iconSfSymbol = .init(initialValue: item.systemImage ?? "")
         self._editMode = .init(initialValue: true)
         
+        var reminders = [ReleasedReminder]()
+        item.reminders?.enumerated().forEach { (index, reminder) in
+            if let reminder = reminder as? Reminder {
+                reminders.append(ReleasedReminder(id: index, daysBefore: Int(reminder.daysBefore)))
+            }
+        }
+        self._nextBillReminders = .init(initialValue: reminders)
+        
         var cancellationReminders = [ReleasedCancellationReminder]()
         item.cancellationReminders?.enumerated().forEach { (index, reminder) in
             if let reminder = reminder as? CancellationReminder,
@@ -79,6 +87,7 @@ struct SubscriptionForm: View {
     @State private var showIconPicker = false
     @State private var purchasePremium = false
     @State private var editMode = false
+    @State private var nextBillReminders = [ReleasedReminder]()
     @State private var cancellationReminders = [ReleasedCancellationReminder]()
     private var item: Item? = nil
     
@@ -116,6 +125,7 @@ struct SubscriptionForm: View {
                                         withDeactivationDate: $withDeactivationDate,
                                         iconIsSfSymbol: $iconIsSfSymbol,
                                         iconSfSymbol: $iconSfSymbol,
+                                        reminders: $nextBillReminders,
                                         cancellationReminders: $cancellationReminders)
             } else {
                 Form {
@@ -183,6 +193,7 @@ struct SubscriptionForm: View {
                                                         withDeactivationDate: $withDeactivationDate,
                                                         iconIsSfSymbol: $iconIsSfSymbol,
                                                         iconSfSymbol: $iconSfSymbol,
+                                                        reminders: $nextBillReminders,
                                                         cancellationReminders: $cancellationReminders)
                             } label: {
                                 EmptyView()
