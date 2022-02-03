@@ -38,6 +38,16 @@ struct SubscriptionForm: View {
         self._iconIsSfSymbol = .init(initialValue: item.systemImage != nil)
         self._iconSfSymbol = .init(initialValue: item.systemImage ?? "")
         self._editMode = .init(initialValue: true)
+        
+        var cancellationReminders = [ReleasedCancellationReminder]()
+        item.cancellationReminders?.enumerated().forEach { (index, reminder) in
+            if let reminder = reminder as? CancellationReminder,
+                let date = reminder.onDate {
+                cancellationReminders.append(ReleasedCancellationReminder(id: index, date: date))
+            }
+        }
+        self._cancellationReminders = .init(initialValue: cancellationReminders)
+        
         self.currentActiveSubscriptions = 0
     }
     
@@ -69,6 +79,7 @@ struct SubscriptionForm: View {
     @State private var showIconPicker = false
     @State private var purchasePremium = false
     @State private var editMode = false
+    @State private var cancellationReminders = [ReleasedCancellationReminder]()
     private var item: Item? = nil
     
     var currentActiveSubscriptions: Int
@@ -104,7 +115,8 @@ struct SubscriptionForm: View {
                                         deactivationDate: $deactivationDate,
                                         withDeactivationDate: $withDeactivationDate,
                                         iconIsSfSymbol: $iconIsSfSymbol,
-                                        iconSfSymbol: $iconSfSymbol)
+                                        iconSfSymbol: $iconSfSymbol,
+                                        cancellationReminders: $cancellationReminders)
             } else {
                 Form {
                     if !canAddSubscription {
@@ -170,7 +182,8 @@ struct SubscriptionForm: View {
                                                         deactivationDate: $deactivationDate,
                                                         withDeactivationDate: $withDeactivationDate,
                                                         iconIsSfSymbol: $iconIsSfSymbol,
-                                                        iconSfSymbol: $iconSfSymbol)
+                                                        iconSfSymbol: $iconSfSymbol,
+                                                        cancellationReminders: $cancellationReminders)
                             } label: {
                                 EmptyView()
                             }

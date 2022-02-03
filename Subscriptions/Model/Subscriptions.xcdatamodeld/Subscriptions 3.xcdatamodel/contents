@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CancellationReminder" representedClassName="CancellationReminder" syncable="YES" codeGenerationType="class">
+        <attribute name="onDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="cancellationReminders" inverseEntity="Item"/>
+    </entity>
     <entity name="IgnoredBudgetMonth" representedClassName="IgnoredBudgetMonth" syncable="YES" codeGenerationType="class">
         <attribute name="firstOfMonth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
@@ -21,11 +25,13 @@
         <attribute name="systemImage" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" inverseName="reminder" inverseEntity="Reminder"/>
+        <relationship name="cancellationReminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CancellationReminder" inverseName="item" inverseEntity="CancellationReminder"/>
+        <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" inverseName="item" inverseEntity="Reminder"/>
     </entity>
     <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="daysBefore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="uid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="reminder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="reminders" inverseEntity="Item"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="reminders" inverseEntity="Item"/>
     </entity>
     <entity name="Tip" representedClassName="Tip" syncable="YES" codeGenerationType="class">
         <attribute name="currency" optional="YES" attributeType="String"/>
@@ -36,9 +42,10 @@
     </entity>
     <fetchRequest name="ActiveSubscriptions" entity="Item" predicateString="active == 1 AND deactivationDate &lt; CAST(Date.now.timeIntervalSince1970, &quot;NSDate&quot;)"/>
     <elements>
-        <element name="IgnoredBudgetMonth" positionX="330.18359375" positionY="-75.828125" width="128" height="44"/>
-        <element name="Item" positionX="-273.37109375" positionY="-105.9765625" width="128" height="313"/>
-        <element name="Reminder" positionX="350.96484375" positionY="54" width="154.99609375" height="73"/>
-        <element name="Tip" positionX="138.546875" positionY="-150.1328125" width="128" height="104"/>
+        <element name="IgnoredBudgetMonth" positionX="51.15625" positionY="410.51171875" width="128" height="44"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="314"/>
+        <element name="Reminder" positionX="229.16015625" positionY="271.6328125" width="154.99609375" height="88"/>
+        <element name="Tip" positionX="387.02734375" positionY="312.9765625" width="128" height="104"/>
+        <element name="CancellationReminder" positionX="139.86328125" positionY="-137.80078125" width="128" height="73"/>
     </elements>
 </model>

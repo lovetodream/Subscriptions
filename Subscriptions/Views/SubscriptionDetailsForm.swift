@@ -12,12 +12,14 @@
 // 
 
 import SwiftUI
+import CoreData
 
 struct SubscriptionDetailsForm: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var viewContext
     
     var item: Item?
+    
     @Binding var title: String
     @Binding var note: String
     @Binding var cost: Double
@@ -37,6 +39,9 @@ struct SubscriptionDetailsForm: View {
     @Binding var withDeactivationDate: Bool
     @Binding var iconIsSfSymbol: Bool
     @Binding var iconSfSymbol: String
+    @Binding var cancellationReminders: [ReleasedCancellationReminder]
+    
+    @State var reminderWarning = false
     
     var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -159,6 +164,54 @@ struct SubscriptionDetailsForm: View {
                             Text("Add end date")
                         }
                     }
+                    
+                    Button {
+                        let newReminder = ReleasedCancellationReminder(id: cancellationReminders.count + 1, date: deactivationDate)
+                        withAnimation {
+                            cancellationReminders.append(newReminder)
+                        }
+                    } label: {
+                        if cancellationReminders.count > 0 {
+                            Text("Add another reminder")
+                        } else {
+                            if title.isEmpty {
+                                Text("Add a reminder to cancel \"Unnamed\"")
+                            } else {
+                                Text("Add a reminder to cancel \"\(title)\"")
+                            }
+                        }
+                    }
+                    .onChange(of: cancellationReminders.count) { [cancellationReminders] newCount in
+                        if newCount > 3 && newCount > cancellationReminders.count {
+                            withAnimation {
+                                reminderWarning = true
+                            }
+                        }
+                    }
+                    .alert("Warning", isPresented: $reminderWarning) {
+                        Button("Ok", role: .cancel) {
+                            withAnimation {
+                                reminderWarning = false
+                            }
+                        }
+                    } message: {
+                        Text("You should avoid adding more than 3 notifications to a single subscription")
+                    }
+                    
+                    ForEach($cancellationReminders) { reminder in
+                        DatePicker(selection: reminder.date) {
+                            Button {
+                                withAnimation {
+                                    cancellationReminders.removeAll { $0.id == reminder.wrappedValue.id }
+                                }
+                            } label: {
+                                Label("Remove", systemImage: "minus.circle.fill")
+                                    .labelStyle(.iconOnly)
+                                    .foregroundColor(.red)
+                            }
+                            .buttonStyle(.borderless)
+                        }
+                    }
                 } header: {
                     Text("Advanced")
                 }
@@ -226,6 +279,14 @@ struct SubscriptionDetailsForm: View {
                     item.serviceUrl = serviceUrl
                 }
                 
+                item.cancellationReminders?.forEach { viewContext.delete($0 as! NSManagedObject) }
+                
+                cancellationReminders.forEach { reminder in
+                    let newReminder = CancellationReminder(context: viewContext)
+                    newReminder.onDate = reminder.date
+                    newReminder.item = item
+                }
+                
                 do {
                     try viewContext.save()
                     dismiss()
@@ -268,6 +329,12 @@ struct SubscriptionDetailsForm: View {
             if let serviceUrl = url {
                 newItem.serviceUrl = serviceUrl
             }
+            
+            cancellationReminders.forEach { reminder in
+                let newReminder = CancellationReminder(context: viewContext)
+                newReminder.onDate = reminder.date
+                newReminder.item = newItem
+            }
 
             do {
                 try viewContext.save()
@@ -301,6 +368,31 @@ struct SubscriptionDetailsForm_Previews: PreviewProvider {
                                 deactivationDate: .constant(.now),
                                 withDeactivationDate: .constant(false),
                                 iconIsSfSymbol: .constant(true),
-                                iconSfSymbol: .constant("applelogo"))
+                                iconSfSymbol: .constant("applelogo"),
+                                cancellationReminders: .constant([]))
     }
+}
+
+extension Binding {
+    func safeBinding<T>(defaultValue: T) -> Binding<T> where Value == Optional<T> {
+        Binding<T>.init {
+            self.wrappedValue ?? defaultValue
+        } set: { newValue in
+            self.wrappedValue = newValue
+        }
+    }
+}
+
+public extension Int {
+      var written: String? {
+          let numberValue = NSNumber(value: self)
+          let formatter = NumberFormatter()
+          formatter.numberStyle = .spellOut
+          return formatter.string(from: numberValue)
+      }
+}
+
+struct ReleasedCancellationReminder: Identifiable {
+    var id: Int
+    var date: Date
 }

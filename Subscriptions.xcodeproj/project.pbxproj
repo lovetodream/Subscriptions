@@ -49,6 +49,7 @@
 		0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */; };
 		0680FDA0279451A900A35783 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9F279451A800A35783 /* TipJarView.swift */; };
 		06C1A2BA27A5CA5500112ECC /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */; };
+		06C1A2BC27A5CE7C00112ECC /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */; };
 		06DEA566279486D400FC6412 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA564279486D400FC6412 /* Localizable.strings */; };
 		06DEA569279486D500FC6412 /* Subscriptions-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA567279486D400FC6412 /* Subscriptions-InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,8 @@
 		0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumIAPView.swift; sourceTree = "<group>"; };
 		0680FD9F279451A800A35783 /* TipJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarView.swift; sourceTree = "<group>"; };
 		06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
+		06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
+		06C1A2BD27A5DD4600112ECC /* Subscriptions 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Subscriptions 3.xcdatamodel"; sourceTree = "<group>"; };
 		06DEA565279486D400FC6412 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		06DEA568279486D500FC6412 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "de.lproj/Subscriptions-InfoPlist.strings"; sourceTree = "<group>"; };
 		06DEA56A2794B67400FC6412 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 				0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */,
 				0680FD93278B1BBD00A35783 /* SettingsView.swift */,
 				062020842788D27400CC6836 /* SubscriptionForm.swift */,
+				06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */,
 				06047C01279C916A000ADA4D /* SubscriptionDetailsForm.swift */,
 				0680FD9F279451A800A35783 /* TipJarView.swift */,
 			);
@@ -488,6 +492,7 @@
 				06047C04279C92E0000ADA4D /* AcknowledgementView.swift in Sources */,
 				06047C09279C9876000ADA4D /* Extension+View.swift in Sources */,
 				06047C02279C916A000ADA4D /* SubscriptionDetailsForm.swift in Sources */,
+				06C1A2BC27A5CE7C00112ECC /* LicenseView.swift in Sources */,
 				06C1A2BA27A5CA5500112ECC /* ShakeGesture.swift in Sources */,
 				06047C00279C8CA2000ADA4D /* CloseButton.swift in Sources */,
 				06047BFA279C8BE1000ADA4D /* BillingOption.swift in Sources */,
@@ -889,10 +894,11 @@
 		06409F43276932C000ED3B7A /* Subscriptions.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				06C1A2BD27A5DD4600112ECC /* Subscriptions 3.xcdatamodel */,
 				06047C10279D85CE000ADA4D /* Subscriptions 2.xcdatamodel */,
 				06409F44276932C000ED3B7A /* Subscriptions.xcdatamodel */,
 			);
-			currentVersion = 06047C10279D85CE000ADA4D /* Subscriptions 2.xcdatamodel */;
+			currentVersion = 06C1A2BD27A5DD4600112ECC /* Subscriptions 3.xcdatamodel */;
 			path = Subscriptions.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
