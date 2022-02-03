@@ -328,7 +328,7 @@ struct SettingsView: View {
                 viewContext.delete(objectData)
             }
         } catch let error {
-            print("Detele all data in \(entity) error :", error)
+            print("Delete all data in \(entity) error :", error)
         }
     }
 }
@@ -344,30 +344,14 @@ struct SettingsView_Previews: PreviewProvider {
     }
 }
 
-struct LicenseView: View {
-    @Environment(\.dismiss) var dismiss
+extension Date: RawRepresentable {
+    private static let formatter = ISO8601DateFormatter()
     
-    var license: License
+    public var rawValue: String {
+        Date.formatter.string(from: self)
+    }
     
-    var body: some View {
-        NavigationView {
-            ScrollView {
-                Text(license.content)
-                    .lineLimit(.none)
-                    .monospacedDigit()
-                    .font(.system(size: 12, weight: .regular, design: .monospaced))
-                    .padding()
-            }
-            .navigationTitle(license.product)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    CloseButton(fill: .secondarySystemBackground) {
-                        withAnimation {
-                            dismiss()
-                        }
-                    }
-                }
-            }
-        }
+    public init?(rawValue: String) {
+        self = Date.formatter.date(from: rawValue) ?? Date()
     }
 }
