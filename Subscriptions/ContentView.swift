@@ -31,6 +31,11 @@ struct ContentView: View {
     @AppStorage("unlockWithBiometrics") private var unlockWithBiometrics = false
     // locked is only taking affect if unlockWithBiometrics is true
     @State private var locked = true
+    
+    @AppStorage("timeToReceiveNotifications") private var timeToReceiveNotifications = Date.now
+    @AppStorage("sendNotificationsWithPriceTag") private var sendNotificationsWithPriceTag = true
+    
+    @ObservedObject var notificationScheduler = NotificationScheduler.shared
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -105,6 +110,7 @@ struct ContentView: View {
                     Section {
                         NavigationLink {
                             BillView(showSettings: $showSettings, cost: cost, budget: budget)
+                                .environmentObject(notificationScheduler)
                         } label: {
                             Label {
                                 Text("This months bill exceeds your budget by \((cost - budget) as NSDecimalNumber, formatter: currencyFormatter).")
@@ -124,6 +130,7 @@ struct ContentView: View {
                         ForEach(items.filter { $0.pinned }) { item in
                             NavigationLink {
                                 SubscriptionDetailView(item: item)
+                                    .environmentObject(notificationScheduler)
                             } label: {
                                 ItemRow(item: item, context: .pinned)
                             }
@@ -161,6 +168,7 @@ struct ContentView: View {
                         ForEach(searchResult) { item in
                             NavigationLink {
                                 SubscriptionDetailView(item: item)
+                                    .environmentObject(notificationScheduler)
                             } label: {
                                 ItemRow(item: item)
                             }
@@ -222,6 +230,7 @@ struct ContentView: View {
                             ForEach(archivedItems) { archivedItem in
                                 NavigationLink {
                                     SubscriptionDetailView(item: archivedItem)
+                                        .environmentObject(notificationScheduler)
                                 } label: {
                                     ItemRow(item: archivedItem)
                                 }
@@ -302,6 +311,7 @@ struct ContentView: View {
         }
         .sheet(isPresented: $addSubscription) {
             SubscriptionForm(currentActiveSubscriptions: items.count)
+                .environmentObject(notificationScheduler)
                 .environmentObject(storeManager)
         }
         .sheet(isPresented: $showSettings) {
@@ -355,8 +365,26 @@ struct ContentView: View {
         .onChange(of: scenePhase) { newValue in
             switch newValue {
             case .inactive, .background:
+                notificationScheduler.removeDeliveredNotifications()
+                
+                Task {
+                    await notificationScheduler.scheduleNotifications(for: items, at: timeToReceiveNotifications, with: sendNotificationsWithPriceTag, and: currencyFormatter)
+                    
+                    print("Pending...")
+                    print(await UNUserNotificationCenter.current().pendingNotificationRequests())
+                }
+                
                 locked = true
             case .active:
+                notificationScheduler.removeDeliveredNotifications()
+                
+                Task {
+                    await notificationScheduler.scheduleNotifications(for: items, at: timeToReceiveNotifications, with: sendNotificationsWithPriceTag, and: currencyFormatter)
+                    
+                    print("Pending...")
+                    print(await UNUserNotificationCenter.current().pendingNotificationRequests())
+                }
+                
                 if locked && unlockWithBiometrics {
                     let context = LAContext()
                     context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Unlock the app") { success, error in
@@ -415,6 +443,7 @@ struct SubscriptionDetailView: View {
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
     @AppStorage("privacyMode") private var privacyMode = false
     
+    @EnvironmentObject var notificationScheduler: NotificationScheduler
     @ObservedObject var item: Item
     
     @State private var editing = false
@@ -592,6 +621,7 @@ struct SubscriptionDetailView: View {
         }
         .sheet(isPresented: $editing) {
             SubscriptionForm(item: item)
+                .environmentObject(notificationScheduler)
         }
         .actionSheet(isPresented: $confirmDeletion) {
             if item.active {
@@ -631,6 +661,8 @@ struct BillView: View {
         self.cost = cost
         self.budget = budget
     }
+    
+    @EnvironmentObject var notificationScheduler: NotificationScheduler
     
     @Environment(\.managedObjectContext) var viewContext
     
@@ -708,6 +740,7 @@ struct BillView: View {
                     if inCurrentMonth(item, circle: BillingOption(item.billing), fullMonth: true) {
                         NavigationLink {
                             SubscriptionDetailView(item: item)
+                                .environmentObject(notificationScheduler)
                         } label: {
                             ItemRow(item: item, context: .budget)
                         }

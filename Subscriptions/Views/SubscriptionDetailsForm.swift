@@ -18,6 +18,8 @@ struct SubscriptionDetailsForm: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var viewContext
     
+    @EnvironmentObject var notificationScheduler: NotificationScheduler
+    
     var item: Item?
     
     @Binding var title: String
@@ -129,6 +131,12 @@ struct SubscriptionDetailsForm: View {
                         }
                     }
                     .onChange(of: reminders.count) { [reminders] newCount in
+                        if newCount > reminders.count {
+                            Task {
+                                _ = await notificationScheduler.requestPermissions()
+                            }
+                        }
+                        
                         if newCount > 3 && newCount > reminders.count {
                             withAnimation {
                                 reminderWarning = true
@@ -251,6 +259,12 @@ struct SubscriptionDetailsForm: View {
                         }
                     }
                     .onChange(of: cancellationReminders.count) { [cancellationReminders] newCount in
+                        if newCount > reminders.count {
+                            Task {
+                                _ = await notificationScheduler.requestPermissions()
+                            }
+                        }
+                        
                         if newCount > 3 && newCount > cancellationReminders.count {
                             withAnimation {
                                 reminderWarning = true

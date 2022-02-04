@@ -59,6 +59,7 @@ struct SubscriptionForm: View {
         self.currentActiveSubscriptions = 0
     }
     
+    @EnvironmentObject var notificationScheduler: NotificationScheduler
     @EnvironmentObject var storeManager: StoreManager
     
     @Environment(\.managedObjectContext) var viewContext
@@ -127,6 +128,7 @@ struct SubscriptionForm: View {
                                         iconSfSymbol: $iconSfSymbol,
                                         reminders: $nextBillReminders,
                                         cancellationReminders: $cancellationReminders)
+                    .environmentObject(notificationScheduler)
             } else {
                 Form {
                     if !canAddSubscription {
@@ -195,6 +197,7 @@ struct SubscriptionForm: View {
                                                         iconSfSymbol: $iconSfSymbol,
                                                         reminders: $nextBillReminders,
                                                         cancellationReminders: $cancellationReminders)
+                                    .environmentObject(notificationScheduler)
                             } label: {
                                 EmptyView()
                             }

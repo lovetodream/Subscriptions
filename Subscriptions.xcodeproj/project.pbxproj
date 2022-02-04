@@ -48,6 +48,7 @@
 		0680FD9C278B6D9D00A35783 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9B278B6D9D00A35783 /* StoreManager.swift */; };
 		0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */; };
 		0680FDA0279451A900A35783 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9F279451A800A35783 /* TipJarView.swift */; };
+		06998F4727AC61FA008A9B87 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */; };
 		06C1A2BA27A5CA5500112ECC /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */; };
 		06C1A2BC27A5CE7C00112ECC /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */; };
 		06DEA566279486D400FC6412 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA564279486D400FC6412 /* Localizable.strings */; };
@@ -122,6 +123,7 @@
 		0680FD9B278B6D9D00A35783 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumIAPView.swift; sourceTree = "<group>"; };
 		0680FD9F279451A800A35783 /* TipJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarView.swift; sourceTree = "<group>"; };
+		06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
 		06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
 		06C1A2BD27A5DD4600112ECC /* Subscriptions 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Subscriptions 3.xcdatamodel"; sourceTree = "<group>"; };
@@ -237,10 +239,11 @@
 			children = (
 				06047BF3279C747F000ADA4D /* Currency.swift */,
 				06047C0C279C99D4000ADA4D /* DateCalculations.swift */,
-				06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */,
 				06047BF5279C8697000ADA4D /* Extension+Color.swift */,
 				06047BF7279C86F2000ADA4D /* Extension+UIImage.swift */,
 				06047C08279C9876000ADA4D /* Extension+View.swift */,
+				06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */,
+				06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */,
 				06047C05279C93C3000ADA4D /* SampleData.swift */,
 			);
 			path = Utility;
@@ -487,6 +490,7 @@
 				06047C0D279C99D4000ADA4D /* DateCalculations.swift in Sources */,
 				0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */,
 				06047BF4279C747F000ADA4D /* Currency.swift in Sources */,
+				06998F4727AC61FA008A9B87 /* NotificationScheduler.swift in Sources */,
 				06047BED279C71B9000ADA4D /* Shake.swift in Sources */,
 				06047C06279C93C3000ADA4D /* SampleData.swift in Sources */,
 				06047C04279C92E0000ADA4D /* AcknowledgementView.swift in Sources */,
