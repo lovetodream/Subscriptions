@@ -33,11 +33,14 @@ struct IconPicker: View {
     
     @State private var searchText = ""
     
-    var searchResults: [String] {
+    var searchResults: [Icon] {
         if searchText.isEmpty {
-            return Icons.available
+            return Icon.list
         } else {
-            return Icons.available.filter { $0.lowercased().contains(searchText.lowercased()) }
+            return Icon.list.filter {
+                $0.symbolName.lowercased().contains(searchText.lowercased()) ||
+                $0.label.lowercased().contains(searchText.lowercased())
+            }
         }
     }
 
@@ -90,31 +93,19 @@ struct IconPicker: View {
                 }
                 
                 Section {
-                    ForEach(searchResults, id: \.self) { icon in
+                    ForEach(searchResults) { icon in
                         Button {
                             withAnimation {
                                 self.isSystemImage = true
-                                self.systemImage = icon
+                                self.systemImage = icon.symbolName
                                 dismiss()
                             }
                         } label: {
                             Label {
-                                Text(icon
-                                        .replacingOccurrences(of: ".circle.fill", with: "")
-                                        .replacingOccurrences(of: ".rectangle.fill", with: "")
-                                        .replacingOccurrences(of: ".square.fill", with: "")
-                                        .replacingOccurrences(of: ".shield.fill", with: "")
-                                        .replacingOccurrences(of: ".fill", with: "")
-                                        .replacingOccurrences(of: ".left", with: "")
-                                        .replacingOccurrences(of: ".right", with: "")
-                                        .replacingOccurrences(of: ".leading", with: "")
-                                        .replacingOccurrences(of: ".trailing", with: "")
-                                        .replacingOccurrences(of: ".badge", with: "")
-                                        .replacingOccurrences(of: ".", with: " ")
-                                        .localizedCapitalized)
+                                Text(icon.label)
                                     .foregroundColor(.label)
                             } icon: {
-                                Image(systemName: icon)
+                                Image(systemName: icon.symbolName)
                                     .symbolRenderingMode(.hierarchical)
                                     .foregroundColor(color)
                             }
