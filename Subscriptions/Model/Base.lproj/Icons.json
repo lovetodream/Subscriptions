@@ -1,0 +1,3106 @@
+[
+  {
+    "symbolName": "pencil.circle.fill", 
+    "label": "Pencil"
+  },
+  {
+    "symbolName": "pencil.and.outline", 
+    "label": "Pencil"
+  },
+  {
+    "symbolName": "scribble.variable", 
+    "label": "Scribble"
+  },
+  {
+    "symbolName": "highlighter", 
+    "label": "Highlighter"
+  },
+  {
+    "symbolName": "lasso", 
+    "label": "Lasso"
+  },
+  {
+    "symbolName": "lasso.and.sparkles", 
+    "label": "Lasso"
+  },
+  {
+    "symbolName": "trash.circle.fill", 
+    "label": "Trash can"
+  },
+  {
+    "symbolName": "folder.circle.fill", 
+    "label": "Folder"
+  },
+  {
+    "symbolName": "folder.badge.person.crop", 
+    "label": "Folder with user avatar"
+  },
+  {
+    "symbolName": "paperplane", 
+    "label": "Paper plane"
+  },
+  {
+    "symbolName": "paperplane.circle.fill", 
+    "label": "Paper plane on circle"
+  },
+  {
+    "symbolName": "tray", 
+    "label": "Tray"
+  },
+  {
+    "symbolName": "tray.2", 
+    "label": "Two trays"
+  },
+  {
+    "symbolName": "tray.full", 
+    "label": "Three trays"
+  },
+  {
+    "symbolName": "externaldrive", 
+    "label": "External drive"
+  },
+  {
+    "symbolName": "externaldrive.badge.person.crop", 
+    "label": "External drive with user avatar"
+  },
+  {
+    "symbolName": "externaldrive.badge.icloud", 
+    "label": "External iCloud drive"
+  },
+  {
+    "symbolName": "externaldrive.badge.wifi", 
+    "label": "Wireless external drive"
+  },
+  {
+    "symbolName": "externaldrive.badge.timemachine", 
+    "label": "External Time Machine backup drive"
+  },
+  {
+    "symbolName": "internaldrive", 
+    "label": "Internal drive"
+  },
+  {
+    "symbolName": "opticaldiscdrive", 
+    "label": "Optical disc drive"
+  },
+  {
+    "symbolName": "externaldrive.connected.to.line.below", 
+    "label": "Plugged in external drive"
+  },
+  {
+    "symbolName": "archivebox", 
+    "label": "Archive box"
+  },
+  {
+    "symbolName": "doc", 
+    "label": "Document"
+  },
+  {
+    "symbolName": "doc.text", 
+    "label": "Document with text"
+  },
+  {
+    "symbolName": "doc.on.doc", 
+    "label": "Document on another document"
+  },
+  {
+    "symbolName": "doc.on.clipboard", 
+    "label": "Document on clipboard"
+  },
+  {
+    "symbolName": "doc.richtext", 
+    "label": "Document with text and image"
+  },
+  {
+    "symbolName": "doc.plaintext", 
+    "label": "Document with plain text"
+  },
+  {
+    "symbolName": "doc.append", 
+    "label": "Document with quote"
+  },
+  {
+    "symbolName": "doc.text.below.ecg", 
+    "label": "Medical document"
+  },
+  {
+    "symbolName": "doc.text.magnifyingglass", 
+    "label": "Zoomed in document"
+  },
+  {
+    "symbolName": "chart.bar.doc.horizontal", 
+    "label": "Document with chart"
+  },
+  {
+    "symbolName": "square.text.square", 
+    "label": "Report"
+  },
+  {
+    "symbolName": "doc.text.image", 
+    "label": "Document with text and image"
+  },
+  {
+    "symbolName": "list.bullet.rectangle.portrait", 
+    "label": "Unordered list on vertical sheet"
+  },
+  {
+    "symbolName": "list.bullet.rectangle", 
+    "label": "Unordered list on horizontal sheet"
+  },
+  {
+    "symbolName": "list.dash.header.rectangle", 
+    "label": "Unordered list with image"
+  },
+  {
+    "symbolName": "terminal", 
+    "label": "Terminal"
+  },
+  {
+    "symbolName": "note", 
+    "label": "Note"
+  },
+  {
+    "symbolName": "note.text", 
+    "label": "Note with text"
+  },
+  {
+    "symbolName": "calendar", 
+    "label": "Calendar"
+  },
+  {
+    "symbolName": "calendar.circle.fill", 
+    "label": "Calendar on circle"
+  },
+  {
+    "symbolName": "calendar.day.timeline.leading", 
+    "label": "Calendar timeline"
+  },
+  {
+    "symbolName": "book", 
+    "label": "Book"
+  },
+  {
+    "symbolName": "book.circle.fill", 
+    "label": "Book on circle"
+  },
+  {
+    "symbolName": "books.vertical", 
+    "label": "Books"
+  },
+  {
+    "symbolName": "books.vertical.circle.fill", 
+    "label": "Books on circle"
+  },
+  {
+    "symbolName": "book.closed", 
+    "label": "Closed book"
+  },
+  {
+    "symbolName": "book.closed.circle.fill", 
+    "label": "Closed book on circle"
+  },
+  {
+    "symbolName": "character.book.closed", 
+    "label": "Labeled book"
+  },
+  {
+    "symbolName": "text.book.closed", 
+    "label": "Closed book with text"
+  },
+  {
+    "symbolName": "menucard", 
+    "label": "Menu card"
+  },
+  {
+    "symbolName": "greetingcard", 
+    "label": "Greeting card"
+  },
+  {
+    "symbolName": "magazine", 
+    "label": "Magazine"
+  },
+  {
+    "symbolName": "newspaper", 
+    "label": "Newspaper"
+  },
+  {
+    "symbolName": "newspaper.circle.fill", 
+    "label": "Newspaper on circle"
+  },
+  {
+    "symbolName": "heart.text.square", 
+    "label": "Medical report"
+  },
+  {
+    "symbolName": "bookmark", 
+    "label": "Bookmark"
+  },
+  {
+    "symbolName": "bookmark.circle.fill", 
+    "label": "Bookmark on circle"
+  },
+  {
+    "symbolName": "bookmark.square.fill", 
+    "label": "Bookmark on square"
+  },
+  {
+    "symbolName": "rosette", 
+    "label": "Rosette"
+  },
+  {
+    "symbolName": "graduationcap", 
+    "label": "Graduation cap"
+  },
+  {
+    "symbolName": "graduationcap.circle.fill", 
+    "label": "Graduation cap on circle"
+  },
+  {
+    "symbolName": "ticket", 
+    "label": "Ticket"
+  },
+  {
+    "symbolName": "paperclip", 
+    "label": "Paper clip"
+  },
+  {
+    "symbolName": "paperclip.circle.fill", 
+    "label": "Paper clip on circle"
+  },
+  {
+    "symbolName": "link", 
+    "label": "Link"
+  },
+  {
+    "symbolName": "link.circle.fill", 
+    "label": "Link on circle"
+  },
+  {
+    "symbolName": "personalhotspot", 
+    "label": "Personal hotspot"
+  },
+  {
+    "symbolName": "personalhotspot.circle.fill", 
+    "label": "Personal hotspot on circle"
+  },
+  {
+    "symbolName": "person", 
+    "label": "Person"
+  },
+  {
+    "symbolName": "person.circle.fill", 
+    "label": "Person on circle"
+  },
+  {
+    "symbolName": "person.badge.clock", 
+    "label": "Clock with user avatar"
+  },
+  {
+    "symbolName": "rectangle.inset.filled.and.person.filled", 
+    "label": "Person in front of board"
+  },
+  {
+    "symbolName": "person.2", 
+    "label": "Two persons"
+  },
+  {
+    "symbolName": "person.2.circle.fill", 
+    "label": "Two persons on circle"
+  },
+  {
+    "symbolName": "person.wave.2", 
+    "label": "Speaking person"
+  },
+  {
+    "symbolName": "person.2.wave.2", 
+    "label": "Two speaking persons"
+  },
+  {
+    "symbolName": "person.3", 
+    "label": "Three persons"
+  },
+  {
+    "symbolName": "person.3.sequence", 
+    "label": "Three persons behind each other"
+  },
+  {
+    "symbolName": "lanyardcard", 
+    "label": "Lanyard card"
+  },
+  {
+    "symbolName": "person.crop.circle", 
+    "label": "Avatar on circle"
+  },
+  {
+    "symbolName": "person.crop.circle.badge.moon", 
+    "label": "Sleeping avatar on circle"
+  },
+  {
+    "symbolName": "person.crop.square", 
+    "label": "Avatar on square"
+  },
+  {
+    "symbolName": "person.crop.artframe", 
+    "label": "Artwork"
+  },
+  {
+    "symbolName": "photo.artframe", 
+    "label": "Framed picture"
+  },
+  {
+    "symbolName": "person.crop.rectangle.stack", 
+    "label": "Cards with avatar"
+  },
+  {
+    "symbolName": "person.2.crop.square.stack", 
+    "label": "Cards with two avatars"
+  },
+  {
+    "symbolName": "person.crop.rectangle", 
+    "label": "Card with avatar"
+  },
+  {
+    "symbolName": "person.crop.square.filled.and.at.rectangle", 
+    "label": "Contact card"
+  },
+  {
+    "symbolName": "person.text.rectangle", 
+    "label": "Contact card"
+  },
+  {
+    "symbolName": "command", 
+    "label": "Command key"
+  },
+  {
+    "symbolName": "escape", 
+    "label": "Escape key"
+  },
+  {
+    "symbolName": "power", 
+    "label": "Power key"
+  },
+  {
+    "symbolName": "peacesign", 
+    "label": "Peace sign"
+  },
+  {
+    "symbolName": "dot.arrowtriangles.up.right.down.left.circle", 
+    "label": "Controller keys"
+  },
+  {
+    "symbolName": "globe", 
+    "label": "Globe"
+  },
+  {
+    "symbolName": "network", 
+    "label": "Network"
+  },
+  {
+    "symbolName": "network.badge.shield.half.filled", 
+    "label": "Protected network"
+  },
+  {
+    "symbolName": "globe.americas", 
+    "label": "Globe on American side"
+  },
+  {
+    "symbolName": "globe.europe.africa", 
+    "label": "Globe on European and African side"
+  },
+  {
+    "symbolName": "globe.asia.australia", 
+    "label": "Globe on Asian and Australian side"
+  },
+  {
+    "symbolName": "sun.max", 
+    "label": "Sun"
+  },
+  {
+    "symbolName": "sun.and.horizon", 
+    "label": "Sun on the horizon"
+  },
+  {
+    "symbolName": "sun.dust", 
+    "label": "Sun behind dust"
+  },
+  {
+    "symbolName": "sun.haze", 
+    "label": "Sun behind haze"
+  },
+  {
+    "symbolName": "moon", 
+    "label": "Moon"
+  },
+  {
+    "symbolName": "moon.circle.fill", 
+    "label": "Moon on circle"
+  },
+  {
+    "symbolName": "zzz", 
+    "label": "Sleeping"
+  },
+  {
+    "symbolName": "moon.zzz", 
+    "label": "Sleeping moon"
+  },
+  {
+    "symbolName": "sparkle", 
+    "label": "Sparkle"
+  },
+  {
+    "symbolName": "sparkles", 
+    "label": "Sparkles"
+  },
+  {
+    "symbolName": "moon.stars", 
+    "label": "Moon with stars"
+  },
+  {
+    "symbolName": "cloud", 
+    "label": "Cloud"
+  },
+  {
+    "symbolName": "cloud.drizzle", 
+    "label": "Drizzle"
+  },
+  {
+    "symbolName": "cloud.rain", 
+    "label": "Rain"
+  },
+  {
+    "symbolName": "cloud.heavyrain", 
+    "label": "Heavy rain"
+  },
+  {
+    "symbolName": "cloud.fog", 
+    "label": "Fog"
+  },
+  {
+    "symbolName": "cloud.hail", 
+    "label": "Hail"
+  },
+  {
+    "symbolName": "cloud.snow", 
+    "label": "Snow"
+  },
+  {
+    "symbolName": "cloud.sleet", 
+    "label": "Sleet"
+  },
+  {
+    "symbolName": "cloud.bolt", 
+    "label": "Bolt"
+  },
+  {
+    "symbolName": "cloud.bolt.rain", 
+    "label": "Storm"
+  },
+  {
+    "symbolName": "cloud.sun", 
+    "label": "Cloudy and sunny"
+  },
+  {
+    "symbolName": "cloud.sun.rain", 
+    "label": "Sunny and rainy"
+  },
+  {
+    "symbolName": "cloud.sun.bolt", 
+    "label": "Sunny with storm"
+  },
+  {
+    "symbolName": "cloud.moon", 
+    "label": "Cloudy at night"
+  },
+  {
+    "symbolName": "cloud.moon.rain", 
+    "label": "Raining at night"
+  },
+  {
+    "symbolName": "cloud.moon.bolt", 
+    "label": "Bolt at night"
+  },
+  {
+    "symbolName": "smoke", 
+    "label": "Smoke"
+  },
+  {
+    "symbolName": "wind", 
+    "label": "Wind"
+  },
+  {
+    "symbolName": "wind.snow", 
+    "label": "Snow and wind"
+  },
+  {
+    "symbolName": "snowflake", 
+    "label": "Snowflake"
+  },
+  {
+    "symbolName": "snowflake.circle.fill", 
+    "label": "Snowflake on circle"
+  },
+  {
+    "symbolName": "tornado", 
+    "label": "Tornado"
+  },
+  {
+    "symbolName": "tropicalstorm", 
+    "label": "Tropical storm"
+  },
+  {
+    "symbolName": "hurricane", 
+    "label": "Hurricane"
+  },
+  {
+    "symbolName": "thermometer.sun", 
+    "label": "Warm thermometer"
+  },
+  {
+    "symbolName": "thermometer.snowflake", 
+    "label": "Cold thermometer"
+  },
+  {
+    "symbolName": "thermometer", 
+    "label": "Thermometer"
+  },
+  {
+    "symbolName": "aqi.low", 
+    "label": "Low air quality index"
+  },
+  {
+    "symbolName": "aqi.medium", 
+    "label": "Medium air quality index"
+  },
+  {
+    "symbolName": "aqi.high", 
+    "label": "High air quality index"
+  },
+  {
+    "symbolName": "humidity", 
+    "label": "humidity"
+  },
+  {
+    "symbolName": "umbrella", 
+    "label": "Umbrella"
+  },
+  {
+    "symbolName": "flame", 
+    "label": "Flame"
+  },
+  {
+    "symbolName": "flame.circle.fill", 
+    "label": "Flame on circle"
+  },
+  {
+    "symbolName": "light.min", 
+    "label": "Minimum light"
+  },
+  {
+    "symbolName": "light.max", 
+    "label": "Maximum light"
+  },
+  {
+    "symbolName": "rays", 
+    "label": "Rays"
+  },
+  {
+    "symbolName": "slowmo", 
+    "label": "Slow motion"
+  },
+  {
+    "symbolName": "timelapse", 
+    "label": "Timelapse"
+  },
+  {
+    "symbolName": "keyboard", 
+    "label": "Keyboard"
+  },
+  {
+    "symbolName": "rectangle.3.group", 
+    "label": "Three rectangles"
+  },
+  {
+    "symbolName": "square.grid.3x2", 
+    "label": "Grid with 3x2 squares"
+  },
+  {
+    "symbolName": "square.grid.2x2", 
+    "label": "Grid with 2x2 squares"
+  },
+  {
+    "symbolName": "circle.hexagongrid", 
+    "label": "Hexagon grid with circles"
+  },
+  {
+    "symbolName": "seal", 
+    "label": "Seal"
+  },
+  {
+    "symbolName": "checkmark.seal", 
+    "label": "Seal with checkmark"
+  },
+  {
+    "symbolName": "exclamationmark.triangle", 
+    "label": "Warning sign"
+  },
+  {
+    "symbolName": "drop", 
+    "label": "Drop"
+  },
+  {
+    "symbolName": "drop.circle.fill", 
+    "label": "Drop on circle"
+  },
+  {
+    "symbolName": "play", 
+    "label": "Play"
+  },
+  {
+    "symbolName": "play.circle.fill", 
+    "label": "Play on circle"
+  },
+  {
+    "symbolName": "play.rectangle.fill", 
+    "label": "Play on circle"
+  },
+  {
+    "symbolName": "pause", 
+    "label": "Pause"
+  },
+  {
+    "symbolName": "pause.circle.fill", 
+    "label": "Pause on circle"
+  },
+  {
+    "symbolName": "pause.rectangle.fill", 
+    "label": "Pause on square"
+  },
+  {
+    "symbolName": "stop", 
+    "label": "Stop"
+  },
+  {
+    "symbolName": "stop.circle.fill", 
+    "label": "Stop on circle"
+  },
+  {
+    "symbolName": "record.circle", 
+    "label": "Record"
+  },
+  {
+    "symbolName": "playpause", 
+    "label": "Play and pause"
+  },
+  {
+    "symbolName": "backward", 
+    "label": "Go backward"
+  },
+  {
+    "symbolName": "forward", 
+    "label": "Go forward"
+  },
+  {
+    "symbolName": "backward.end", 
+    "label": "Go to the end"
+  },
+  {
+    "symbolName": "forward.end", 
+    "label": "Go to the start"
+  },
+  {
+    "symbolName": "backward.frame", 
+    "label": "Move one frame backward"
+  },
+  {
+    "symbolName": "forward.frame", 
+    "label": "Move on frame forward"
+  },
+  {
+    "symbolName": "eject", 
+    "label": "Eject volume"
+  },
+  {
+    "symbolName": "mount", 
+    "label": "Mount volume"
+  },
+  {
+    "symbolName": "memories", 
+    "label": "Memories"
+  },
+  {
+    "symbolName": "shuffle", 
+    "label": "Shuffle"
+  },
+  {
+    "symbolName": "shuffle.circle.fill", 
+    "label": "Shuffle on circle"
+  },
+  {
+    "symbolName": "repeat", 
+    "label": "Repeat"
+  },
+  {
+    "symbolName": "repeat.circle.fill", 
+    "label": "Repeat on circle"
+  },
+  {
+    "symbolName": "infinity", 
+    "label": "Infinity"
+  },
+  {
+    "symbolName": "infinity.circle.fill", 
+    "label": "Infinity on circle"
+  },
+  {
+    "symbolName": "megaphone", 
+    "label": "Megaphone"
+  },
+  {
+    "symbolName": "speaker", 
+    "label": "Speaker"
+  },
+  {
+    "symbolName": "speaker.circle.fill", 
+    "label": "Speaker on circle"
+  },
+  {
+    "symbolName": "speaker.zzz", 
+    "label": "Snoozing speaker"
+  },
+  {
+    "symbolName": "speaker.wave.1", 
+    "label": "Speaker with one wave"
+  },
+  {
+    "symbolName": "speaker.wave.2", 
+    "label": "Speaker with two waves"
+  },
+  {
+    "symbolName": "speaker.wave.3", 
+    "label": "Speaker with three waves"
+  },
+  {
+    "symbolName": "music.note", 
+    "label": "Music note"
+  },
+  {
+    "symbolName": "music.note.list", 
+    "label": "List of music notes"
+  },
+  {
+    "symbolName": "music.quarternote.3", 
+    "label": "Three music notes"
+  },
+  {
+    "symbolName": "music.mic", 
+    "label": "Microphone for music"
+  },
+  {
+    "symbolName": "music.mic.circle.fill", 
+    "label": "Microphone for music on circle"
+  },
+  {
+    "symbolName": "swift", 
+    "label": "Swift"
+  },
+  {
+    "symbolName": "magnifyingglass", 
+    "label": "Magnifying glass"
+  },
+  {
+    "symbolName": "magnifyingglass.circle.fill", 
+    "label": "Magnifying glass on circle"
+  },
+  {
+    "symbolName": "sparkle.magnifyingglass", 
+    "label": "Magnifying glass with sparkles"
+  },
+  {
+    "symbolName": "location.magnifyingglass", 
+    "label": "Magnifying glass at location"
+  },
+  {
+    "symbolName": "loupe", 
+    "label": "Loupe"
+  },
+  {
+    "symbolName": "mic", 
+    "label": "Microphone"
+  },
+  {
+    "symbolName": "mic.circle.fill", 
+    "label": "Microphone with circle"
+  },
+  {
+    "symbolName": "mic.square.fill", 
+    "label": "Microphone on square"
+  },
+  {
+    "symbolName": "circle", 
+    "label": "Circle"
+  },
+  {
+    "symbolName": "circle.lefthalf.filled", 
+    "label": "Circle with left half filled"
+  },
+  {
+    "symbolName": "circle.tophalf.filled", 
+    "label": "Circle with top half filled"
+  },
+  {
+    "symbolName": "circle.inset.filled", 
+    "label": "Filled circle"
+  },
+  {
+    "symbolName": "circle.dashed.inset.filled", 
+    "label": "Filled circle with dashed outline"
+  },
+  {
+    "symbolName": "circle.dotted", 
+    "label": "Dotted circle"
+  },
+  {
+    "symbolName": "circlebadge.2", 
+    "label": "Two circles"
+  },
+  {
+    "symbolName": "smallcircle.circle", 
+    "label": "Circle with dot in the middle"
+  },
+  {
+    "symbolName": "target", 
+    "label": "Target"
+  },
+  {
+    "symbolName": "capsule", 
+    "label": "Capsule"
+  },
+  {
+    "symbolName": "capsule.lefthalf.filled", 
+    "label": "Capsule with left half filled"
+  },
+  {
+    "symbolName": "capsule.tophalf.filled", 
+    "label": "Capsule with top half filled"
+  },
+  {
+    "symbolName": "capsule.portrait", 
+    "label": "Standing capsule"
+  },
+  {
+    "symbolName": "capsule.portrait.lefthalf.filled", 
+    "label": "Standing capsule with left half filled"
+  },
+  {
+    "symbolName": "capsule.portrait.tophalf.filled", 
+    "label": "Standing capsule with top half filled"
+  },
+  {
+    "symbolName": "capsule.portrait.inset.filled", 
+    "label": "Filled standing capsule"
+  },
+  {
+    "symbolName": "placeholdertext.fill", 
+    "label": "Placeholder for text"
+  },
+  {
+    "symbolName": "square", 
+    "label": "Square"
+  },
+  {
+    "symbolName": "square.dashed", 
+    "label": "Dashed square"
+  },
+  {
+    "symbolName": "app", 
+    "label": "App"
+  },
+  {
+    "symbolName": "triangle", 
+    "label": "Triangle"
+  },
+  {
+    "symbolName": "triangle.inset.filled", 
+    "label": "Filled triangle"
+  },
+  {
+    "symbolName": "diamond", 
+    "label": "Diamond"
+  },
+  {
+    "symbolName": "diamond.circle.fill", 
+    "label": "Diamond on circle"
+  },
+  {
+    "symbolName": "diamond.inset.filled", 
+    "label": "Filled diamond"
+  },
+  {
+    "symbolName": "octagon", 
+    "label": "Octagon"
+  },
+  {
+    "symbolName": "hexagon", 
+    "label": "Hexagon"
+  },
+  {
+    "symbolName": "pentagon", 
+    "label": "Pentagon"
+  },
+  {
+    "symbolName": "suit.heart", 
+    "label": "Suit heart"
+  },
+  {
+    "symbolName": "suit.club", 
+    "label": "Suit club"
+  },
+  {
+    "symbolName": "suit.spade", 
+    "label": "Suit spade"
+  },
+  {
+    "symbolName": "suit.diamond", 
+    "label": "Suit diamond"
+  },
+  {
+    "symbolName": "heart", 
+    "label": "Heart"
+  },
+  {
+    "symbolName": "heart.circle.fill", 
+    "label": "Heart on circle"
+  },
+  {
+    "symbolName": "heart.square.fill", 
+    "label": "Heart on square"
+  },
+  {
+    "symbolName": "bolt.heart.fill", 
+    "label": "Bolt in heart"
+  },
+  {
+    "symbolName": "rhombus", 
+    "label": "Rhombus"
+  },
+  {
+    "symbolName": "star", 
+    "label": "Star"
+  },
+  {
+    "symbolName": "star.circle.fill", 
+    "label": "Star on circle"
+  },
+  {
+    "symbolName": "star.square.fill", 
+    "label": "Star on square"
+  },
+  {
+    "symbolName": "flag", 
+    "label": "Flag"
+  },
+  {
+    "symbolName": "flag.circle.fill", 
+    "label": "Flag on circle"
+  },
+  {
+    "symbolName": "flag.square.fill", 
+    "label": "Flag on square"
+  },
+  {
+    "symbolName": "flag.2.crossed", 
+    "label": "Two crossed flags"
+  },
+  {
+    "symbolName": "flag.filled.and.flag.crossed", 
+    "label": "Two different crossed flag"
+  },
+  {
+    "symbolName": "location", 
+    "label": "Location"
+  },
+  {
+    "symbolName": "location.circle.fill", 
+    "label": "Location on circle"
+  },
+  {
+    "symbolName": "location.square.fill", 
+    "label": "Location on square"
+  },
+  {
+    "symbolName": "airtag.radiowaves.forward", 
+    "label": "Active AirTag"
+  },
+  {
+    "symbolName": "airtag", 
+    "label": "AirTag"
+  },
+  {
+    "symbolName": "bell", 
+    "label": "Bell"
+  },
+  {
+    "symbolName": "bell.circle.fill", 
+    "label": "Bell on circle"
+  },
+  {
+    "symbolName": "bell.square.fill", 
+    "label": "Bell on square"
+  },
+  {
+    "symbolName": "bell.and.waveform", 
+    "label": "Bell with waves"
+  },
+  {
+    "symbolName": "bell.badge", 
+    "label": "Bell with badge"
+  },
+  {
+    "symbolName": "bell.badge.circle.fill", 
+    "label": "Bell with badge on circle"
+  },
+  {
+    "symbolName": "tag", 
+    "label": "Tag"
+  },
+  {
+    "symbolName": "tag.circle.fill", 
+    "label": "Tag on circle"
+  },
+  {
+    "symbolName": "tag.square.fill", 
+    "label": "Tag on square"
+  },
+  {
+    "symbolName": "bolt", 
+    "label": "Bolt"
+  },
+  {
+    "symbolName": "bolt.circle.fill", 
+    "label": "Bolt on circle"
+  },
+  {
+    "symbolName": "bolt.square.fill", 
+    "label": "Bolt on square"
+  },
+  {
+    "symbolName": "bolt.shield.fill", 
+    "label": "Bolt on shield"
+  },
+  {
+    "symbolName": "bolt.badge.a", 
+    "label": "Bolt (Ampere)"
+  },
+  {
+    "symbolName": "bolt.horizontal.circle", 
+    "label": "Horizontal bolt"
+  },
+  {
+    "symbolName": "eye", 
+    "label": "Eye"
+  },
+  {
+    "symbolName": "eye.circle.fill", 
+    "label": "Eye on circle"
+  },
+  {
+    "symbolName": "eye.square.fill", 
+    "label": "Eye on square"
+  },
+  {
+    "symbolName": "tshirt", 
+    "label": "T-Shirt"
+  },
+  {
+    "symbolName": "eyes", 
+    "label": "Eyes"
+  },
+  {
+    "symbolName": "eyebrow", 
+    "label": "Eyebrow"
+  },
+  {
+    "symbolName": "nose", 
+    "label": "Nose"
+  },
+  {
+    "symbolName": "mustache", 
+    "label": "Mustache"
+  },
+  {
+    "symbolName": "mouth", 
+    "label": "Mouth"
+  },
+  {
+    "symbolName": "eyeglasses", 
+    "label": "Glasses"
+  },
+  {
+    "symbolName": "facemask", 
+    "label": "Face mask"
+  },
+  {
+    "symbolName": "brain.head.profile", 
+    "label": "Brain in head"
+  },
+  {
+    "symbolName": "brain", 
+    "label": "Brain"
+  },
+  {
+    "symbolName": "icloud", 
+    "label": "iCloud"
+  },
+  {
+    "symbolName": "icloud.circle.fill", 
+    "label": "iCloud on Circle"
+  },
+  {
+    "symbolName": "icloud.square.fill", 
+    "label": "iCloud on Square"
+  },
+  {
+    "symbolName": "lock.icloud", 
+    "label": "Locked iCloud"
+  },
+  {
+    "symbolName": "key.icloud", 
+    "label": "iCloud credentials"
+  },
+  {
+    "symbolName": "flashlight.off.fill", 
+    "label": "Flashlight (off)"
+  },
+  {
+    "symbolName": "flashlight.on.fill", 
+    "label": "Flashlight (on)"
+  },
+  {
+    "symbolName": "camera", 
+    "label": "Camera"
+  },
+  {
+    "symbolName": "camera.circle.fill", 
+    "label": "Camera on circle"
+  },
+  {
+    "symbolName": "message", 
+    "label": "Message"
+  },
+  {
+    "symbolName": "message.circle.fill", 
+    "label": "Message on circle"
+  },
+  {
+    "symbolName": "bubble.right", 
+    "label": "Chat bubble"
+  },
+  {
+    "symbolName": "bubble.right.circle.fill", 
+    "label": "Chat bubble on circle"
+  },
+  {
+    "symbolName": "quote.opening", 
+    "label": "Opening quote"
+  },
+  {
+    "symbolName": "quote.closing", 
+    "label": "Closing quote"
+  },
+  {
+    "symbolName": "quote.bubble", 
+    "label": "Chat bubble with quote"
+  },
+  {
+    "symbolName": "star.bubble", 
+    "label": "Chat bubble with star"
+  },
+  {
+    "symbolName": "character.bubble", 
+    "label": "Chat bubble with character"
+  },
+  {
+    "symbolName": "text.bubble", 
+    "label": "Chat bubble with text"
+  },
+  {
+    "symbolName": "captions.bubble", 
+    "label": "Chat bubble with captions"
+  },
+  {
+    "symbolName": "rectangle.3.group.bubble.left", 
+    "label": "Chat bubble with three rectangles"
+  },
+  {
+    "symbolName": "ellipsis.bubble", 
+    "label": "Chat bubble with ellipsis"
+  },
+  {
+    "symbolName": "phone.bubble.left.fill", 
+    "label": "Chat bubble with phone"
+  },
+  {
+    "symbolName": "video.bubble.left.fill", 
+    "label": "Chat bubble with video (FaceTime)"
+  },
+  {
+    "symbolName": "bubble.left.and.bubble.right", 
+    "label": "Communicating chat bubbles"
+  },
+  {
+    "symbolName": "phone", 
+    "label": "Phone"
+  },
+  {
+    "symbolName": "phone.circle.fill", 
+    "label": "Phone on circle"
+  },
+  {
+    "symbolName": "video", 
+    "label": "Video (FaceTime)"
+  },
+  {
+    "symbolName": "video.circle.fill", 
+    "label": "Video on circle (FaceTime)"
+  },
+  {
+    "symbolName": "video.square.fill", 
+    "label": "Video on square (FaceTime)"
+  },
+  {
+    "symbolName": "envelope", 
+    "label": "Envelope"
+  },
+  {
+    "symbolName": "envelope.circle.fill", 
+    "label": "Envelope on circle"
+  },
+  {
+    "symbolName": "envelope.open", 
+    "label": "Open envelope"
+  },
+  {
+    "symbolName": "envelope.badge", 
+    "label": "Envelope with badge"
+  },
+  {
+    "symbolName": "envelope.badge.shield.half.filled", 
+    "label": "Protected envelope"
+  },
+  {
+    "symbolName": "mail.stack", 
+    "label": "Mails"
+  },
+  {
+    "symbolName": "mail", 
+    "label": "Mail"
+  },
+  {
+    "symbolName": "mail.and.text.magnifyingglass", 
+    "label": "Zoomed in mail"
+  },
+  {
+    "symbolName": "gear", 
+    "label": "Gear"
+  },
+  {
+    "symbolName": "gear.circle.fill", 
+    "label": "Gear on circle"
+  },
+  {
+    "symbolName": "gearshape", 
+    "label": "Gear rim shape"
+  },
+  {
+    "symbolName": "gearshape.circle.fill", 
+    "label": "Gear rim shape on circle"
+  },
+  {
+    "symbolName": "gearshape.2", 
+    "label": "Two gear rim shapes"
+  },
+  {
+    "symbolName": "signature", 
+    "label": "Signature"
+  },
+  {
+    "symbolName": "line.3.crossed.swirl.circle", 
+    "label": "Photo snap"
+  },
+  {
+    "symbolName": "scissors", 
+    "label": "Scissors"
+  },
+  {
+    "symbolName": "ellipsis.circle", 
+    "label": "Ellipsis on circle"
+  },
+  {
+    "symbolName": "bag", 
+    "label": "Bag"
+  },
+  {
+    "symbolName": "bag.circle.fill", 
+    "label": "Bag on circle"
+  },
+  {
+    "symbolName": "cart", 
+    "label": "Cart"
+  },
+  {
+    "symbolName": "cart.circle.fill", 
+    "label": "Cart on circle"
+  },
+  {
+    "symbolName": "creditcard", 
+    "label": "Credit card"
+  },
+  {
+    "symbolName": "creditcard.circle.fill", 
+    "label": "Credit card on circle"
+  },
+  {
+    "symbolName": "giftcard", 
+    "label": "Gift card"
+  },
+  {
+    "symbolName": "wallet.pass", 
+    "label": "Wallet pass"
+  },
+  {
+    "symbolName": "wand.and.rays", 
+    "label": "Wand"
+  },
+  {
+    "symbolName": "crop", 
+    "label": "Crop"
+  },
+  {
+    "symbolName": "gyroscope", 
+    "label": "Gyroscope"
+  },
+  {
+    "symbolName": "gauge", 
+    "label": "Gauge"
+  },
+  {
+    "symbolName": "speedometer", 
+    "label": "Speedometer"
+  },
+  {
+    "symbolName": "barometer", 
+    "label": "Barometer"
+  },
+  {
+    "symbolName": "metronome", 
+    "label": "Metronome"
+  },
+  {
+    "symbolName": "amplifier", 
+    "label": "Amplifier"
+  },
+  {
+    "symbolName": "dice", 
+    "label": "Dice"
+  },
+  {
+    "symbolName": "pianokeys", 
+    "label": "Piano keys"
+  },
+  {
+    "symbolName": "tuningfork", 
+    "label": "Tuning fork"
+  },
+  {
+    "symbolName": "paintbrush", 
+    "label": "Paint brush"
+  },
+  {
+    "symbolName": "paintbrush.pointed", 
+    "label": "Pointed paint brush"
+  },
+  {
+    "symbolName": "bandage", 
+    "label": "Bandage"
+  },
+  {
+    "symbolName": "ruler", 
+    "label": "Ruler"
+  },
+  {
+    "symbolName": "level", 
+    "label": "Level"
+  },
+  {
+    "symbolName": "lines.measurement.horizontal", 
+    "label": "Measurement"
+  },
+  {
+    "symbolName": "wrench", 
+    "label": "Wrench"
+  },
+  {
+    "symbolName": "hammer", 
+    "label": "Hammer"
+  },
+  {
+    "symbolName": "screwdriver", 
+    "label": "Screwdriver"
+  },
+  {
+    "symbolName": "eyedropper", 
+    "label": "Eye dropper"
+  },
+  {
+    "symbolName": "wrench.and.screwdriver", 
+    "label": "Wrench and screwdriver"
+  },
+  {
+    "symbolName": "applescript", 
+    "label": "AppleScript"
+  },
+  {
+    "symbolName": "scroll", 
+    "label": "Scroll"
+  },
+  {
+    "symbolName": "stethoscope", 
+    "label": "Stethoscope"
+  },
+  {
+    "symbolName": "printer", 
+    "label": "Printer"
+  },
+  {
+    "symbolName": "scanner", 
+    "label": "Scanner"
+  },
+  {
+    "symbolName": "faxmachine", 
+    "label": "Fax machine"
+  },
+  {
+    "symbolName": "briefcase", 
+    "label": "Briefcase"
+  },
+  {
+    "symbolName": "case", 
+    "label": "Case"
+  },
+  {
+    "symbolName": "latch.2.case", 
+    "label": "Case with two latches"
+  },
+  {
+    "symbolName": "cross.case", 
+    "label": "First aid case"
+  },
+  {
+    "symbolName": "suitcase", 
+    "label": "Suitcase"
+  },
+  {
+    "symbolName": "suitcase.cart", 
+    "label": "Suitcase on cart"
+  },
+  {
+    "symbolName": "theatermasks", 
+    "label": "Theater masks"
+  },
+  {
+    "symbolName": "puzzlepiece.extension", 
+    "label": "Puzzle piece"
+  },
+  {
+    "symbolName": "puzzlepiece", 
+    "label": "Puzzle piece"
+  },
+  {
+    "symbolName": "homekit", 
+    "label": "HomeKit"
+  },
+  {
+    "symbolName": "house", 
+    "label": "House"
+  },
+  {
+    "symbolName": "music.note.house", 
+    "label": "Music note in house"
+  },
+  {
+    "symbolName": "building.columns", 
+    "label": "Ancient Greek building"
+  },
+  {
+    "symbolName": "signpost.left", 
+    "label": "Signpost"
+  },
+  {
+    "symbolName": "building", 
+    "label": "Building"
+  },
+  {
+    "symbolName": "building.2", 
+    "label": "Two buildings"
+  },
+  {
+    "symbolName": "lock", 
+    "label": "Lock"
+  },
+  {
+    "symbolName": "lock.circle.fill", 
+    "label": "Lock on circle"
+  },
+  {
+    "symbolName": "lock.square.fill", 
+    "label": "Lock on square"
+  },
+  {
+    "symbolName": "lock.shield.fill", 
+    "label": "Lock on shield"
+  },
+  {
+    "symbolName": "lock.open", 
+    "label": "Open lock"
+  },
+  {
+    "symbolName": "key", 
+    "label": "Key"
+  },
+  {
+    "symbolName": "wifi", 
+    "label": "Wifi"
+  },
+  {
+    "symbolName": "wifi.circle.fill", 
+    "label": "Wifi on circle"
+  },
+  {
+    "symbolName": "wifi.square.fill", 
+    "label": "Wifi on square"
+  },
+  {
+    "symbolName": "pin", 
+    "label": "Pin"
+  },
+  {
+    "symbolName": "pin.circle.fill", 
+    "label": "Pin on circle"
+  },
+  {
+    "symbolName": "pin.square.fill", 
+    "label": "Pin on square"
+  },
+  {
+    "symbolName": "mappin", 
+    "label": "Map pin"
+  },
+  {
+    "symbolName": "mappin.circle.fill", 
+    "label": "Map pin on circle"
+  },
+  {
+    "symbolName": "mappin.square.fill", 
+    "label": "Map pin on square"
+  },
+  {
+    "symbolName": "mappin.and.ellipse", 
+    "label": "Map pin and ellipse"
+  },
+  {
+    "symbolName": "map", 
+    "label": "Map"
+  },
+  {
+    "symbolName": "map.circle.fill", 
+    "label": "Map on circle"
+  },
+  {
+    "symbolName": "safari", 
+    "label": "Safari"
+  },
+  {
+    "symbolName": "move.3d", 
+    "label": "Move (3D)"
+  },
+  {
+    "symbolName": "scale.3d", 
+    "label": "Scale (3D)"
+  },
+  {
+    "symbolName": "rotate.3d", 
+    "label": "Rotate (3D)"
+  },
+  {
+    "symbolName": "torus", 
+    "label": "Torus"
+  },
+  {
+    "symbolName": "rotate.left", 
+    "label": "Rotate left"
+  },
+  {
+    "symbolName": "powerplug", 
+    "label": "Power plug"
+  },
+  {
+    "symbolName": "timeline.selection", 
+    "label": "Selection on timeline"
+  },
+  {
+    "symbolName": "cpu", 
+    "label": "CPU"
+  },
+  {
+    "symbolName": "memorychip", 
+    "label": "Memory chip (RAM)"
+  },
+  {
+    "symbolName": "opticaldisc", 
+    "label": "Optical disc"
+  },
+  {
+    "symbolName": "display", 
+    "label": "Display"
+  },
+  {
+    "symbolName": "display.2", 
+    "label": "Displays"
+  },
+  {
+    "symbolName": "desktopcomputer", 
+    "label": "Desktop computer"
+  },
+  {
+    "symbolName": "pc", 
+    "label": "PC"
+  },
+  {
+    "symbolName": "macpro.gen1", 
+    "label": "Mac Pro 1. Generation"
+  },
+  {
+    "symbolName": "macpro.gen2", 
+    "label": "Mac Pro 2. Generation"
+  },
+  {
+    "symbolName": "macpro.gen3", 
+    "label": "Mac Pro 3. Generation"
+  },
+  {
+    "symbolName": "macpro.gen3.server", 
+    "label": "Mac Pro 3. Generation in Rack"
+  },
+  {
+    "symbolName": "server.rack", 
+    "label": "Server rack"
+  },
+  {
+    "symbolName": "xserve", 
+    "label": "Xserve"
+  },
+  {
+    "symbolName": "laptopcomputer", 
+    "label": "Laptop computer"
+  },
+  {
+    "symbolName": "laptopcomputer.and.iphone", 
+    "label": "Laptop computer and iPhone"
+  },
+  {
+    "symbolName": "ipad.and.iphone", 
+    "label": "iPad and iPhone"
+  },
+  {
+    "symbolName": "macmini", 
+    "label": "Mac Mini"
+  },
+  {
+    "symbolName": "airport.express", 
+    "label": "Airport Express"
+  },
+  {
+    "symbolName": "airport.extreme", 
+    "label": "Airport Extreme"
+  },
+  {
+    "symbolName": "airport.extreme.tower", 
+    "label": "Airport Extreme Tower"
+  },
+  {
+    "symbolName": "ipod", 
+    "label": "iPod"
+  },
+  {
+    "symbolName": "ipodshuffle.gen1", 
+    "label": "iPod Shuffle 1. Generation"
+  },
+  {
+    "symbolName": "ipodshuffle.gen2", 
+    "label": "iPod Shuffle 2. Generation"
+  },
+  {
+    "symbolName": "ipodshuffle.gen3", 
+    "label": "iPod Shuffle 3. Generation"
+  },
+  {
+    "symbolName": "ipodshuffle.gen4", 
+    "label": "iPod Shuffle 4. Generation"
+  },
+  {
+    "symbolName": "ipodtouch", 
+    "label": "iPod Touch"
+  },
+  {
+    "symbolName": "ipodtouch.landscape", 
+    "label": "iPod Touch in landscape mode"
+  },
+  {
+    "symbolName": "flipphone", 
+    "label": "Flip phone"
+  },
+  {
+    "symbolName": "candybarphone", 
+    "label": "Candy bar phone"
+  },
+  {
+    "symbolName": "iphone.homebutton", 
+    "label": "iPhone with home button"
+  },
+  {
+    "symbolName": "iphone.homebutton.landscape", 
+    "label": "iPhone with home button in landscape mode"
+  },
+  {
+    "symbolName": "iphone.homebutton.radiowaves.left.and.right", 
+    "label": "iPhone with home button with radio waves"
+  },
+  {
+    "symbolName": "iphone", 
+    "label": "iPhone"
+  },
+  {
+    "symbolName": "iphone.landscape", 
+    "label": "iPhone in landscape mode"
+  },
+  {
+    "symbolName": "iphone.radiowaves.left.and.right", 
+    "label": "iPhone with radio waves"
+  },
+  {
+    "symbolName": "apps.iphone", 
+    "label": "iPhone with apps"
+  },
+  {
+    "symbolName": "iphone.smartbatterycase.gen2", 
+    "label": "Smart battery case for iPhones 2. Generation"
+  },
+  {
+    "symbolName": "iphone.smartbatterycase.gen1", 
+    "label": "Smart battery case for iPhones 1. Generation"
+  },
+  {
+    "symbolName": "ipad.homebutton", 
+    "label": "iPad with home button"
+  },
+  {
+    "symbolName": "ipad.homebutton.landscape", 
+    "label": "iPad with home button in landscape mode"
+  },
+  {
+    "symbolName": "ipad", 
+    "label": "iPad"
+  },
+  {
+    "symbolName": "ipad.landscape", 
+    "label": "iPad in landscape mode"
+  },
+  {
+    "symbolName": "apps.ipad", 
+    "label": "iPad with apps"
+  },
+  {
+    "symbolName": "applepencil", 
+    "label": "Apple Pencil"
+  },
+  {
+    "symbolName": "magicmouse", 
+    "label": "Magic Mouse"
+  },
+  {
+    "symbolName": "computermouse", 
+    "label": "Computer mouse"
+  },
+  {
+    "symbolName": "applewatch", 
+    "label": "Apple Watch"
+  },
+  {
+    "symbolName": "applewatch.watchface", 
+    "label": "Apple Watch with watch face"
+  },
+  {
+    "symbolName": "applewatch.side.right", 
+    "label": "Right side of Apple Watch"
+  },
+  {
+    "symbolName": "watchface.applewatch.case", 
+    "label": "Apple Watch with watch face and without watch band"
+  },
+  {
+    "symbolName": "airpodsmax", 
+    "label": "AirPods Max"
+  },
+  {
+    "symbolName": "beats.headphones", 
+    "label": "Beats headphones"
+  },
+  {
+    "symbolName": "headphones", 
+    "label": "Headphones"
+  },
+  {
+    "symbolName": "earbuds", 
+    "label": "Earbuds"
+  },
+  {
+    "symbolName": "earbuds.case", 
+    "label": "Earbuds case"
+  },
+  {
+    "symbolName": "earpods", 
+    "label": "EarPods"
+  },
+  {
+    "symbolName": "airpods", 
+    "label": "AirPods"
+  },
+  {
+    "symbolName": "airpods.chargingcase", 
+    "label": "Charging case for AirPods"
+  },
+  {
+    "symbolName": "airpods.chargingcase.wireless", 
+    "label": "Wireless charging case for AirPods"
+  },
+  {
+    "symbolName": "airpodspro", 
+    "label": "AirPods Pro"
+  },
+  {
+    "symbolName": "airpodspro.chargingcase.wireless", 
+    "label": "Charging case for AirPods Pro"
+  },
+  {
+    "symbolName": "airpods.gen3", 
+    "label": "AirPods 3. Generation"
+  },
+  {
+    "symbolName": "airpods.gen3.chargingcase.wireless", 
+    "label": "Charging case for 3. Generation AirPods"
+  },
+  {
+    "symbolName": "beats.earphones", 
+    "label": "Beats Earphones"
+  },
+  {
+    "symbolName": "beats.powerbeatspro", 
+    "label": "Beats Powerbeats Pro"
+  },
+  {
+    "symbolName": "beats.powerbeats", 
+    "label": "Beats Powerbeats"
+  },
+  {
+    "symbolName": "beats.powerbeats3", 
+    "label": "Beats Powerbeats 3"
+  },
+  {
+    "symbolName": "beats.studiobuds", 
+    "label": "Beats Studio Buds"
+  },
+  {
+    "symbolName": "beats.studiobuds.chargingcase", 
+    "label": "Charging case for Beats Studio Buds"
+  },
+  {
+    "symbolName": "beats.fit.pro", 
+    "label": "Beats Fit Pro"
+  },
+  {
+    "symbolName": "beats.fit.pro.chargingcase", 
+    "label": "Charging case for Beats Fit Pro"
+  },
+  {
+    "symbolName": "beats.powerbeatspro.chargingcase", 
+    "label": "Charging case for Beats Powerbeats Pro"
+  },
+  {
+    "symbolName": "homepodmini", 
+    "label": "HomePod Mini"
+  },
+  {
+    "symbolName": "homepodmini.2", 
+    "label": "Two HomePod Minis"
+  },
+  {
+    "symbolName": "homepod.and.homepodmini", 
+    "label": "HomePod and HomePod Mini"
+  },
+  {
+    "symbolName": "hifispeaker.and.homepodmini", 
+    "label": "Hifi Speaker and HomePod Mini"
+  },
+  {
+    "symbolName": "homepod", 
+    "label": "HomePod"
+  },
+  {
+    "symbolName": "homepod.2", 
+    "label": "Two HomePods"
+  },
+  {
+    "symbolName": "hifispeaker.and.homepod", 
+    "label": "Hifi Speaker and HomePod"
+  },
+  {
+    "symbolName": "hifispeaker", 
+    "label": "Hifi Speaker"
+  },
+  {
+    "symbolName": "hifispeaker.2", 
+    "label": "Two Hifi Speakers"
+  },
+  {
+    "symbolName": "appletv", 
+    "label": "Apple TV"
+  },
+  {
+    "symbolName": "homepod.and.appletv", 
+    "label": "HomePod and Apple TV"
+  },
+  {
+    "symbolName": "homepodmini.and.appletv", 
+    "label": "HomePod Mini and Apple TV"
+  },
+  {
+    "symbolName": "hifispeaker.and.appletv", 
+    "label": "Hifi Speaker and Apple TV"
+  },
+  {
+    "symbolName": "appletvremote.gen1", 
+    "label": "Apple TV Remote 1. Generation"
+  },
+  {
+    "symbolName": "appletvremote.gen2", 
+    "label": "Apple TV Remote 2. Generation"
+  },
+  {
+    "symbolName": "appletvremote.gen3", 
+    "label": "Apple TV Remote 3. Generation"
+  },
+  {
+    "symbolName": "appletvremote.gen4", 
+    "label": "Apple TV Remote 4. Generation"
+  },
+  {
+    "symbolName": "magsafe.batterypack", 
+    "label": "Magsafe Battery Pack"
+  },
+  {
+    "symbolName": "mediastick", 
+    "label": "Media Stick (USB Stick)"
+  },
+  {
+    "symbolName": "cable.connector", 
+    "label": "Cable connector"
+  },
+  {
+    "symbolName": "cable.connector.horizontal", 
+    "label": "Horizontal cable connector"
+  },
+  {
+    "symbolName": "radio", 
+    "label": "Radio"
+  },
+  {
+    "symbolName": "tv", 
+    "label": "TV"
+  },
+  {
+    "symbolName": "sparkles.tv", 
+    "label": "Sparkles on TV"
+  },
+  {
+    "symbolName": "4k.tv", 
+    "label": "4K TV"
+  },
+  {
+    "symbolName": "music.note.tv", 
+    "label": "Music note on TV"
+  },
+  {
+    "symbolName": "play.tv", 
+    "label": "Play button on TV"
+  },
+  {
+    "symbolName": "photo.tv", 
+    "label": "Picture on TV"
+  },
+  {
+    "symbolName": "tv.and.hifispeaker.fill", 
+    "label": "TV and Hifi Speaker"
+  },
+  {
+    "symbolName": "tv.and.mediabox", 
+    "label": "TV and Mediabox"
+  },
+  {
+    "symbolName": "airplayvideo", 
+    "label": "AirPlay Video"
+  },
+  {
+    "symbolName": "airplayaudio", 
+    "label": "AirPlay Audio"
+  },
+  {
+    "symbolName": "dot.radiowaves.left.and.right", 
+    "label": "Radio waves in two directions"
+  },
+  {
+    "symbolName": "dot.radiowaves.forward", 
+    "label": "Radio waves on one side"
+  },
+  {
+    "symbolName": "dot.radiowaves.up.forward", 
+    "label": "RSS Feed"
+  },
+  {
+    "symbolName": "antenna.radiowaves.left.and.right", 
+    "label": "Antenna with radio waves"
+  },
+  {
+    "symbolName": "antenna.radiowaves.left.and.right.circle.fill", 
+    "label": "Antenna with radio waves in two directions"
+  },
+  {
+    "symbolName": "pip", 
+    "label": "Picture in picture"
+  },
+  {
+    "symbolName": "guitars", 
+    "label": "Guitars"
+  },
+  {
+    "symbolName": "airplane", 
+    "label": "Airplane"
+  },
+  {
+    "symbolName": "airplane.circle.fill", 
+    "label": "Airplane on circle"
+  },
+  {
+    "symbolName": "airplane.arrival", 
+    "label": "Arrival of airplane"
+  },
+  {
+    "symbolName": "airplane.departure", 
+    "label": "Departure of airplane"
+  },
+  {
+    "symbolName": "car", 
+    "label": "Car"
+  },
+  {
+    "symbolName": "car.circle.fill", 
+    "label": "Car on circle"
+  },
+  {
+    "symbolName": "bolt.car", 
+    "label": "Bolt in car (electric car)"
+  },
+  {
+    "symbolName": "bolt.car.circle.fill", 
+    "label": "Bolt in car on circle (electric car on circle)"
+  },
+  {
+    "symbolName": "car.2", 
+    "label": "Two cars"
+  },
+  {
+    "symbolName": "bus", 
+    "label": "Bus"
+  },
+  {
+    "symbolName": "bus.doubledecker", 
+    "label": "Double decker bus"
+  },
+  {
+    "symbolName": "tram", 
+    "label": "Tram"
+  },
+  {
+    "symbolName": "tram.fill.tunnel", 
+    "label": "Tram in tunnel"
+  },
+  {
+    "symbolName": "cablecar", 
+    "label": "Cablecar"
+  },
+  {
+    "symbolName": "ferry", 
+    "label": "Ferry"
+  },
+  {
+    "symbolName": "car.ferry", 
+    "label": "Car ferry"
+  },
+  {
+    "symbolName": "train.side.front.car", 
+    "label": "Front car of train"
+  },
+  {
+    "symbolName": "train.side.middle.car", 
+    "label": "Middle car of train"
+  },
+  {
+    "symbolName": "train.side.rear.car", 
+    "label": "Rear car of train"
+  },
+  {
+    "symbolName": "bicycle", 
+    "label": "Bicycle"
+  },
+  {
+    "symbolName": "bicycle.circle.fill", 
+    "label": "Bicycle on circle"
+  },
+  {
+    "symbolName": "scooter", 
+    "label": "Scooter"
+  },
+  {
+    "symbolName": "parkingsign", 
+    "label": "Parking sign"
+  },
+  {
+    "symbolName": "parkingsign.circle.fill", 
+    "label": "Parking sign on circle"
+  },
+  {
+    "symbolName": "fuelpump", 
+    "label": "Fuelpump"
+  },
+  {
+    "symbolName": "fuelpump.circle.fill", 
+    "label": "Fuelpump on circle"
+  },
+  {
+    "symbolName": "fanblades", 
+    "label": "Fan blades"
+  },
+  {
+    "symbolName": "bed.double", 
+    "label": "Double bed"
+  },
+  {
+    "symbolName": "bed.double.circle.fill", 
+    "label": "Double bed on circle"
+  },
+  {
+    "symbolName": "lungs", 
+    "label": "Lungs"
+  },
+  {
+    "symbolName": "allergens", 
+    "label": "Allergens"
+  },
+  {
+    "symbolName": "pills", 
+    "label": "Pills"
+  },
+  {
+    "symbolName": "pills.circle.fill", 
+    "label": "Pills on circle"
+  },
+  {
+    "symbolName": "testtube.2", 
+    "label": "Two test tubes"
+  },
+  {
+    "symbolName": "ivfluid.bag", 
+    "label": "IV fluid bag"
+  },
+  {
+    "symbolName": "cross.vial", 
+    "label": "Vial with cross"
+  },
+  {
+    "symbolName": "cross", 
+    "label": "Cross"
+  },
+  {
+    "symbolName": "cross.circle.fill", 
+    "label": "Cross on circle"
+  },
+  {
+    "symbolName": "hare", 
+    "label": "Hare"
+  },
+  {
+    "symbolName": "tortoise", 
+    "label": "Tortoise"
+  },
+  {
+    "symbolName": "pawprint", 
+    "label": "Paw print"
+  },
+  {
+    "symbolName": "pawprint.circle.fill", 
+    "label": "Paw print on circle"
+  },
+  {
+    "symbolName": "ant", 
+    "label": "Ant"
+  },
+  {
+    "symbolName": "ant.circle.fill", 
+    "label": "Ant on circle"
+  },
+  {
+    "symbolName": "ladybug", 
+    "label": "Ladybug"
+  },
+  {
+    "symbolName": "leaf", 
+    "label": "Leaf"
+  },
+  {
+    "symbolName": "leaf.circle.fill", 
+    "label": "Leaf on circle"
+  },
+  {
+    "symbolName": "film", 
+    "label": "Film"
+  },
+  {
+    "symbolName": "film.circle.fill", 
+    "label": "Film on circle"
+  },
+  {
+    "symbolName": "sportscourt", 
+    "label": "Sports court"
+  },
+  {
+    "symbolName": "face.smiling", 
+    "label": "Smiling face"
+  },
+  {
+    "symbolName": "crown", 
+    "label": "Crown"
+  },
+  {
+    "symbolName": "comb", 
+    "label": "Comb"
+  },
+  {
+    "symbolName": "qrcode", 
+    "label": "QR Code"
+  },
+  {
+    "symbolName": "barcode", 
+    "label": "Barcode"
+  },
+  {
+    "symbolName": "viewfinder", 
+    "label": "Viewfinder"
+  },
+  {
+    "symbolName": "viewfinder.circle.fill", 
+    "label": "Viewfinder on circle"
+  },
+  {
+    "symbolName": "barcode.viewfinder", 
+    "label": "Barcode viewfinder"
+  },
+  {
+    "symbolName": "qrcode.viewfinder", 
+    "label": "QR Code viewfinder"
+  },
+  {
+    "symbolName": "camera.viewfinder", 
+    "label": "Camera viewfinder"
+  },
+  {
+    "symbolName": "faceid", 
+    "label": "FaceID"
+  },
+  {
+    "symbolName": "doc.viewfinder", 
+    "label": "Document viewfinder"
+  },
+  {
+    "symbolName": "location.viewfinder", 
+    "label": "Location viewfinder"
+  },
+  {
+    "symbolName": "person.fill.viewfinder", 
+    "label": "Person viewfinder"
+  },
+  {
+    "symbolName": "text.viewfinder", 
+    "label": "Text viewfinder"
+  },
+  {
+    "symbolName": "dot.viewfinder", 
+    "label": "Dot viewfinder"
+  },
+  {
+    "symbolName": "dot.circle.viewfinder", 
+    "label": "Outlined dot viewfinder"
+  },
+  {
+    "symbolName": "photo", 
+    "label": "Photo"
+  },
+  {
+    "symbolName": "photo.circle.fill", 
+    "label": "Photo on circle"
+  },
+  {
+    "symbolName": "text.below.photo", 
+    "label": "Text below photo"
+  },
+  {
+    "symbolName": "checkerboard.rectangle", 
+    "label": "Checkerboard"
+  },
+  {
+    "symbolName": "sidebar.leading", 
+    "label": "Leading sidebar"
+  },
+  {
+    "symbolName": "macwindow", 
+    "label": "Mac window"
+  },
+  {
+    "symbolName": "text.and.command.macwindow", 
+    "label": "Text and command in Mac window"
+  },
+  {
+    "symbolName": "keyboard.macwindow", 
+    "label": "Keyboard in Mac window"
+  },
+  {
+    "symbolName": "mosaic", 
+    "label": "Mosaic"
+  },
+  {
+    "symbolName": "pano", 
+    "label": "Panorama"
+  },
+  {
+    "symbolName": "flowchart", 
+    "label": "Flowchart"
+  },
+  {
+    "symbolName": "shield", 
+    "label": "Shield"
+  },
+  {
+    "symbolName": "shield.lefthalf.filled", 
+    "label": "Shield with filled left half"
+  },
+  {
+    "symbolName": "checkerboard.shield", 
+    "label": "Checkerboard shield"
+  },
+  {
+    "symbolName": "switch.2", 
+    "label": "Two switches"
+  },
+  {
+    "symbolName": "slider.horizontal.3", 
+    "label": "Three horizontal sliders"
+  },
+  {
+    "symbolName": "slider.horizontal.below.rectangle", 
+    "label": "Horizontal slider below rectangle"
+  },
+  {
+    "symbolName": "slider.vertical.3", 
+    "label": "Three vertical sliders"
+  },
+  {
+    "symbolName": "cube", 
+    "label": "Cube"
+  },
+  {
+    "symbolName": "cube.transparent", 
+    "label": "Transparent cube"
+  },
+  {
+    "symbolName": "shippingbox", 
+    "label": "Shipping box"
+  },
+  {
+    "symbolName": "arkit", 
+    "label": "ARKit"
+  },
+  {
+    "symbolName": "cone", 
+    "label": "Cone"
+  },
+  {
+    "symbolName": "pyramid", 
+    "label": "Pyramid"
+  },
+  {
+    "symbolName": "livephoto", 
+    "label": "Live photo button"
+  },
+  {
+    "symbolName": "livephoto.play", 
+    "label": "Play button inside live photo button"
+  },
+  {
+    "symbolName": "scope", 
+    "label": "Scope"
+  },
+  {
+    "symbolName": "helm", 
+    "label": "Helm"
+  },
+  {
+    "symbolName": "clock", 
+    "label": "Clock"
+  },
+  {
+    "symbolName": "deskclock", 
+    "label": "Desk clock"
+  },
+  {
+    "symbolName": "alarm", 
+    "label": "Alarm"
+  },
+  {
+    "symbolName": "stopwatch", 
+    "label": "Stopwatch"
+  },
+  {
+    "symbolName": "timer", 
+    "label": "Timer"
+  },
+  {
+    "symbolName": "gamecontroller", 
+    "label": "Game controller"
+  },
+  {
+    "symbolName": "l.joystick", 
+    "label": "Left joystick on controller"
+  },
+  {
+    "symbolName": "r.joystick", 
+    "label": "Right joystick on controller"
+  },
+  {
+    "symbolName": "dpad", 
+    "label": "DPad on controller"
+  },
+  {
+    "symbolName": "circle.circle.fill", 
+    "label": "Circle button on controller"
+  },
+  {
+    "symbolName": "square.circle.fill", 
+    "label": "Square button on controller"
+  },
+  {
+    "symbolName": "triangle.circle.fill", 
+    "label": "Triangle button on controller"
+  },
+  {
+    "symbolName": "l.rectangle.roundedbottom.fill", 
+    "label": "Left button on controller"
+  },
+  {
+    "symbolName": "l1.rectangle.roundedbottom.fill", 
+    "label": "L1 button on controller"
+  },
+  {
+    "symbolName": "l2.rectangle.roundedtop.fill", 
+    "label": "L2 button on controller"
+  },
+  {
+    "symbolName": "r.rectangle.roundedbottom.fill", 
+    "label": "Right button on controller"
+  },
+  {
+    "symbolName": "r1.rectangle.roundedbottom.fill", 
+    "label": "R1 button on controller"
+  },
+  {
+    "symbolName": "r2.rectangle.roundedtop.fill", 
+    "label": "R2 button on controller"
+  },
+  {
+    "symbolName": "lb.rectangle.roundedbottom.fill", 
+    "label": "LB button on controller"
+  },
+  {
+    "symbolName": "rb.rectangle.roundedbottom.fill", 
+    "label": "RB button on controller"
+  },
+  {
+    "symbolName": "lt.rectangle.roundedtop.fill", 
+    "label": "LT button on controller"
+  },
+  {
+    "symbolName": "rt.rectangle.roundedtop.fill", 
+    "label": "RT button on controller"
+  },
+  {
+    "symbolName": "zl.rectangle.roundedtop.fill", 
+    "label": "ZL button on controller"
+  },
+  {
+    "symbolName": "zr.rectangle.roundedtop.fill", 
+    "label": "ZR button on controller"
+  },
+  {
+    "symbolName": "logo.playstation", 
+    "label": "Playstation logo"
+  },
+  {
+    "symbolName": "logo.xbox", 
+    "label": "Xbox logo"
+  },
+  {
+    "symbolName": "paintpalette", 
+    "label": "Color palette"
+  },
+  {
+    "symbolName": "cup.and.saucer", 
+    "label": "Cup and saucer"
+  },
+  {
+    "symbolName": "takeoutbag.and.cup.and.straw", 
+    "label": "Takeout bag, cup and straw"
+  },
+  {
+    "symbolName": "fork.knife", 
+    "label": "Fork and knife"
+  },
+  {
+    "symbolName": "figure.walk", 
+    "label": "Walking figure"
+  },
+  {
+    "symbolName": "figure.stand", 
+    "label": "Standing figure"
+  },
+  {
+    "symbolName": "figure.stand.line.dotted.figure.stand", 
+    "label": "Dotted line between two standing figures"
+  },
+  {
+    "symbolName": "figure.wave", 
+    "label": "Waving figure"
+  },
+  {
+    "symbolName": "figure.roll", 
+    "label": "Rolling figure in wheelchair"
+  },
+  {
+    "symbolName": "ear", 
+    "label": "Ear"
+  },
+  {
+    "symbolName": "ear.and.waveform", 
+    "label": "Ear with waves"
+  },
+  {
+    "symbolName": "hand.raised", 
+    "label": "Raised hand"
+  },
+  {
+    "symbolName": "hand.thumbsup", 
+    "label": "Thumbs up"
+  },
+  {
+    "symbolName": "hand.thumbsdown", 
+    "label": "Thumbs down"
+  },
+  {
+    "symbolName": "hand.point.up.left", 
+    "label": "Hand points towards the upper left"
+  },
+  {
+    "symbolName": "hand.draw", 
+    "label": "Drawing hand"
+  },
+  {
+    "symbolName": "hand.tap", 
+    "label": "Tapping hand"
+  },
+  {
+    "symbolName": "rectangle.and.hand.point.up.left", 
+    "label": "Hand pointing on a rectangle"
+  },
+  {
+    "symbolName": "hand.point.left", 
+    "label": "Hand points towards the left side"
+  },
+  {
+    "symbolName": "hand.point.right", 
+    "label": "Hand points towards the right side"
+  },
+  {
+    "symbolName": "hand.point.up", 
+    "label": "Hand points towards the upper side"
+  },
+  {
+    "symbolName": "hand.point.up.braille", 
+    "label": "Hand points on braille"
+  },
+  {
+    "symbolName": "hand.point.down", 
+    "label": "Hand points towards the bottom"
+  },
+  {
+    "symbolName": "hand.wave", 
+    "label": "Waving hand"
+  },
+  {
+    "symbolName": "hands.clap", 
+    "label": "Clapping hands"
+  },
+  {
+    "symbolName": "hands.sparkles", 
+    "label": "Clapping hands with sparkles"
+  },
+  {
+    "symbolName": "cylinder", 
+    "label": "Cylinder"
+  },
+  {
+    "symbolName": "cylinder.split.1x2", 
+    "label": "Splited cylinder"
+  },
+  {
+    "symbolName": "chart.bar", 
+    "label": "Bar chart"
+  },
+  {
+    "symbolName": "chart.pie", 
+    "label": "Pie chart"
+  },
+  {
+    "symbolName": "chart.bar.xaxis", 
+    "label": "Bar chart on x-axis"
+  },
+  {
+    "symbolName": "chart.line.uptrend.xyaxis", 
+    "label": "Line chart with upwards trend"
+  },
+  {
+    "symbolName": "waveform.path.ecg", 
+    "label": "ECG waveform path"
+  },
+  {
+    "symbolName": "waveform.path", 
+    "label": "Waveform path"
+  },
+  {
+    "symbolName": "waveform", 
+    "label": "Waveform"
+  },
+  {
+    "symbolName": "waveform.and.magnifyingglass", 
+    "label": "Waveform and magnifying glass"
+  },
+  {
+    "symbolName": "waveform.and.mic", 
+    "label": "Waveform and microphone"
+  },
+  {
+    "symbolName": "simcard", 
+    "label": "Sim card"
+  },
+  {
+    "symbolName": "simcard.2", 
+    "label": "Two sim cards"
+  },
+  {
+    "symbolName": "sdcard", 
+    "label": "SD Card"
+  },
+  {
+    "symbolName": "esim", 
+    "label": "eSim"
+  },
+  {
+    "symbolName": "touchid", 
+    "label": "TouchID"
+  },
+  {
+    "symbolName": "bonjour", 
+    "label": "Bonjour"
+  },
+  {
+    "symbolName": "atom", 
+    "label": "Atom"
+  },
+  {
+    "symbolName": "scalemass", 
+    "label": "Scale mass"
+  },
+  {
+    "symbolName": "gift", 
+    "label": "Gift"
+  },
+  {
+    "symbolName": "app.badge", 
+    "label": "Badge on app icon"
+  },
+  {
+    "symbolName": "appclip", 
+    "label": "AppClip"
+  },
+  {
+    "symbolName": "app.gift", 
+    "label": "App gift"
+  },
+  {
+    "symbolName": "studentdesk", 
+    "label": "Student desk"
+  },
+  {
+    "symbolName": "hourglass", 
+    "label": "Hourglass"
+  },
+  {
+    "symbolName": "banknote", 
+    "label": "Banknote"
+  },
+  {
+    "symbolName": "paragraphsign", 
+    "label": "Paragraph sign"
+  },
+  {
+    "symbolName": "purchased", 
+    "label": "Purchased"
+  },
+  {
+    "symbolName": "perspective", 
+    "label": "Perspective"
+  },
+  {
+    "symbolName": "aspectratio", 
+    "label": "Aspect ratio"
+  },
+  {
+    "symbolName": "camera.filters", 
+    "label": "Camera filters"
+  },
+  {
+    "symbolName": "skew", 
+    "label": "Skew"
+  },
+  {
+    "symbolName": "grid", 
+    "label": "Grid"
+  },
+  {
+    "symbolName": "burn", 
+    "label": "Burn"
+  },
+  {
+    "symbolName": "lifepreserver", 
+    "label": "Life preserver"
+  },
+  {
+    "symbolName": "recordingtape", 
+    "label": "Recording tape"
+  },
+  {
+    "symbolName": "binoculars", 
+    "label": "Binoculars"
+  },
+  {
+    "symbolName": "battery.100", 
+    "label": "Battery on 100%"
+  },
+  {
+    "symbolName": "battery.75", 
+    "label": "Battery on 75%"
+  },
+  {
+    "symbolName": "battery.50", 
+    "label": "Battery on 50%"
+  },
+  {
+    "symbolName": "battery.25", 
+    "label": "Battery on 25%"
+  },
+  {
+    "symbolName": "battery.0", 
+    "label": "Battery on 0%"
+  },
+  {
+    "symbolName": "battery.100.bolt", 
+    "label": "Loading battery"
+  },
+  {
+    "symbolName": "minus.plus.batteryblock", 
+    "label": "Negative and positive battery block"
+  },
+  {
+    "symbolName": "bolt.batteryblock", 
+    "label": "Loading battery block"
+  },
+  {
+    "symbolName": "lightbulb", 
+    "label": "Lightbulb"
+  },
+  {
+    "symbolName": "fibrechannel", 
+    "label": "Fibre channel"
+  },
+  {
+    "symbolName": "checklist", 
+    "label": "Checklist"
+  },
+  {
+    "symbolName": "list.dash", 
+    "label": "Dashed list"
+  },
+  {
+    "symbolName": "list.bullet", 
+    "label": "Bullet list"
+  },
+  {
+    "symbolName": "list.number", 
+    "label": "Ordered list"
+  },
+  {
+    "symbolName": "text.quote", 
+    "label": "Text quote"
+  },
+  {
+    "symbolName": "list.and.film", 
+    "label": "List and film"
+  },
+  {
+    "symbolName": "textformat.size", 
+    "label": "Textformat: Size"
+  },
+  {
+    "symbolName": "textformat", 
+    "label": "Textformat"
+  },
+  {
+    "symbolName": "textformat.alt", 
+    "label": "Textformat: Alt"
+  },
+  {
+    "symbolName": "textformat.superscript", 
+    "label": "Textformat: Superscript"
+  },
+  {
+    "symbolName": "textformat.subscript", 
+    "label": "Textformat: Subscript"
+  },
+  {
+    "symbolName": "textformat.abc.dottedunderline", 
+    "label": "Textformat: Dotted underline"
+  },
+  {
+    "symbolName": "bold", 
+    "label": "Bold"
+  },
+  {
+    "symbolName": "italic", 
+    "label": "Italic"
+  },
+  {
+    "symbolName": "underline", 
+    "label": "Underline"
+  },
+  {
+    "symbolName": "strikethrough", 
+    "label": "Strikethrough"
+  },
+  {
+    "symbolName": "shadow", 
+    "label": "Shadow"
+  },
+  {
+    "symbolName": "view.2d", 
+    "label": "View in 2D"
+  },
+  {
+    "symbolName": "view.3d", 
+    "label": "View in 3D"
+  },
+  {
+    "symbolName": "character.cursor.ibeam", 
+    "label": "Character cursor"
+  },
+  {
+    "symbolName": "fx", 
+    "label": "FX"
+  },
+  {
+    "symbolName": "f.cursive", 
+    "label": "Cursive F"
+  },
+  {
+    "symbolName": "k", 
+    "label": "K"
+  },
+  {
+    "symbolName": "sum", 
+    "label": "Sum"
+  },
+  {
+    "symbolName": "percent", 
+    "label": "Percent"
+  },
+  {
+    "symbolName": "function", 
+    "label": "Function"
+  },
+  {
+    "symbolName": "fn", 
+    "label": "Fn"
+  },
+  {
+    "symbolName": "textformat.123", 
+    "label": "Textformat: 123"
+  },
+  {
+    "symbolName": "a.magnify", 
+    "label": "Zoomed in A"
+  },
+  {
+    "symbolName": "info", 
+    "label": "Info"
+  },
+  {
+    "symbolName": "info.circle.fill", 
+    "label": "Info on circle"
+  },
+  {
+    "symbolName": "at", 
+    "label": "@ (at)"
+  },
+  {
+    "symbolName": "at.circle.fill", 
+    "label": "@ (at) on circle"
+  },
+  {
+    "symbolName": "questionmark", 
+    "label": "? (question mark)"
+  },
+  {
+    "symbolName": "questionmark.circle.fill", 
+    "label": "? (question mark) on circle"
+  },
+  {
+    "symbolName": "exclamationmark", 
+    "label": "! (exclamation mark)"
+  },
+  {
+    "symbolName": "exclamationmark.circle.fill", 
+    "label": "! (exclamation mark) on circle"
+  },
+  {
+    "symbolName": "exclamationmark.shield.fill", 
+    "label": "! (exclamation mark) on shield"
+  },
+  {
+    "symbolName": "plus", 
+    "label": "+ (plus)"
+  },
+  {
+    "symbolName": "minus", 
+    "label": "- (minus)"
+  },
+  {
+    "symbolName": "plusminus", 
+    "label": "+- (plus minus)"
+  },
+  {
+    "symbolName": "plus.forwardslash.minus", 
+    "label": "+/- (plus/minus)"
+  },
+  {
+    "symbolName": "minus.forwardslash.plus", 
+    "label": "-/+ (minus/plus)"
+  },
+  {
+    "symbolName": "multiply", 
+    "label": "* (multiply)"
+  },
+  {
+    "symbolName": "divide", 
+    "label": "/ (divide)"
+  },
+  {
+    "symbolName": "equal", 
+    "label": "= (equal)"
+  },
+  {
+    "symbolName": "lessthan", 
+    "label": "< (less than)"
+  },
+  {
+    "symbolName": "greaterthan", 
+    "label": "> (greater than)"
+  },
+  {
+    "symbolName": "chevron.left.forwardslash.chevron.right", 
+    "label": "Coding"
+  },
+  {
+    "symbolName": "parentheses", 
+    "label": "Parentheses"
+  },
+  {
+    "symbolName": "curlybraces", 
+    "label": "Curly braces"
+  },
+  {
+    "symbolName": "ellipsis.curlybraces", 
+    "label": "Ellipsis between curly braces"
+  },
+  {
+    "symbolName": "number", 
+    "label": "Number"
+  },
+  {
+    "symbolName": "x.squareroot", 
+    "label": "Square root"
+  },
+  {
+    "symbolName": "xmark", 
+    "label": "Close"
+  },
+  {
+    "symbolName": "xmark.circle.fill", 
+    "label": "Close on circle"
+  },
+  {
+    "symbolName": "checkmark", 
+    "label": "Checkmark"
+  },
+  {
+    "symbolName": "checkmark.circle.fill", 
+    "label": "Checkmark on circle"
+  },
+  {
+    "symbolName": "applelogo", 
+    "label": "Apple logo"
+  }
+]

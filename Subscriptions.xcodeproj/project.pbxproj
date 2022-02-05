@@ -49,6 +49,8 @@
 		0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */; };
 		0680FDA0279451A900A35783 /* TipJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD9F279451A800A35783 /* TipJarView.swift */; };
 		06998F4727AC61FA008A9B87 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */; };
+		06998F4A27AE7799008A9B87 /* Icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 06998F4C27AE7799008A9B87 /* Icons.json */; };
+		06998F4F27AED331008A9B87 /* Extension+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F4E27AED331008A9B87 /* Extension+Bundle.swift */; };
 		06C1A2BA27A5CA5500112ECC /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */; };
 		06C1A2BC27A5CE7C00112ECC /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */; };
 		06DEA566279486D400FC6412 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA564279486D400FC6412 /* Localizable.strings */; };
@@ -124,6 +126,9 @@
 		0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumIAPView.swift; sourceTree = "<group>"; };
 		0680FD9F279451A800A35783 /* TipJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarView.swift; sourceTree = "<group>"; };
 		06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		06998F4B27AE7799008A9B87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Icons.json; sourceTree = "<group>"; };
+		06998F4D27AE795A008A9B87 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/Icons.json; sourceTree = "<group>"; };
+		06998F4E27AED331008A9B87 /* Extension+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Bundle.swift"; sourceTree = "<group>"; };
 		06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
 		06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
 		06C1A2BD27A5DD4600112ECC /* Subscriptions 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Subscriptions 3.xcdatamodel"; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 			children = (
 				06047BF9279C8BE1000ADA4D /* BillingOption.swift */,
 				0680FD8D278AED5800A35783 /* Icons.swift */,
+				06998F4C27AE7799008A9B87 /* Icons.json */,
 				06409F43276932C000ED3B7A /* Subscriptions.xcdatamodeld */,
 				06047BFD279C8C5D000ADA4D /* License.swift */,
 				06047C0E279C9C19000ADA4D /* SubscriptionItems.swift */,
@@ -240,6 +246,7 @@
 				06047BF3279C747F000ADA4D /* Currency.swift */,
 				06047C0C279C99D4000ADA4D /* DateCalculations.swift */,
 				06047BF5279C8697000ADA4D /* Extension+Color.swift */,
+				06998F4E27AED331008A9B87 /* Extension+Bundle.swift */,
 				06047BF7279C86F2000ADA4D /* Extension+UIImage.swift */,
 				06047C08279C9876000ADA4D /* Extension+View.swift */,
 				06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */,
@@ -450,6 +457,7 @@
 				06409F40276932C000ED3B7A /* Preview Assets.xcassets in Resources */,
 				06DEA566279486D400FC6412 /* Localizable.strings in Resources */,
 				06409F3D276932C000ED3B7A /* Assets.xcassets in Resources */,
+				06998F4A27AE7799008A9B87 /* Icons.json in Resources */,
 				06047C13279D96FD000ADA4D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +498,7 @@
 				06047C0D279C99D4000ADA4D /* DateCalculations.swift in Sources */,
 				0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */,
 				06047BF4279C747F000ADA4D /* Currency.swift in Sources */,
+				06998F4F27AED331008A9B87 /* Extension+Bundle.swift in Sources */,
 				06998F4727AC61FA008A9B87 /* NotificationScheduler.swift in Sources */,
 				06047BED279C71B9000ADA4D /* Shake.swift in Sources */,
 				06047C06279C93C3000ADA4D /* SampleData.swift in Sources */,
@@ -552,6 +561,15 @@
 				06047C12279D96FC000ADA4D /* de */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		06998F4C27AE7799008A9B87 /* Icons.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06998F4B27AE7799008A9B87 /* Base */,
+				06998F4D27AE795A008A9B87 /* de */,
+			);
+			name = Icons.json;
 			sourceTree = "<group>";
 		};
 		06DEA564279486D400FC6412 /* Localizable.strings */ = {
