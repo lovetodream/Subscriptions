@@ -4,6 +4,13 @@
         <attribute name="onDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="cancellationReminders" inverseEntity="Item"/>
     </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="icon" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="systemImage" optional="YES" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="category" inverseEntity="Item"/>
+    </entity>
     <entity name="IgnoredBudgetMonth" representedClassName="IgnoredBudgetMonth" syncable="YES" codeGenerationType="class">
         <attribute name="firstOfMonth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
@@ -26,12 +33,21 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="cancellationReminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CancellationReminder" inverseName="item" inverseEntity="CancellationReminder"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
         <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" inverseName="item" inverseEntity="Reminder"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="items" inverseEntity="Tag"/>
     </entity>
     <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="daysBefore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="uid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="reminders" inverseEntity="Item"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="icon" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="systemImage" optional="YES" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="tags" inverseEntity="Item"/>
     </entity>
     <entity name="Tip" representedClassName="Tip" syncable="YES" codeGenerationType="class">
         <attribute name="currency" optional="YES" attributeType="String"/>
@@ -42,10 +58,12 @@
     </entity>
     <fetchRequest name="ActiveSubscriptions" entity="Item" predicateString="active == 1 AND deactivationDate &lt; CAST(Date.now.timeIntervalSince1970, &quot;NSDate&quot;)"/>
     <elements>
-        <element name="IgnoredBudgetMonth" positionX="51.15625" positionY="410.51171875" width="128" height="44"/>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="314"/>
+        <element name="CancellationReminder" positionX="139.86328125" positionY="-137.80078125" width="128" height="73"/>
+        <element name="IgnoredBudgetMonth" positionX="51.15625" positionY="410.51171875" width="128" height="58"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="358"/>
         <element name="Reminder" positionX="229.16015625" positionY="271.6328125" width="154.99609375" height="88"/>
         <element name="Tip" positionX="387.02734375" positionY="312.9765625" width="128" height="104"/>
-        <element name="CancellationReminder" positionX="139.86328125" positionY="-137.80078125" width="128" height="73"/>
+        <element name="Category" positionX="162" positionY="135" width="128" height="118"/>
+        <element name="Tag" positionX="171" positionY="144" width="128" height="104"/>
     </elements>
 </model>
