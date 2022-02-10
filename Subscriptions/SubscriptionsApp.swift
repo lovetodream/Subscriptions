@@ -12,10 +12,24 @@
 //
 
 import SwiftUI
+import Sentry
 
 @main
 struct SubscriptionsApp: App {
     let persistenceController = PersistenceController.shared
+    
+    init() {
+        SentrySDK.start { options in
+            options.dsn = Bundle.main.object(forInfoDictionaryKey: "sentryDSN") as? String ?? ""
+            options.debug = true
+            
+            #if DEBUG
+            options.sampleRate = 1.0
+            #else
+            options.sampleRate = 0.25
+            #endif
+        }
+    }
 
     var body: some Scene {
         WindowGroup {

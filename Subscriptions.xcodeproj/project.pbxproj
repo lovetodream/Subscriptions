@@ -51,6 +51,7 @@
 		06998F4727AC61FA008A9B87 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */; };
 		06998F4A27AE7799008A9B87 /* Icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 06998F4C27AE7799008A9B87 /* Icons.json */; };
 		06998F4F27AED331008A9B87 /* Extension+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F4E27AED331008A9B87 /* Extension+Bundle.swift */; };
+		06998F5227B59CA4008A9B87 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 06998F5127B59CA4008A9B87 /* Sentry */; };
 		06C1A2BA27A5CA5500112ECC /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */; };
 		06C1A2BC27A5CE7C00112ECC /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */; };
 		06DEA566279486D400FC6412 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA564279486D400FC6412 /* Localizable.strings */; };
@@ -146,6 +147,7 @@
 				0680FD9A278B6D7F00A35783 /* StoreKit.framework in Frameworks */,
 				0680FD8C278A145700A35783 /* FaviconFinder in Frameworks */,
 				0680FD98278B5ED800A35783 /* CloudKit.framework in Frameworks */,
+				06998F5227B59CA4008A9B87 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +361,7 @@
 			name = Subscriptions;
 			packageProductDependencies = (
 				0680FD8B278A145700A35783 /* FaviconFinder */,
+				06998F5127B59CA4008A9B87 /* Sentry */,
 			);
 			productName = Subscriptions;
 			productReference = 06409F35276932BF00ED3B7A /* Abonementi.app */;
@@ -436,6 +439,7 @@
 			mainGroup = 06409F2C276932BF00ED3B7A;
 			packageReferences = (
 				0680FD8A278A145700A35783 /* XCRemoteSwiftPackageReference "FaviconFinder" */,
+				06998F5027B59CA4008A9B87 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = 06409F36276932BF00ED3B7A /* Products */;
 			projectDirPath = "";
@@ -902,6 +906,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		06998F5027B59CA4008A9B87 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -909,6 +921,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0680FD8A278A145700A35783 /* XCRemoteSwiftPackageReference "FaviconFinder" */;
 			productName = FaviconFinder;
+		};
+		06998F5127B59CA4008A9B87 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06998F5027B59CA4008A9B87 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
 		};
 /* End XCSwiftPackageProductDependency section */
 

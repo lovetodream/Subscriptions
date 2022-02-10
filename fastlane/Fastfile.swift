@@ -11,6 +11,10 @@ import Foundation
 class Fastfile: LaneFile {
     let xcodeproj = OptionalConfigValue(stringLiteral: "Subscriptions.xcodeproj")
     let appleID = OptionalConfigValue(stringLiteral: environmentVariable(get: "APPLE_ID"))
+    let sentryAuthToken = OptionalConfigValue(stringLiteral: environmentVariable(get: "SENTRY_AUTH_TOKEN"))
+    let sentryUrl = OptionalConfigValue(stringLiteral: environmentVariable(get: "SENTRY_URL"))
+    let sentryOrg = OptionalConfigValue(stringLiteral: environmentVariable(get: "SENTRY_ORG"))
+    let sentryProject = OptionalConfigValue(stringLiteral: environmentVariable(get: "SENTRY_PROJECT"))
     
 	func screenshotsLane() {
         desc("Generate new localized screenshots")
@@ -34,5 +38,20 @@ class Fastfile: LaneFile {
         buildIosApp(scheme: "Subscriptions")
         
         uploadToTestflight(appleId: "appleID")
+        
+        uploadDif()
+    }
+    
+    func uploadDifLane() {
+        desc("Upload dif to Sentry")
+        
+        uploadDif()
+    }
+    
+    func uploadDif() {
+        sentryUploadDif(url: sentryUrl,
+                        authToken: sentryAuthToken,
+                        orgSlug: sentryOrg,
+                        projectSlug: sentryProject)
     }
 }

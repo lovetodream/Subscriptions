@@ -19,7 +19,8 @@ struct AcknowledgementView: View {
                                                url: URL(string: "https://raw.githubusercontent.com/OpenSesameManager/FaviconFinder/4.0.4/LICENSE.txt")!),
                                        License(product: "SwiftSoup",
                                                content: "",
-                                               url: URL(string: "https://raw.githubusercontent.com/scinfu/SwiftSoup/2.3.6/LICENSE")!)]
+                                               url: URL(string: "https://raw.githubusercontent.com/scinfu/SwiftSoup/2.3.6/LICENSE")!),
+                                       License(product: "Sentry", content: "", url: URL(string: "https://raw.githubusercontent.com/getsentry/sentry-cocoa/master/LICENSE.md")!)]
     
     @State private var selectedLicense: License?
     @State private var loadingLicense: License?
