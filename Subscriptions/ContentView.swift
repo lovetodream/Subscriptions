@@ -49,6 +49,9 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \IgnoredBudgetMonth.firstOfMonth, ascending: true)], predicate: NSPredicate(format: "firstOfMonth == %@", NSDate(timeIntervalSince1970: Date.now.startOfMonth().timeIntervalSince1970)), animation: .default)
     private var ignoredBudgetMonths: FetchedResults<IgnoredBudgetMonth>
     
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Category.timestamp, ascending: false)], animation: .default)
+    private var categories: FetchedResults<Category>
+    
     let publisher = NotificationCenter.default.publisher(for: .NSManagedObjectContextObjectsDidChange)
     
     @StateObject var storeManager = StoreManager()
@@ -58,6 +61,7 @@ struct ContentView: View {
     @State private var showPremiumIAP = false
     @State private var highlightAddButton: CGFloat = 0
     @State private var ignoreOnlyRelevantFlag = false
+    @State private var groupByCategories = false
     
     @State private var searchText = ""
     
@@ -114,6 +118,7 @@ struct ContentView: View {
                         } label: {
                             Label {
                                 Text("This months bill exceeds your budget by \((cost - budget) as NSDecimalNumber, formatter: currencyFormatter).")
+                                    .privacySensitive()
                             } icon: {
                                 Image(systemName: "exclamationmark.circle")
                             }
@@ -163,67 +168,86 @@ struct ContentView: View {
                     }
                 }
                 
-                Section {
-                    if items.count > 0 {
-                        ForEach(searchResult) { item in
-                            NavigationLink {
-                                SubscriptionDetailView(item: item)
-                                    .environmentObject(notificationScheduler)
-                            } label: {
-                                ItemRow(item: item)
-                            }
-                            .swipeActions(edge: .leading, allowsFullSwipe: true) {
-                                Button {
-                                    withAnimation {
-                                        item.pinned.toggle()
-                                        try? viewContext.save()
+                if groupByCategories && searchText.isEmpty {
+                    ForEach(categories) { category in
+                        if let items = category.items as? Set<Item>, items.count > 0 {
+                            Section {
+                                ForEach(Array(items.filter { $0.active && ($0.deactivationDate == nil || $0.deactivationDate! >= .now) })) { item in
+                                    NavigationLink {
+                                        SubscriptionDetailView(item: item)
+                                            .environmentObject(notificationScheduler)
+                                    } label: {
+                                        ItemRow(item: item)
                                     }
-                                } label: {
-                                    item.pinned ? Label("Unpin", systemImage: "pin.slash") : Label("Pin", systemImage: "pin")
                                 }
-                                .tint(.orange)
-                            }
-                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                                Button(role: .destructive) {
-                                    withAnimation {
-                                        item.active.toggle()
-                                        item.deactivationDate = item.active ? nil : .now
-                                        try? viewContext.save()
-                                    }
-                                } label: {
-                                    item.active ? Label("Pause", systemImage: "pause") : Label("Reactivate", systemImage: "play")
-                                }
+                            } header: {
+                                Text(category.name ?? "Unnamed")
                             }
                         }
-                        .onDelete(perform: deleteItems)
-                    } else {
+                    }
+                } else {
+                    Section {
+                        if items.count > 0 {
+                            ForEach(searchResult) { item in
+                                NavigationLink {
+                                    SubscriptionDetailView(item: item)
+                                        .environmentObject(notificationScheduler)
+                                } label: {
+                                    ItemRow(item: item)
+                                }
+                                .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                                    Button {
+                                        withAnimation {
+                                            item.pinned.toggle()
+                                            try? viewContext.save()
+                                        }
+                                    } label: {
+                                        item.pinned ? Label("Unpin", systemImage: "pin.slash") : Label("Pin", systemImage: "pin")
+                                    }
+                                    .tint(.orange)
+                                }
+                                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                    Button(role: .destructive) {
+                                        withAnimation {
+                                            item.active.toggle()
+                                            item.deactivationDate = item.active ? nil : .now
+                                            try? viewContext.save()
+                                        }
+                                    } label: {
+                                        item.active ? Label("Pause", systemImage: "pause") : Label("Reactivate", systemImage: "play")
+                                    }
+                                }
+                            }
+                            .onDelete(perform: deleteItems)
+                        } else {
+                            Button {
+                                withAnimation {
+                                    highlightAddButton += 1
+                                }
+                            } label: {
+                                Text("Add your first Subscription with the \(Image(systemName: "plus")) button.")
+                            }
+                        }
+                    } header: {
+                        Text("Due this month: \(currentMonthCost as NSDecimalNumber, formatter: currencyFormatter)")
+                            .privacySensitive()
+                    }
+                    
+                    if showOnlyRelevantSubscriptions {
                         Button {
                             withAnimation {
-                                highlightAddButton += 1
+                                ignoreOnlyRelevantFlag.toggle()
                             }
                         } label: {
-                            Text("Add your first Subscription with the \(Image(systemName: "plus")) button.")
-                        }
-                    }
-                } header: {
-                    Text("Due this month: \(currentMonthCost as NSDecimalNumber, formatter: currencyFormatter)")
-                        .privacySensitive()
-                }
-                
-                if showOnlyRelevantSubscriptions {
-                    Button {
-                        withAnimation {
-                            ignoreOnlyRelevantFlag.toggle()
-                        }
-                    } label: {
-                        if ignoreOnlyRelevantFlag {
-                            Label("Show only relevant subscriptions", systemImage: "eye.slash")
-                        } else {
-                            Label("Show all active subscriptions", systemImage: "eye")
+                            if ignoreOnlyRelevantFlag {
+                                Label("Show only relevant subscriptions", systemImage: "eye.slash")
+                            } else {
+                                Label("Show all active subscriptions", systemImage: "eye")
+                            }
                         }
                     }
                 }
-                
+                    
                 if archivedItems.count > 0 {
                     NavigationLink {
                         List {
@@ -289,13 +313,25 @@ struct ContentView: View {
                     }
                     .modifier(Bounce(animatableData: highlightAddButton))
                 }
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
                     Button {
                         withAnimation {
                             showSettings.toggle()
                         }
                     } label: {
                         Label("Settings", systemImage: "gear")
+                    }
+                    
+                    Button {
+                        withAnimation {
+                            groupByCategories.toggle()
+                        }
+                    } label: {
+                        if groupByCategories {
+                            Label("Sort by next bill", systemImage: "line.3.horizontal.decrease.circle.fill")
+                        } else {
+                            Label("Group by categories", systemImage: "line.3.horizontal.decrease.circle")
+                        }
                     }
                 }
             }
