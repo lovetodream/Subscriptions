@@ -21,9 +21,6 @@ struct SubscriptionDetailView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Category.timestamp, ascending: false)], animation: .default)
     private var categories: FetchedResults<Category>
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Tag.timestamp, ascending: false)], animation: .default)
-    private var tags: FetchedResults<Tag>
-    
     @AppStorage("currency") private var currency: String = Locale.current.currencyCode ?? "USD"
     @AppStorage("roundedIconBorders") private var roundedIconBorders = true
     @AppStorage("privacyMode") private var privacyMode = false
@@ -53,17 +50,6 @@ struct SubscriptionDetailView: View {
         formatter.currencySymbol = currency.currencySymbol
         formatter.internationalCurrencySymbol = currency.currencySymbol
         return formatter
-    }
-    
-    private var foundTags: [Tag] {
-        let usableTags = Array(tags.filter { !(item.tags ?? []).contains($0) })
-        if tagSearchText.isEmpty {
-            return usableTags
-        } else {
-            return usableTags.filter {
-                ($0.name ?? "").lowercased().contains(tagSearchText.lowercased())
-            }
-        }
     }
     
     var body: some View {
@@ -164,11 +150,11 @@ struct SubscriptionDetailView: View {
                                 Text(category.name ?? "Unnamed")
                             } icon: {
                                 if let hex = category.color, let color = Color(hex: hex) {
-                                    Image(systemName: "square.inset.filled")
+                                    Image(systemName: "tag.fill")
                                         .symbolRenderingMode(.hierarchical)
                                         .foregroundColor(color)
                                 } else {
-                                    Image(systemName: "square.inset.filled")
+                                    Image(systemName: "tag.fill")
                                         .symbolRenderingMode(.hierarchical)
                                         .foregroundColor(.accentColor)
                                 }
@@ -182,82 +168,6 @@ struct SubscriptionDetailView: View {
                 .onChange(of: selectedCategory) { _ in
                     item.category = selectedCategory
                     try? viewContext.save()
-                }
-                HStack {
-                    if !searchingTag {
-                        Text("Tags")
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(spacing: 10) {
-                                ForEach(Array(item.tags! as! Set<Tag>), id: \.id) { tag in
-                                    HStack {
-                                        Text(tag.name ?? "Unnamed")
-                                        Button {
-                                            withAnimation {
-                                                tag.removeFromItems(item)
-                                                try? viewContext.save()
-                                            }
-                                        } label: {
-                                            Label("Remove tag", systemImage: "xmark.circle")
-                                                .labelStyle(.iconOnly)
-                                                .foregroundColor(.red)
-                                        }
-                                        .padding(2)
-                                        .background(.regularMaterial)
-                                        .cornerRadius(15)
-                                    }
-                                    .padding(5)
-                                    .if(tag.color != nil && Color(hex: tag.color!) != nil) {
-                                        $0.background(Color(hex: tag.color!))
-                                    }
-                                    .if(tag.color == nil || Color(hex: tag.color!) == nil) {
-                                        $0.background(Color.accentColor)
-                                    }
-                                    .cornerRadius(10)
-                                }
-                            }
-                        }
-                    } else {
-                        TextField("Search a tag...", text: $tagSearchText)
-                        Text("\((item.tags ?? []).count)")
-                    }
-                    Button {
-                        withAnimation {
-                            tagSearchText = ""
-                            searchingTag.toggle()
-                        }
-                    } label: {
-                        if searchingTag {
-                            Label("Cancel search", systemImage: "xmark.circle")
-                                .labelStyle(.iconOnly)
-                        } else {
-                            Label("Add tag", systemImage: "plus.circle")
-                                .labelStyle(.iconOnly)
-                        }
-                    }
-                    .buttonStyle(.bordered)
-                }
-                if searchingTag && !foundTags.isEmpty {
-                    ForEach(foundTags) { tag in
-                        Button {
-                            tag.addToItems(item)
-                            try? viewContext.save()
-                        } label: {
-                            Label {
-                                Text(tag.name ?? "Unnamed")
-                            } icon: {
-                                if let hex = tag.color, let color = Color(hex: hex) {
-                                    Image(systemName: "tag.fill")
-                                        .symbolRenderingMode(.hierarchical)
-                                        .foregroundColor(color)
-                                } else {
-                                    Image(systemName: "tag.fill")
-                                        .symbolRenderingMode(.hierarchical)
-                                        .foregroundColor(.accentColor)
-                                }
-                            }
-                            .foregroundColor(.label)
-                        }
-                    }
                 }
             }
             

@@ -122,14 +122,10 @@ struct SettingsView: View {
                     NavigationLink {
                         CategoryView()
                     } label: {
-                        Label("Categories", systemImage: "square.3.layers.3d.down.right")
+                        Label("Categories", systemImage: "tag")
                     }
-                    
-                    NavigationLink {
-                        TagView()
-                    } label: {
-                        Label("Tags", systemImage: "tag")
-                    }
+                } footer: {
+                    Text("You can add a category to each of your subscriptions. They can be used to group subscriptions of the same categories or use them in the search.")
                 }
                 
                 Group {

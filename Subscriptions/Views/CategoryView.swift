@@ -21,7 +21,7 @@ struct CategoryView: View {
     
     @State private var showCategoryField = false
     @State private var currentEditCategory: Category?
-    @State private var categoryTitle = ""
+    @State private var categoryName = ""
     @State private var categoryColor = Color.accentColor
     @FocusState private var isFocused
     
@@ -45,8 +45,6 @@ struct CategoryView: View {
                     }
                     .foregroundColor(.white)
                     .listRowBackground(Color.accentColor.opacity(showCategoryField ? 0.5 : 1.0))
-                } footer: {
-                    Text("You can add a category to each of your subscriptions. They can be used to group subscriptions of the same categories or use them in the search.")
                 }
                 
                 Section {
@@ -55,8 +53,7 @@ struct CategoryView: View {
                             Label {
                                 Text(category.name ?? "Unnamed")
                             } icon: {
-                                Image(systemName: "square.inset.filled")
-                                    .symbolRenderingMode(.hierarchical)
+                                Image(systemName: "tag.fill")
                                     .if(category.color != nil) {
                                         $0.foregroundColor(Color(hex: category.color!))
                                     }
@@ -75,9 +72,11 @@ struct CategoryView: View {
                             
                             Button {
                                 withAnimation {
-                                    categoryTitle = category.name ?? ""
+                                    categoryName = category.name ?? ""
                                     if let color = category.color {
                                         categoryColor = Color(hex: color) ?? .accentColor
+                                    } else {
+                                        categoryColor = .accentColor
                                     }
                                     currentEditCategory = category
                                     showCategoryField = true
@@ -96,7 +95,7 @@ struct CategoryView: View {
                 HStack {
                     ColorPicker("Category Color", selection: $categoryColor)
                         .labelsHidden()
-                    TextField("Category Title", text: $categoryTitle)
+                    TextField("Category Name", text: $categoryName)
                         .font(.title2)
                         .focused($isFocused)
                         .submitLabel(.done)
@@ -108,6 +107,7 @@ struct CategoryView: View {
                             .font(.headline)
                     }
                     .buttonStyle(.borderedProminent)
+                    .disabled(categoryName.isEmpty)
                 }
                 .padding()
                 .background(.regularMaterial)
@@ -118,20 +118,24 @@ struct CategoryView: View {
     }
     
     private func addOrUpdateCategory() {
+        if categoryName.isEmpty {
+            return
+        }
+        
         withAnimation {
             if let currentEditCategory = currentEditCategory {
-                currentEditCategory.name = categoryTitle
+                currentEditCategory.name = categoryName
                 currentEditCategory.color = categoryColor.hex
             } else {
                 let newCategory = Category(context: viewContext)
                 newCategory.timestamp = .now
-                newCategory.name = categoryTitle
+                newCategory.name = categoryName
                 newCategory.color = categoryColor.hex
             }
             try? viewContext.save()
             showCategoryField = false
             currentEditCategory = nil
-            categoryTitle = ""
+            categoryName = ""
         }
     }
 }
