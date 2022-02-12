@@ -52,6 +52,10 @@
 		06998F4A27AE7799008A9B87 /* Icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 06998F4C27AE7799008A9B87 /* Icons.json */; };
 		06998F4F27AED331008A9B87 /* Extension+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F4E27AED331008A9B87 /* Extension+Bundle.swift */; };
 		06998F5227B59CA4008A9B87 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 06998F5127B59CA4008A9B87 /* Sentry */; };
+		06998F5427B6CDD7008A9B87 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F5327B6CDD7008A9B87 /* CategoryView.swift */; };
+		06998F5627B6DD5A008A9B87 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F5527B6DD5A008A9B87 /* TagView.swift */; };
+		06998F5827B6E70C008A9B87 /* SubscriptionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F5727B6E70C008A9B87 /* SubscriptionDetailView.swift */; };
+		06998F5A27B6E73D008A9B87 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06998F5927B6E73D008A9B87 /* Formatter.swift */; };
 		06C1A2BA27A5CA5500112ECC /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */; };
 		06C1A2BC27A5CE7C00112ECC /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */; };
 		06DEA566279486D400FC6412 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06DEA564279486D400FC6412 /* Localizable.strings */; };
@@ -130,6 +134,10 @@
 		06998F4B27AE7799008A9B87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Icons.json; sourceTree = "<group>"; };
 		06998F4D27AE795A008A9B87 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/Icons.json; sourceTree = "<group>"; };
 		06998F4E27AED331008A9B87 /* Extension+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Bundle.swift"; sourceTree = "<group>"; };
+		06998F5327B6CDD7008A9B87 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		06998F5527B6DD5A008A9B87 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		06998F5727B6E70C008A9B87 /* SubscriptionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailView.swift; sourceTree = "<group>"; };
+		06998F5927B6E73D008A9B87 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
 		06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
 		06C1A2BD27A5DD4600112ECC /* Subscriptions 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Subscriptions 3.xcdatamodel"; sourceTree = "<group>"; };
@@ -223,9 +231,12 @@
 			isa = PBXGroup;
 			children = (
 				06047C03279C92E0000ADA4D /* AcknowledgementView.swift */,
+				06998F5327B6CDD7008A9B87 /* CategoryView.swift */,
+				06998F5527B6DD5A008A9B87 /* TagView.swift */,
 				0680FD8F278AEF3F00A35783 /* IconPicker.swift */,
 				0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */,
 				0680FD93278B1BBD00A35783 /* SettingsView.swift */,
+				06998F5727B6E70C008A9B87 /* SubscriptionDetailView.swift */,
 				062020842788D27400CC6836 /* SubscriptionForm.swift */,
 				06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */,
 				06047C01279C916A000ADA4D /* SubscriptionDetailsForm.swift */,
@@ -251,6 +262,7 @@
 				06998F4E27AED331008A9B87 /* Extension+Bundle.swift */,
 				06047BF7279C86F2000ADA4D /* Extension+UIImage.swift */,
 				06047C08279C9876000ADA4D /* Extension+View.swift */,
+				06998F5927B6E73D008A9B87 /* Formatter.swift */,
 				06998F4627AC61FA008A9B87 /* NotificationScheduler.swift */,
 				06C1A2B927A5CA5500112ECC /* ShakeGesture.swift */,
 				06047C05279C93C3000ADA4D /* SampleData.swift */,
@@ -506,7 +518,10 @@
 				06998F4727AC61FA008A9B87 /* NotificationScheduler.swift in Sources */,
 				06047BED279C71B9000ADA4D /* Shake.swift in Sources */,
 				06047C06279C93C3000ADA4D /* SampleData.swift in Sources */,
+				06998F5827B6E70C008A9B87 /* SubscriptionDetailView.swift in Sources */,
+				06998F5627B6DD5A008A9B87 /* TagView.swift in Sources */,
 				06047C04279C92E0000ADA4D /* AcknowledgementView.swift in Sources */,
+				06998F5A27B6E73D008A9B87 /* Formatter.swift in Sources */,
 				06047C09279C9876000ADA4D /* Extension+View.swift in Sources */,
 				06047C02279C916A000ADA4D /* SubscriptionDetailsForm.swift in Sources */,
 				06C1A2BC27A5CE7C00112ECC /* LicenseView.swift in Sources */,
@@ -516,6 +531,7 @@
 				06409F3B276932BF00ED3B7A /* ContentView.swift in Sources */,
 				06047BFC279C8C3E000ADA4D /* SearchBar.swift in Sources */,
 				0680FD92278B111500A35783 /* ImagePicker.swift in Sources */,
+				06998F5427B6CDD7008A9B87 /* CategoryView.swift in Sources */,
 				06047C0F279C9C19000ADA4D /* SubscriptionItems.swift in Sources */,
 				0680FD9C278B6D9D00A35783 /* StoreManager.swift in Sources */,
 				06047BE6279C43CC000ADA4D /* RestoreButton.swift in Sources */,

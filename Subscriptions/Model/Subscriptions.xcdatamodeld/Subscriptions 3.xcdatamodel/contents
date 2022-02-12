@@ -9,6 +9,7 @@
         <attribute name="icon" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="systemImage" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="category" inverseEntity="Item"/>
     </entity>
     <entity name="IgnoredBudgetMonth" representedClassName="IgnoredBudgetMonth" syncable="YES" codeGenerationType="class">
@@ -47,6 +48,7 @@
         <attribute name="icon" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="systemImage" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="tags" inverseEntity="Item"/>
     </entity>
     <entity name="Tip" representedClassName="Tip" syncable="YES" codeGenerationType="class">
@@ -59,11 +61,11 @@
     <fetchRequest name="ActiveSubscriptions" entity="Item" predicateString="active == 1 AND deactivationDate &lt; CAST(Date.now.timeIntervalSince1970, &quot;NSDate&quot;)"/>
     <elements>
         <element name="CancellationReminder" positionX="139.86328125" positionY="-137.80078125" width="128" height="73"/>
+        <element name="Category" positionX="162" positionY="135" width="128" height="119"/>
         <element name="IgnoredBudgetMonth" positionX="51.15625" positionY="410.51171875" width="128" height="58"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="358"/>
         <element name="Reminder" positionX="229.16015625" positionY="271.6328125" width="154.99609375" height="88"/>
+        <element name="Tag" positionX="171" positionY="144" width="128" height="119"/>
         <element name="Tip" positionX="387.02734375" positionY="312.9765625" width="128" height="104"/>
-        <element name="Category" positionX="162" positionY="135" width="128" height="118"/>
-        <element name="Tag" positionX="171" positionY="144" width="128" height="104"/>
     </elements>
 </model>

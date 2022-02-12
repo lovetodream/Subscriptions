@@ -118,6 +118,20 @@ struct SettingsView: View {
                     Text("This is a display only option and does not affect the cost of your subscriptions.")
                 }
                 
+                Section {
+                    NavigationLink {
+                        CategoryView()
+                    } label: {
+                        Label("Categories", systemImage: "square.3.layers.3d.down.right")
+                    }
+                    
+                    NavigationLink {
+                        TagView()
+                    } label: {
+                        Label("Tags", systemImage: "tag")
+                    }
+                }
+                
                 Group {
                     Section {
                         Toggle(isOn: $iCloudSync) {
