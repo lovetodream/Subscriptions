@@ -62,6 +62,7 @@ struct ContentView: View {
     @State private var highlightAddButton: CGFloat = 0
     @State private var ignoreOnlyRelevantFlag = false
     @State private var groupByCategories = false
+    @State private var singleCategoryToShow: Category?
     
     @State private var searchText = ""
     
@@ -171,7 +172,22 @@ struct ContentView: View {
                     }
                 }
                 
-                if groupByCategories && searchText.isEmpty {
+                if let singleCategoryToShow = singleCategoryToShow {
+                    if let items = singleCategoryToShow.items as? Set<Item>, items.count > 0 {
+                        Section {
+                            ForEach(Array(items.filter { $0.active && ($0.deactivationDate == nil || $0.deactivationDate! >= .now) })) { item in
+                                NavigationLink {
+                                    SubscriptionDetailView(item: item)
+                                        .environmentObject(notificationScheduler)
+                                } label: {
+                                    ItemRow(item: item)
+                                }
+                            }
+                        } header: {
+                            Text(singleCategoryToShow.name ?? "Unnamed")
+                        }
+                    }
+                } else if groupByCategories && searchText.isEmpty {
                     ForEach(categories) { category in
                         if let items = category.items as? Set<Item>, items.count > 0 {
                             Section {
@@ -328,12 +344,34 @@ struct ContentView: View {
                     Button {
                         withAnimation {
                             groupByCategories.toggle()
+                            singleCategoryToShow = nil
                         }
                     } label: {
-                        if groupByCategories {
+                        if groupByCategories || singleCategoryToShow != nil {
                             Label("Sort by next bill", systemImage: "line.3.horizontal.decrease.circle.fill")
                         } else {
                             Label("Group by categories", systemImage: "line.3.horizontal.decrease.circle")
+                        }
+                    }
+                    .contextMenu {
+                        Button {
+                            withAnimation {
+                                singleCategoryToShow = nil
+                            }
+                        } label: {
+                            Text("Show all")
+                        }
+                        Divider()
+                        Menu("Show single category") {
+                            ForEach(categories) { category in
+                                Button {
+                                    withAnimation {
+                                        singleCategoryToShow = category
+                                    }
+                                } label: {
+                                    Label(category.name ?? "Unnamed", systemImage: "tag")
+                                }
+                            }
                         }
                     }
                 }
