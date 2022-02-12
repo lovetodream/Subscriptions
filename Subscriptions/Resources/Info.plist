@@ -9,7 +9,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.1.0</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>7</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.timozacherl.Subscriptions</string>
 	<key>UIBackgroundModes</key>
