@@ -85,7 +85,10 @@ struct ContentView: View {
              }
         }
         
-        return items.filter { $0.title?.lowercased().contains(searchText.lowercased()) ?? false }
+        return items.filter {
+            $0.title?.lowercased().contains(searchText.lowercased()) ?? false ||
+            $0.category?.name?.lowercased().contains(searchText.lowercased()) ?? false
+        }
     }
     
     private var currentMonthCost: Decimal {
