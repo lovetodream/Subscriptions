@@ -144,6 +144,8 @@ struct SubscriptionDetailView: View {
             
             Section {
                 Picker(selection: $selectedCategory) {
+                    Label("Uncategorized", systemImage: "tag.slash")
+                        .tag(nil as Category?)
                     ForEach(categories) { category in
                         HStack {
                             Label {

@@ -341,35 +341,42 @@ struct ContentView: View {
                         Label("Settings", systemImage: "gear")
                     }
                     
-                    Button {
-                        withAnimation {
-                            groupByCategories.toggle()
-                            singleCategoryToShow = nil
-                        }
-                    } label: {
-                        if groupByCategories || singleCategoryToShow != nil {
-                            Label("Sort by next bill", systemImage: "line.3.horizontal.decrease.circle.fill")
-                        } else {
-                            Label("Group by categories", systemImage: "line.3.horizontal.decrease.circle")
-                        }
-                    }
-                    .contextMenu {
+                    if categories.count > 0 {
                         Button {
                             withAnimation {
+                                if singleCategoryToShow != nil {
+                                    singleCategoryToShow = nil
+                                    groupByCategories = false
+                                    return
+                                }
                                 singleCategoryToShow = nil
+                                groupByCategories.toggle()
                             }
                         } label: {
-                            Text("Show all")
+                            if groupByCategories || singleCategoryToShow != nil {
+                                Label("Sort by next bill", systemImage: "line.3.horizontal.decrease.circle.fill")
+                            } else {
+                                Label("Group by categories", systemImage: "line.3.horizontal.decrease.circle")
+                            }
                         }
-                        Divider()
-                        Menu("Show single category") {
-                            ForEach(categories) { category in
-                                Button {
-                                    withAnimation {
-                                        singleCategoryToShow = category
+                        .contextMenu {
+                            Button {
+                                withAnimation {
+                                    singleCategoryToShow = nil
+                                }
+                            } label: {
+                                Text("Show all")
+                            }
+                            Divider()
+                            Menu("Show single category") {
+                                ForEach(categories) { category in
+                                    Button {
+                                        withAnimation {
+                                            singleCategoryToShow = category
+                                        }
+                                    } label: {
+                                        Label(category.name ?? "Unnamed", systemImage: "tag")
                                     }
-                                } label: {
-                                    Label(category.name ?? "Unnamed", systemImage: "tag")
                                 }
                             }
                         }
