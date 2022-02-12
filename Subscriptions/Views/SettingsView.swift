@@ -188,7 +188,7 @@ struct SettingsView: View {
                             }
                         }
                     } footer: {
-                        Text("Tip: You can long tap any price tag within the app to switch to private mode and vice versa. (This hides all prices)")
+                        Text("Tip: You can shake your device to switch to private mode and vice versa. (This hides all prices)")
                     }
                     .onChange(of: unlockWithBiometrics) { newValue in
                         if let context = context {

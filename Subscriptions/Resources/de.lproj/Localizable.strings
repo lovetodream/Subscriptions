@@ -11,6 +11,9 @@
 "👍" = "👍";
 
 /* No comment provided by engineer. */
+"0" = "0";
+
+/* No comment provided by engineer. */
 "0.00" = "0,00";
 
 /* No comment provided by engineer. */
@@ -20,7 +23,25 @@
 "Actions" = "Aktionen";
 
 /* No comment provided by engineer. */
+"Add a due date reminder for \"%@\"" = "Fälligkeitserinnerung für „%@“ hinzufügen";
+
+/* No comment provided by engineer. */
+"Add a due date reminder for \"Unnamed\"" = "Fälligkeitserinnerung für \"Unbenannt\" hinzufügen";
+
+/* No comment provided by engineer. */
+"Add a reminder to cancel \"%@\"" = "Erinnerung hinzufügen, um „%@“ zu kündigen";
+
+/* No comment provided by engineer. */
+"Add a reminder to cancel \"Unnamed\"" = "Erinnerung hinzufügen, um \"Unbenannt\" zu kündigen";
+
+/* No comment provided by engineer. */
+"Add another reminder" = "Eine weitere Erinnerung hinzufügen";
+
+/* No comment provided by engineer. */
 "Add as many subscriptions as you want, there is no limit 😁." = "Füge so viele Abonnements hinzu, wie du möchtest, es gibt keine Begrenzung 😁.";
+
+/* No comment provided by engineer. */
+"Add category" = "Kategorie hinzufügen";
 
 /* No comment provided by engineer. */
 "Add end date" = "Enddatum hinzufügen";
@@ -59,10 +80,25 @@
 "Cancel" = "Abbrechen";
 
 /* No comment provided by engineer. */
+"Cancel editing category" = "Bearbeiten der Kategorie abbrechen";
+
+/* No comment provided by engineer. */
 "Cancel this Subscription" = "Dieses Abonnement kündigen";
 
 /* No comment provided by engineer. */
 "Cancellation URL" = "Kündigungslink";
+
+/* No comment provided by engineer. */
+"Categories" = "Kategorien";
+
+/* No comment provided by engineer. */
+"Category" = "Kategorie";
+
+/* No comment provided by engineer. */
+"Category Color" = "Farbe der Kategorie";
+
+/* No comment provided by engineer. */
+"Category Name" = "Name der Kategorie";
 
 /* No comment provided by engineer. */
 "Choose from gallery" = "Wähle aus der Galerie";
@@ -107,10 +143,16 @@
 "Date of last bill" = "Datum der letzten Rechnung";
 
 /* No comment provided by engineer. */
+"day before next bill" = "Tag vor der nächsten Rechnung";
+
+/* No comment provided by engineer. */
 "days" = "Tage";
 
 /* No comment provided by engineer. */
 "Days" = "Tage";
+
+/* No comment provided by engineer. */
+"days before next bill" = "Tage vor der nächsten Rechnung";
 
 /* No comment provided by engineer. */
 "Delete this Subscription" = "Dieses Abonnement löschen";
@@ -120,6 +162,9 @@
 
 /* No comment provided by engineer. */
 "Disclaimer" = "Hinweis";
+
+/* No comment provided by engineer. */
+"Don't add category" = "Keine Kategorie hinzufügen";
 
 /* No comment provided by engineer. */
 "Download logo" = "Logo herunterladen";
@@ -152,6 +197,9 @@
 "Get notified if your monthly subscription cost exceeds your budget." = "Lasse dich benachrichtigen, wenn deine monatlichen Abonnementkosten dein Budget überschreiten.";
 
 /* No comment provided by engineer. */
+"Group by categories" = "Nach Kategorien gruppieren";
+
+/* No comment provided by engineer. */
 "Hide advanced options" = "Erweiterte Optionen ausblenden";
 
 /* No comment provided by engineer. */
@@ -179,7 +227,13 @@
 "Inactive Subscriptions" = "Inaktive Abonnements";
 
 /* No comment provided by engineer. */
+"Include cost in notifications" = "Kosten in Benachrichtigungen einbeziehen";
+
+/* No comment provided by engineer. */
 "Information" = "Information";
+
+/* No comment provided by engineer. */
+"It may take some time for iCloud to start syncing your data across your devices." = "Es kann einige Zeit dauern, bis iCloud mit der Synchronisierung deiner Daten über deine Geräte hinweg beginnt.";
 
 /* No comment provided by engineer. */
 "Load logo (favicon) from URL" = "Logo (Favicon) von URL laden";
@@ -204,6 +258,9 @@
 
 /* No comment provided by engineer. */
 "Note" = "Notiz";
+
+/* No comment provided by engineer. */
+"Ok" = "Ok";
 
 /* No comment provided by engineer. */
 "Once paused, you can resume a subscription at any time in the future." = "Einmal unterbrochen, kannst du ein Abonnement jederzeit wieder fortsetzen.";
@@ -302,6 +359,9 @@
 "Show advanced options" = "Erweiterte Optionen anzeigen";
 
 /* No comment provided by engineer. */
+"Show all" = "Alle anzeigen";
+
+/* No comment provided by engineer. */
 "Show all active subscriptions" = "Alle aktiven Abonnements anzeigen";
 
 /* No comment provided by engineer. */
@@ -311,7 +371,16 @@
 "Show only relevant subscriptions" = "Nur relevante Abonnements anzeigen";
 
 /* No comment provided by engineer. */
+"Show single category" = "Einzelne Kategorie anzeigen";
+
+/* No comment provided by engineer. */
 "Shows only relevant subscriptions for this month by default. This hides all subscriptions which aren't due for the rest of the month." = "Zeigt standardmäßig nur relevante Abonnements für diesen Monat an. Dadurch werden alle Abonnements ausgeblendet, die für den Rest des Monats noch nicht fällig sind.";
+
+/* No comment provided by engineer. */
+"Sort by next bill" = "Nach nächster Rechnung sortieren";
+
+/* No comment provided by engineer. */
+"Submit" = "Speichern";
 
 /* No comment provided by engineer. */
 "Subscription added at %@" = "Abonnement am %@ hinzugefügt";
@@ -362,7 +431,13 @@
 "This will remove the subscription permanently." = "Dadurch wird das Abonnement dauerhaft entfernt.";
 
 /* No comment provided by engineer. */
+"Time at which you receive notifications" = "Uhrzeit, zu der du Benachrichtigungen erhältst";
+
+/* No comment provided by engineer. */
 "Tip Jar" = "Trinkgelddose";
+
+/* No comment provided by engineer. */
+"Tip: You can shake your device to switch to private mode and vice versa. (This hides all prices)" = "Tipp: Du kannst dein Gerät schütteln, um in den privaten Modus zu wechseln und umgekehrt. (Dadurch werden alle Preise ausgeblendet)";
 
 /* No comment provided by engineer. */
 "Title" = "Titel";
@@ -371,7 +446,13 @@
 "Title or URL" = "Titel oder URL";
 
 /* No comment provided by engineer. */
+"Uncategorized" = "Unkategorisiert";
+
+/* No comment provided by engineer. */
 "Unlimited Subscriptions" = "Unbegrenzte Abonnements";
+
+/* No comment provided by engineer. */
+"Unlock Abonementi" = "Abonementi entsperren";
 
 /* No comment provided by engineer. */
 "Unlock all features" = "Alle Funktionen freischalten";
@@ -386,6 +467,18 @@
 "Unpin this Subscription" = "Dieses Abonnement loslösen";
 
 /* No comment provided by engineer. */
+"Use a PIN to unlock the app" = "Verwende eine PIN zum Entsperren der App";
+
+/* No comment provided by engineer. */
+"Use Face-ID to unlock the app" = "Verwende Face-ID zum Entsperren der App";
+
+/* No comment provided by engineer. */
+"Use Touch-ID to unlock the app" = "Verwende Touch-ID zum Entsperren der App";
+
+/* No comment provided by engineer. */
+"Warning" = "Warnung";
+
+/* No comment provided by engineer. */
 "Website" = "Webseite";
 
 /* No comment provided by engineer. */
@@ -398,10 +491,19 @@
 "Will be paused " = "Wird pausiert ";
 
 /* No comment provided by engineer. */
+"You can add a category to each of your subscriptions. They can be used to group subscriptions of the same categories or use them in the search." = "Du kannst zu jedem deiner Abonnements eine Kategorie hinzufügen. Du kannst sie verwenden, um Abonnements derselben Kategorie zu gruppieren oder darüber zu suchen.";
+
+/* No comment provided by engineer. */
 "You have reached the limit of free active Subscriptions" = "Du hast das Limit der kostenlosen aktiven Abonnements erreicht";
 
 /* No comment provided by engineer. */
 "You have tipped a total of %@" = "Du hast insgesamt %@ Trinkgeld gegeben.";
+
+/* No comment provided by engineer. */
+"You should avoid adding more than 3 notifications to a single subscription" = "Du solltest nicht mehr als 3 Benachrichtigungen zu einem einzigen Abonnement hinzufügen";
+
+/* No comment provided by engineer. */
+"You will receive all your notifications at %@. Except reminders to cancel a subscriptions, you can specify date and time for those individually." = "Du erhältst alle Benachrichtigungen um %@. Mit Ausnahme von Erinnerungen zur Kündigung eines Abonnements. Dafür kannst du Datum und Uhrzeit individuell festlegen.";
 
 /* No comment provided by engineer. */
 "Your purchase directly supports the independent developer of this app." = "Dein Kauf unterstützt direkt den unabhängigen Entwickler dieser App.";

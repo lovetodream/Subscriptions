@@ -1,3 +1,6 @@
 /* Bundle name */
 "CFBundleName" = "Abonementi";
 
+/* Privacy - Face ID Usage Description */
+"NSFaceIDUsageDescription" = "Dient zum Entsperren der App, wenn diese Funktion in den Einstellungen aktiviert ist";
+
