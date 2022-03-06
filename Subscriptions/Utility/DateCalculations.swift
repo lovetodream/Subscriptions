@@ -126,7 +126,7 @@ func getNextBill(_ item: Item, circle: BillingOption) -> Date? {
         case .monthly:
             var components = DateComponents()
             components.day = Calendar.current.dateComponents([.day], from: firstBilling).day!
-            var nextBilling = Calendar.current.date(bySetting: .day, value: components.day!, of: firstBilling)!
+            var nextBilling = Calendar.current.date(bySetting: .day, value: components.day!, of: today)!
             if nextBilling.compare(today) == .orderedAscending {
                 nextBilling = Calendar.current.date(byAdding: .month, value: 1, to: nextBilling)!
             }
