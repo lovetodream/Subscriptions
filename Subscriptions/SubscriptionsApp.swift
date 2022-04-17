@@ -21,7 +21,6 @@ struct SubscriptionsApp: App {
     init() {
         SentrySDK.start { options in
             options.dsn = Bundle.main.object(forInfoDictionaryKey: "sentryDSN") as? String ?? ""
-            options.debug = true
             
             #if DEBUG
             options.sampleRate = 1.0
