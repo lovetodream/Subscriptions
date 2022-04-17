@@ -51,6 +51,11 @@ struct SubscriptionDetailView: View {
         formatter.internationalCurrencySymbol = currency.currencySymbol
         return formatter
     }
+
+    init(item: Item) {
+        self._item = .init(wrappedValue: item)
+        self._selectedCategory = .init(wrappedValue: item.category)
+    }
     
     var body: some View {
         List {
@@ -167,10 +172,6 @@ struct SubscriptionDetailView: View {
                 } label: {
                     Text("Category")
                 }
-                .onChange(of: selectedCategory) { _ in
-                    item.category = selectedCategory
-                    try? viewContext.save()
-                }
             }
             
             Section {
@@ -268,8 +269,11 @@ struct SubscriptionDetailView: View {
                 })])
             }
         }
-        .onAppear {
-            selectedCategory = item.category
+        .onDisappear {
+            if selectedCategory != item.category {
+                item.category = selectedCategory
+                try? viewContext.save()
+            }
         }
     }
 }
