@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Attachment" representedClassName="Attachment" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="attachments" inverseEntity="Item"/>
+    </entity>
+    <entity name="CancellationReminder" representedClassName="CancellationReminder" syncable="YES" codeGenerationType="class">
+        <attribute name="onDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="cancellationReminders" inverseEntity="Item"/>
+    </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="icon" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="systemImage" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="category" inverseEntity="Item"/>
+    </entity>
+    <entity name="IgnoredBudgetMonth" representedClassName="IgnoredBudgetMonth" syncable="YES" codeGenerationType="class">
+        <attribute name="firstOfMonth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="billing" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cancellationUrl" optional="YES" attributeType="URI"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="cost" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="currencyCode" optional="YES" attributeType="String"/>
+        <attribute name="deactivationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="icon" optional="YES" attributeType="Binary"/>
+        <attribute name="lastBillDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="pinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="serviceUrl" optional="YES" attributeType="URI"/>
+        <attribute name="suggestedPlanID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="suggestedServiceID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="systemImage" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attachment" inverseName="item" inverseEntity="Attachment"/>
+        <relationship name="cancellationReminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CancellationReminder" inverseName="item" inverseEntity="CancellationReminder"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
+        <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" inverseName="item" inverseEntity="Reminder"/>
+    </entity>
+    <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="daysBefore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="uid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="reminders" inverseEntity="Item"/>
+    </entity>
+    <entity name="Tip" representedClassName="Tip" syncable="YES" codeGenerationType="class">
+        <attribute name="currency" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="productID" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="transactionID" optional="YES" attributeType="String"/>
+    </entity>
+    <fetchRequest name="ActiveSubscriptions" entity="Item" predicateString="active == 1 AND deactivationDate &lt; CAST(Date.now.timeIntervalSince1970, &quot;NSDate&quot;)"/>
+    <elements>
+        <element name="CancellationReminder" positionX="139.86328125" positionY="-137.80078125" width="128" height="73"/>
+        <element name="Category" positionX="162" positionY="135" width="128" height="119"/>
+        <element name="IgnoredBudgetMonth" positionX="51.15625" positionY="410.51171875" width="128" height="58"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="344"/>
+        <element name="Reminder" positionX="229.16015625" positionY="271.6328125" width="154.99609375" height="88"/>
+        <element name="Tip" positionX="387.02734375" positionY="312.9765625" width="128" height="104"/>
+        <element name="Attachment" positionX="144" positionY="18" width="128" height="89"/>
+    </elements>
+</model>
