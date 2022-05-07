@@ -111,7 +111,7 @@ struct SubscriptionDetailView: View {
                         .privacySensitive()
                     }
                 }
-                if let billing = item.billing {
+                if let billing = item.billing, item.active {
                     if let nextBill = getNextBill(item, circle: BillingOption(billing)) {
                         HStack {
                             Text("Next Bill")
@@ -180,17 +180,19 @@ struct SubscriptionDetailView: View {
                         Label("Cancel this Subscription", systemImage: "xmark.circle")
                     }
                 }
-                
-                Button {
-                    withAnimation {
-                        item.pinned.toggle()
-                        try? viewContext.save()
-                    }
-                } label: {
-                    if item.pinned {
-                        Label("Unpin this Subscription", systemImage: "pin.slash")
-                    } else {
-                        Label("Pin this Subscription", systemImage: "pin")
+
+                if item.active || item.pinned {
+                    Button {
+                        withAnimation {
+                            item.pinned.toggle()
+                            try? viewContext.save()
+                        }
+                    } label: {
+                        if item.pinned {
+                            Label("Unpin this Subscription", systemImage: "pin.slash")
+                        } else {
+                            Label("Pin this Subscription", systemImage: "pin")
+                        }
                     }
                 }
                 
