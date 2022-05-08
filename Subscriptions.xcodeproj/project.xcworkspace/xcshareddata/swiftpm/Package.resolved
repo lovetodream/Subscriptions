@@ -1,34 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "FaviconFinder",
-        "repositoryURL": "https://github.com/OpenSesameManager/FaviconFinder",
-        "state": {
-          "branch": null,
-          "revision": "b327d60fd49d0f30bcc4b89473c6087ae07e03cb",
-          "version": "4.0.4"
-        }
-      },
-      {
-        "package": "Sentry",
-        "repositoryURL": "https://github.com/getsentry/sentry-cocoa.git",
-        "state": {
-          "branch": null,
-          "revision": "967f04b3cd6989df3f9ced3060481a21646c146d",
-          "version": "7.9.0"
-        }
-      },
-      {
-        "package": "SwiftSoup",
-        "repositoryURL": "https://github.com/scinfu/SwiftSoup.git",
-        "state": {
-          "branch": null,
-          "revision": "45a7566f7ec2de0b977f28e825f8df874f210327",
-          "version": "2.3.6"
-        }
+  "pins" : [
+    {
+      "identity" : "faviconfinder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OpenSesameManager/FaviconFinder",
+      "state" : {
+        "revision" : "b327d60fd49d0f30bcc4b89473c6087ae07e03cb",
+        "version" : "4.0.4"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "sentry-cocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsentry/sentry-cocoa.git",
+      "state" : {
+        "revision" : "967f04b3cd6989df3f9ced3060481a21646c146d",
+        "version" : "7.9.0"
+      }
+    },
+    {
+      "identity" : "swiftsoup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scinfu/SwiftSoup.git",
+      "state" : {
+        "revision" : "45a7566f7ec2de0b977f28e825f8df874f210327",
+        "version" : "2.3.6"
+      }
+    }
+  ],
+  "version" : 2
 }
