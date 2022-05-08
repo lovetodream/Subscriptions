@@ -11,7 +11,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.2.0</string>
 	<key>CFBundleVersion</key>
-	<string>10</string>
+	<string>11</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.timozacherl.Subscriptions</string>
 	<key>UIBackgroundModes</key>
