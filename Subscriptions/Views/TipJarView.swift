@@ -83,6 +83,7 @@ struct TipJarView: View {
             
             VStack {
                 Text("You have tipped a total of \(fullPurchaseAmount.0, format: .currency(code: fullPurchaseAmount.1))")
+                    .multilineTextAlignment(.center)
             }
             
             VStack {

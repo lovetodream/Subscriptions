@@ -275,6 +275,7 @@ struct SubscriptionDetailView: View {
         }
         .sheet(isPresented: $showDocumentPicker) {
             DocumentPicker(fileContent: $selectedFile, fileName: $selectedFileName)
+                .ignoresSafeArea()
         }
         .onChange(of: selectedFile) { newFile in
             if let newFile = newFile, let selectedFileName = selectedFileName {
