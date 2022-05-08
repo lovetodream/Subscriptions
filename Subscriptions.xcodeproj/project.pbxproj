@@ -38,6 +38,11 @@
 		06409F4F276932C000ED3B7A /* SubscriptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F4E276932C000ED3B7A /* SubscriptionsTests.swift */; };
 		06409F59276932C000ED3B7A /* SubscriptionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F58276932C000ED3B7A /* SubscriptionsUITests.swift */; };
 		06409F5B276932C000ED3B7A /* SubscriptionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06409F5A276932C000ED3B7A /* SubscriptionsUITestsLaunchTests.swift */; };
+		06454EB82827031700C9E0FE /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06454EB72827031700C9E0FE /* DocumentPicker.swift */; };
+		06454EBA28270E3400C9E0FE /* AttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06454EB928270E3400C9E0FE /* AttachmentView.swift */; };
+		06454EBC2827120900C9E0FE /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06454EBB2827120900C9E0FE /* ActivityView.swift */; };
+		06454EBE2827EFB100C9E0FE /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06454EBD2827EFB100C9E0FE /* FloatingTextField.swift */; };
+		06454EC02827F00000C9E0FE /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06454EBF2827F00000C9E0FE /* Attachment.swift */; };
 		0680FD8C278A145700A35783 /* FaviconFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 0680FD8B278A145700A35783 /* FaviconFinder */; };
 		0680FD8E278AED5800A35783 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD8D278AED5800A35783 /* Icons.swift */; };
 		0680FD90278AEF3F00A35783 /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680FD8F278AEF3F00A35783 /* IconPicker.swift */; };
@@ -116,6 +121,11 @@
 		06409F54276932C000ED3B7A /* SubscriptionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubscriptionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06409F58276932C000ED3B7A /* SubscriptionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsUITests.swift; sourceTree = "<group>"; };
 		06409F5A276932C000ED3B7A /* SubscriptionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		06454EB72827031700C9E0FE /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		06454EB928270E3400C9E0FE /* AttachmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentView.swift; sourceTree = "<group>"; };
+		06454EBB2827120900C9E0FE /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		06454EBD2827EFB100C9E0FE /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		06454EBF2827F00000C9E0FE /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		064834EE2795F614002C210C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		067956CF279B0BC400ED60E8 /* Environment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Environment.xcconfig; sourceTree = "<group>"; };
 		067956D0279B0C8700ED60E8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -185,6 +195,8 @@
 				06047BE7279C4965000ADA4D /* IAPBenefit.swift */,
 				06047BFB279C8C3E000ADA4D /* SearchBar.swift */,
 				06047BFF279C8CA2000ADA4D /* CloseButton.swift */,
+				06454EBD2827EFB100C9E0FE /* FloatingTextField.swift */,
+				06454EB72827031700C9E0FE /* DocumentPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -207,6 +219,7 @@
 		06047BEA279C70EF000ADA4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06454EBF2827F00000C9E0FE /* Attachment.swift */,
 				06047BF9279C8BE1000ADA4D /* BillingOption.swift */,
 				0680FD8D278AED5800A35783 /* Icons.swift */,
 				06998F4C27AE7799008A9B87 /* Icons.json */,
@@ -235,6 +248,8 @@
 				0680FD9D278B6F9A00A35783 /* PremiumIAPView.swift */,
 				0680FD93278B1BBD00A35783 /* SettingsView.swift */,
 				06998F5727B6E70C008A9B87 /* SubscriptionDetailView.swift */,
+				06454EBB2827120900C9E0FE /* ActivityView.swift */,
+				06454EB928270E3400C9E0FE /* AttachmentView.swift */,
 				062020842788D27400CC6836 /* SubscriptionForm.swift */,
 				06C1A2BB27A5CE7C00112ECC /* LicenseView.swift */,
 				06047C01279C916A000ADA4D /* SubscriptionDetailsForm.swift */,
@@ -501,6 +516,8 @@
 				06047BE4279C3FA3000ADA4D /* PurchaseButton.swift in Sources */,
 				0680FDA0279451A900A35783 /* TipJarView.swift in Sources */,
 				06047BE8279C4965000ADA4D /* IAPBenefit.swift in Sources */,
+				06454EC02827F00000C9E0FE /* Attachment.swift in Sources */,
+				06454EBE2827EFB100C9E0FE /* FloatingTextField.swift in Sources */,
 				0680FD90278AEF3F00A35783 /* IconPicker.swift in Sources */,
 				06409F42276932C000ED3B7A /* Persistence.swift in Sources */,
 				062020852788D27400CC6836 /* SubscriptionForm.swift in Sources */,
@@ -508,6 +525,7 @@
 				06047BF6279C8697000ADA4D /* Extension+Color.swift in Sources */,
 				0680FD94278B1BBD00A35783 /* SettingsView.swift in Sources */,
 				0680FD8E278AED5800A35783 /* Icons.swift in Sources */,
+				06454EBC2827120900C9E0FE /* ActivityView.swift in Sources */,
 				06047BFE279C8C5D000ADA4D /* License.swift in Sources */,
 				06047C0D279C99D4000ADA4D /* DateCalculations.swift in Sources */,
 				0680FD9E278B6F9A00A35783 /* PremiumIAPView.swift in Sources */,
@@ -515,6 +533,7 @@
 				06998F4F27AED331008A9B87 /* Extension+Bundle.swift in Sources */,
 				06998F4727AC61FA008A9B87 /* NotificationScheduler.swift in Sources */,
 				06047BED279C71B9000ADA4D /* Shake.swift in Sources */,
+				06454EBA28270E3400C9E0FE /* AttachmentView.swift in Sources */,
 				06047C06279C93C3000ADA4D /* SampleData.swift in Sources */,
 				06998F5827B6E70C008A9B87 /* SubscriptionDetailView.swift in Sources */,
 				06047C04279C92E0000ADA4D /* AcknowledgementView.swift in Sources */,
@@ -525,6 +544,7 @@
 				06C1A2BA27A5CA5500112ECC /* ShakeGesture.swift in Sources */,
 				06047C00279C8CA2000ADA4D /* CloseButton.swift in Sources */,
 				06047BFA279C8BE1000ADA4D /* BillingOption.swift in Sources */,
+				06454EB82827031700C9E0FE /* DocumentPicker.swift in Sources */,
 				06409F3B276932BF00ED3B7A /* ContentView.swift in Sources */,
 				06047BFC279C8C3E000ADA4D /* SearchBar.swift in Sources */,
 				0680FD92278B111500A35783 /* ImagePicker.swift in Sources */,

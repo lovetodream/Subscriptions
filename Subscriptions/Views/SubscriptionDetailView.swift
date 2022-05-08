@@ -12,6 +12,7 @@
 // 
 
 import SwiftUI
+import PDFKit
 
 struct SubscriptionDetailView: View {
     @Environment(\.managedObjectContext) var viewContext
@@ -33,6 +34,9 @@ struct SubscriptionDetailView: View {
     @State private var selectedCategory: Category?
     @State private var tagSearchText = ""
     @State private var searchingTag = false
+    @State private var showDocumentPicker = false
+    @State private var selectedFile: Data?
+    @State private var selectedFileName: String?
     
     var relativeDateFormatter: DateFormatter = {
         var formatter = DateFormatter()
@@ -173,8 +177,35 @@ struct SubscriptionDetailView: View {
                     Text("Category")
                 }
             }
+
+            if let attachments = item.attachments?.sortedArray(using: [NSSortDescriptor(keyPath: \Attachment.timestamp, ascending: false)]) as? [Attachment], !attachments.isEmpty {
+                Section {
+                    ForEach(attachments) { attachment in
+                        NavigationLink {
+                            AttachmentView(attachment: attachment)
+                        } label: {
+                            Text(attachment.title ?? "Unnamed")
+                        }
+                    }
+                    .onDelete { indexSet in
+                        indexSet.forEach { index in
+                            let attachment = attachments[index]
+                            viewContext.delete(attachment)
+                            try? viewContext.save()
+                        }
+                    }
+                } header: {
+                    Text("Attachments")
+                }
+            }
             
             Section {
+                Button {
+                    showDocumentPicker.toggle()
+                } label: {
+                    Label("Add attachment", systemImage: "paperclip")
+                }
+
                 if let cancellationUrl = item.cancellationUrl {
                     Link(destination: cancellationUrl) {
                         Label("Cancel this Subscription", systemImage: "xmark.circle")
@@ -241,6 +272,19 @@ struct SubscriptionDetailView: View {
         .sheet(isPresented: $editing) {
             SubscriptionForm(item: item)
                 .environmentObject(notificationScheduler)
+        }
+        .sheet(isPresented: $showDocumentPicker) {
+            DocumentPicker(fileContent: $selectedFile, fileName: $selectedFileName)
+        }
+        .onChange(of: selectedFile) { newFile in
+            if let newFile = newFile, let selectedFileName = selectedFileName {
+                let newAttachment = Attachment(context: viewContext)
+                newAttachment.item = item
+                newAttachment.title = selectedFileName
+                newAttachment.data = newFile
+                newAttachment.timestamp = .now
+                try? viewContext.save()
+            }
         }
         .actionSheet(isPresented: $confirmDeletion) {
             if item.active {
