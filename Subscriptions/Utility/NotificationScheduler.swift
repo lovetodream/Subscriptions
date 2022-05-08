@@ -51,21 +51,21 @@ class NotificationScheduler: ObservableObject {
                         
                         var inDaysString: String
                         if reminder.daysBefore == 1 {
-                            inDaysString = "tomorrow"
+                            inDaysString = NSLocalizedString("tomorrow", comment: "")
                         } else if reminder.daysBefore == 2 {
-                            inDaysString = "the day after tomorrow"
+                            inDaysString = NSLocalizedString("the day after tomorrow", comment: "")
                         } else {
-                            inDaysString = "in \(Int(reminder.daysBefore).written ?? "\(reminder.daysBefore)") Days"
+                            inDaysString = NSLocalizedString("in \(Int(reminder.daysBefore).written ?? "\(reminder.daysBefore)") Days", comment: "")
                         }
                         
                         let content = UNMutableNotificationContent()
-                        content.title = "Abonementi - Subscription"
+                        content.title = NSLocalizedString("Abonementi - Subscription", comment: "")
                         if priceTag, let cost = itemWithNextBill.item.cost, let formattedCost = formatter.string(from: cost), let title = itemWithNextBill.item.title {
-                            content.body = "Your \(title) subscription for \(formattedCost) will be charged \(inDaysString)."
+                            content.body = NSLocalizedString("Your \(title) subscription for \(formattedCost) will be charged \(inDaysString).", comment: "")
                         } else if let title = itemWithNextBill.item.title {
-                            content.body = "Your \(title) subscription will be charged \(inDaysString)."
+                            content.body = NSLocalizedString("Your \(title) subscription will be charged \(inDaysString).", comment: "")
                         } else {
-                            content.body = "One of your subscriptions will be charged \(inDaysString)"
+                            content.body = NSLocalizedString("One of your subscriptions will be charged \(inDaysString)", comment: "")
                         }
                         content.threadIdentifier = "next-bill"
                         content.categoryIdentifier = "next-bill"
@@ -99,13 +99,13 @@ class NotificationScheduler: ObservableObject {
                         dateFormatter.dateStyle = .medium
                         
                         let content = UNMutableNotificationContent()
-                        content.title = "Abonementi - Cancel Subscription"
+                        content.title = NSLocalizedString("Abonementi - Cancel Subscription", comment: "")
                         if let deactivationDate = itemWithNextBill.item.deactivationDate, let title = itemWithNextBill.item.title {
-                            content.body = "You should cancel your \(title) subscription before \(dateFormatter.string(from: deactivationDate))."
+                            content.body = NSLocalizedString("You should cancel your \(title) subscription before \(dateFormatter.string(from: deactivationDate)).", comment: "")
                         } else if let title = itemWithNextBill.item.title {
-                            content.body = "You should cancel your \(title) soon. Your next charge will be at \(dateFormatter.string(from: itemWithNextBill.nextBill))."
+                            content.body = NSLocalizedString("You should cancel your \(title) soon. Your next charge will be at \(dateFormatter.string(from: itemWithNextBill.nextBill)).", comment: "")
                         } else {
-                            content.body = "You should cancel one of your subscriptions soon. Your next charge will be at \(dateFormatter.string(from: itemWithNextBill.nextBill))"
+                            content.body = NSLocalizedString("You should cancel one of your subscriptions soon. Your next charge will be at \(dateFormatter.string(from: itemWithNextBill.nextBill))", comment: "")
                         }
                         content.threadIdentifier = "cancellation"
                         content.categoryIdentifier = "cancellation"

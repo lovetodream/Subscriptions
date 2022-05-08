@@ -17,6 +17,12 @@
 "0.00" = "0,00";
 
 /* No comment provided by engineer. */
+"Abonementi - Cancel Subscription" = "Abonementi - Abonnement beenden";
+
+/* No comment provided by engineer. */
+"Abonementi - Subscription" = "Abonementi - Abonnement";
+
+/* No comment provided by engineer. */
 "Acknowledgements" = "Anerkennungen";
 
 /* No comment provided by engineer. */
@@ -39,6 +45,9 @@
 
 /* No comment provided by engineer. */
 "Add as many subscriptions as you want, there is no limit 😁." = "Füge so viele Abonnements hinzu, wie du möchtest, es gibt keine Begrenzung 😁.";
+
+/* No comment provided by engineer. */
+"Add attachment" = "Anhang hinzufügen";
 
 /* No comment provided by engineer. */
 "Add category" = "Kategorie hinzufügen";
@@ -65,6 +74,9 @@
 "Are you sure?" = "Bist du sicher?";
 
 /* No comment provided by engineer. */
+"Attachments" = "Anhänge";
+
+/* No comment provided by engineer. */
 "Bill for %@" = "Rechnung für %@";
 
 /* No comment provided by engineer. */
@@ -80,6 +92,9 @@
 "Cancel" = "Abbrechen";
 
 /* No comment provided by engineer. */
+"Cancel editing" = "Editieren abbrechen";
+
+/* No comment provided by engineer. */
 "Cancel editing category" = "Bearbeiten der Kategorie abbrechen";
 
 /* No comment provided by engineer. */
@@ -93,12 +108,6 @@
 
 /* No comment provided by engineer. */
 "Category" = "Kategorie";
-
-/* No comment provided by engineer. */
-"Category Color" = "Farbe der Kategorie";
-
-/* No comment provided by engineer. */
-"Category Name" = "Name der Kategorie";
 
 /* No comment provided by engineer. */
 "Choose from gallery" = "Wähle aus der Galerie";
@@ -182,6 +191,9 @@
 "Edit Budget" = "Budget editieren";
 
 /* No comment provided by engineer. */
+"Edit document name" = "Name des Dokuments editieren";
+
+/* No comment provided by engineer. */
 "Email" = "E-Mail";
 
 /* No comment provided by engineer. */
@@ -236,6 +248,9 @@
 "It may take some time for iCloud to start syncing your data across your devices." = "Es kann einige Zeit dauern, bis iCloud mit der Synchronisierung deiner Daten über deine Geräte hinweg beginnt.";
 
 /* No comment provided by engineer. */
+"It seems like the attachment contains no valid data. You might want to remove it." = "Es sieht so aus als würde der Anhang keine gültige Daten enthalten. Evtl. sollte er gelöscht werden.";
+
+/* No comment provided by engineer. */
 "Load logo (favicon) from URL" = "Logo (Favicon) von URL laden";
 
 /* No comment provided by engineer. */
@@ -264,6 +279,9 @@
 
 /* No comment provided by engineer. */
 "Once paused, you can resume a subscription at any time in the future." = "Einmal unterbrochen, kannst du ein Abonnement jederzeit wieder fortsetzen.";
+
+/* No comment provided by engineer. */
+"One of your subscriptions will be charged (inDaysString)" = "Eines deiner Abonnements wird in (inDaysString) Tagen abgebucht";
 
 /* No comment provided by engineer. */
 "Only relevant subscriptions" = "Nur relevante Abonnements";
@@ -404,6 +422,9 @@
 "Thank you so much! %@" = "Herzlichen Dank! %@";
 
 /* No comment provided by engineer. */
+"the day after tomorrow" = "übermorgen";
+
+/* No comment provided by engineer. */
 "The tip jar helps keep Abonementi running, and helps with getting regular (and substantial) updates pushed out to you.\n\nIf you enjoy using this app and want to support an independent app developer (that's me, Timo), please consider leaving a tip, an App Store rating/review, or telling a friend about how much you like Abonementi.\n\nThank you for being awesome!" = "Das Trinkgeld hilft, Abonementi am Laufen zu halten und regelmäßige (und umfangreiche) Updates zu erhalten.\n\nWenn dir diese App gefällt und du einen unabhängigen App-Entwickler (das bin ich, Timo) unterstützen möchtest, kannst du mir etwas Trinkgeld oder eine App Store-Bewertung/-Rezension geben. Es hilft auch wenn du einem Freund erzählst, wie sehr dir Abonementi gefällt.\n\nVielen Dank, dass du so fantastisch bist!\n";
 
 /* No comment provided by engineer. */
@@ -444,6 +465,9 @@
 
 /* No comment provided by engineer. */
 "Title or URL" = "Titel oder URL";
+
+/* No comment provided by engineer. */
+"tomorrow" = "morgen";
 
 /* No comment provided by engineer. */
 "Uncategorized" = "Unkategorisiert";
@@ -503,7 +527,22 @@
 "You should avoid adding more than 3 notifications to a single subscription" = "Du solltest nicht mehr als 3 Benachrichtigungen zu einem einzigen Abonnement hinzufügen";
 
 /* No comment provided by engineer. */
+"You should cancel one of your subscriptions soon. Your next charge will be at (dateFormatter.string(from: itemWithNextBill.nextBill))" = "Du solltest eine deiner Abonnements bald kündigen. Die nächste Buchung ist am (dateFormatter.string(from: itemWithNextBill.nextBill))";
+
+/* No comment provided by engineer. */
+"You should cancel your (title) soon. Your next charge will be at (dateFormatter.string(from: itemWithNextBill.nextBill))." = "Du solltest (title) bald kündigen. Die nächste Buchung ist am (dateFormatter.string(from: itemWithNextBill.nextBill)).";
+
+/* No comment provided by engineer. */
+"You should cancel your (title) subscription before (dateFormatter.string(from: deactivationDate))." = "Du solltest dein (title) Abonnement vor (dateFormatter.string(from: deactivationDate)) kündigen.";
+
+/* No comment provided by engineer. */
 "You will receive all your notifications at %@. Except reminders to cancel a subscriptions, you can specify date and time for those individually." = "Du erhältst alle Benachrichtigungen um %@. Mit Ausnahme von Erinnerungen zur Kündigung eines Abonnements. Dafür kannst du Datum und Uhrzeit individuell festlegen.";
+
+/* No comment provided by engineer. */
+"Your (title) subscription for (formattedCost) will be charged (inDaysString)." = "Dein (title) Abonnement über (formattedCost) wird in (inDaysString) abgebucht.";
+
+/* No comment provided by engineer. */
+"Your (title) subscription will be charged (inDaysString)." = "Dein (title) Abonnement wird in (inDaysString) abgebucht.";
 
 /* No comment provided by engineer. */
 "Your purchase directly supports the independent developer of this app." = "Dein Kauf unterstützt direkt den unabhängigen Entwickler dieser App.";
