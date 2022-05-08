@@ -19,7 +19,9 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
+        #if DEBUG
         insertSampleData(viewContext: viewContext)
+        #endif
         return result
     }()
 
