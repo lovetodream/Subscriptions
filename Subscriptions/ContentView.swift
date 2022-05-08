@@ -453,9 +453,6 @@ struct ContentView: View {
                 
                 Task {
                     await notificationScheduler.scheduleNotifications(for: items, at: timeToReceiveNotifications, with: sendNotificationsWithPriceTag, and: currencyFormatter)
-                    
-                    print("Pending...")
-                    print(await UNUserNotificationCenter.current().pendingNotificationRequests())
                 }
                 
                 locked = true
@@ -464,9 +461,6 @@ struct ContentView: View {
                 
                 Task {
                     await notificationScheduler.scheduleNotifications(for: items, at: timeToReceiveNotifications, with: sendNotificationsWithPriceTag, and: currencyFormatter)
-                    
-                    print("Pending...")
-                    print(await UNUserNotificationCenter.current().pendingNotificationRequests())
                 }
                 
                 if locked && unlockWithBiometrics {
