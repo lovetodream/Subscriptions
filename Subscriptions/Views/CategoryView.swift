@@ -92,27 +92,10 @@ struct CategoryView: View {
             }.zIndex(1)
             
             if showCategoryField {
-                HStack {
-                    ColorPicker("Category Color", selection: $categoryColor)
-                        .labelsHidden()
-                    TextField("Category Name", text: $categoryName)
-                        .font(.title2)
-                        .focused($isFocused)
-                        .submitLabel(.done)
-                        .onSubmit(addOrUpdateCategory)
-                    Spacer()
-                    Button(action: addOrUpdateCategory) {
-                        Label("Submit", systemImage: "chevron.forward")
-                            .labelStyle(.iconOnly)
-                            .font(.headline)
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .disabled(categoryName.isEmpty)
-                }
-                .padding()
-                .background(.regularMaterial)
-                .transition(.move(edge: .bottom))
-                .zIndex(2)
+                FloatingTextField(color: $categoryColor,
+                                  text: $categoryName,
+                                  isFocused: _isFocused,
+                                  submitAction: addOrUpdateCategory)
             }
         }.navigationTitle("Categories")
     }
