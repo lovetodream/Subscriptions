@@ -292,7 +292,10 @@ struct SettingsView: View {
                 } header: {
                     Text("Danger Zone")
                 } footer: {
-                    Text("No third-party tracking or analytics services are used, and no personal data is collected or shared with anyone.")
+                    VStack(spacing: 20) {
+                        Text("No third-party tracking or analytics services are used, and no personal data is collected or shared with anyone.")
+                        Text("Version \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild))")
+                    }
                 }
             }
             .navigationTitle("Settings")
